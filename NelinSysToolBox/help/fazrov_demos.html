@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+	<TITLE>Phase Plane Analysis - demo simulations</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Phase Plane Analysis - demo simulations</H2>
+
+<P ALIGN="JUSTIFY">This part of the <I>NelinSys</I> tool contains three demonstration examples that illustrate the use of its function blocks in order to perform a phase-plane analysis of nonlinear systems. Simulation of chosen example is started automatically, immediately after its selection from the menu (see the following picture) and during its first run it cannot be stopped - modifications of the simulation scheme are allowed only after the first simulation is over.</P>
+<CENTER><IMG SRC="fazrov_demos_menu.jpg" ALT="Example selection menu"></CENTER>
+
+<H3>2nd-order autonomous system</H3>
+<P ALIGN="JUSTIFY"><U>Problem</U>: Construct and analyze a phase-plane portrait of a 2nd-order autonomous system described by the differential equation <I>y''(t) + y(t) = 0</I>, decide whether the system is stable or not and draw the time responses of the system output for different initial conditions.</P>
+<P ALIGN="JUSTIFY"><U>Solution</U>: Both the phase-plane portrait of the system and the time responses can be constructed by running the following Simulink simulation scheme (<I>demo_fp2.mdl</I>):<BR>
+<CENTER><IMG SRC="fazrov_demo1_schema.gif" ALT="Simulation scheme"><BR><BR><IMG SRC="fazrov_demo1_portret.jpg" ALT="Phase-plane portrait"><BR><BR><IMG SRC="fazrov_demo1_casz.jpg" ALT="Time responses of system output"></CENTER></P>
+<P ALIGN="JUSTIFY">Initial conditions were chosen as follows: -5 &lt;= <I>x1</I> &lt;= 5 (10&nbsp;values), -1 &lt;= <I>x2</I> &lt;= 10 (3&nbsp;values). From the phase-plane portrait we can conclude that the system has only one <I>centre</I>-type equilibrium point (0,0), which is <I>marginally stable</I> (there are two complex-conjugated poles with real parts equal to zero). This conclusion is in compliance with the results obtained from linear analysis, since the roots of the characteristic equation of the system <I>s<SUP>2</SUP> + 1 = 0</I> (namely <I>+i</I> and <I>-i</I>) lie on imaginary axis.</P>
+
+<H3>2-nd order system with hard nonlinearity</H3>
+<P ALIGN="JUSTIFY"><U>Problem</U>: Construct and analyze a phase-plane portrait of a nonlinear  system depicted in the following picture (desired value is <I>w = 0</I>), decide which of the equilibrium points are stable and which are not.</P>
+<CENTER><IMG SRC="fazrov_typnl_priklad1.jpg" ALT="2-nd order system with a hard nonlinearity"></CENTER>
+<P ALIGN="JUSTIFY"><U>Solution</U>: The phase-plane portrait of the system can be constructed by running the following Simulink simulation scheme (<I>demo_typnl.mdl</I>):<BR><BR>
+<CENTER><IMG SRC="fazrov_typnl_priklad.gif" ALT="Simulation scheme"><BR><IMG SRC="fazrov_typnl_priklad.jpg" ALT="Phase-plane portrait of the system"></CENTER></P>
+<P ALIGN="JUSTIFY">Initial conditions were chosen as follows: -3 &lt;= <I>x1</I> &lt;= 3 (15&nbsp;values), -5 &lt;= <I>x2</I> &lt;= 5 (3&nbsp;values). From the phase-plane portrait we can conclude that the system has three equilibrium points: (-4/3,0) - saddle point, (0,0) - stable node and (4/3,0) - saddle point.</P>
+
+<H3>Duffing equation</H3>
+<P ALIGN="JUSTIFY"><U>Problem</U>: Construct and analyze a phase-plane portrait of the Duffing equation <I>y''(t) + 2y'(t) - 2y(t) + [y(t)]<SUP>3</SUP> = 0</I>, decide which of its equilibrium points are stable and which are not, draw the time responses of the system output and its derivative for two different initial conditions.</P>
+<P ALIGN="JUSTIFY"><U>Solution</U>: The phase-plane portrait of the system as well as the time responses can be constructed by running the following Simulink simulation scheme (<I>demo_duffing.mdl</I>):<BR><BR>
+<CENTER><IMG SRC="fazrov_duffing_schema.gif" ALT="Simulation scheme"><BR><IMG SRC="fazrov_duffing_portret.jpg" ALT="Phase-plane portrait"><BR><BR><IMG SRC="fazrov_duffing_casz1.jpg" ALT="Time responses of y(t) and y'(t) for x1(0) = -3, x2(0)= -3"><BR><BR><IMG SRC="fazrov_duffing_casz2.jpg" ALT="Time responses of y(t) and y'(t) for x1(0) = -0.857, x2(0)= 3"></CENTER></P>
+<P ALIGN="JUSTIFY">Initial conditions were: -3 &lt;= <I>x1</I> &lt;= 3 (15&nbsp;values), -3 &lt;= <I>x2</I> &lt;= 3 (3&nbsp;values). From the phase-plane portrait one can conclude that the system has three equilibrium points: (-1.414,0) - stable focus, (0,0) - saddle point and (1.414,0) - stable focus.</P>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

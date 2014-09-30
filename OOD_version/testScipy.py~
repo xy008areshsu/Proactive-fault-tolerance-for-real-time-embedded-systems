@@ -1,0 +1,11 @@
+import numpy
+
+A = numpy.array([[2.0, 0.0],
+                 [1.0, -1.0]])
+
+B = numpy.array([[1.0],
+                 [1.0]])
+
+P = numpy.array([-0.5 + 1j, -0.5-1j])
+
+K = numpy.array([2.625, -0.625])

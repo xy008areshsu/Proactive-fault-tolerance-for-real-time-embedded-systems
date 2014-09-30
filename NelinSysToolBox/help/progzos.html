@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+	<TITLE>Gain-Scheduling control for SISO systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Gain-Scheduling control for SISO systems</H2>
+
+<P ALIGN="JUSTIFY">The <I>ProgZos</I> application serves as a tool for design of state-space controllers for SISO systems via gain scheduling (the method is also known as extended linearization). The design of parametric linear controller is performed via pole placement. There are two versions of the application - a <A HREF="#GrafRozhr">GUI version</A> and a <A HREF="#TextRozhr">text-based version</A>.</P>
+
+<A NAME="GrafRozhr"></A>
+<H3>Graphical user interface (GUI)</H3>
+<CENTER><IMG SRC="progzos_dialog.jpg" ALT="GUI of the 'ProgZos' application"></CENTER>
+<DL>
+	<DT><I>Nonlinear system state-space equations - f(x), g(x), h(x)</I><DD><P ALIGN="JUSTIFY">Symbolic expressions for <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I> defining the state-space description of the nonlinear system to be controlled i.e. the system to which the application should design a suitable gain-scheduled controller. The convention for writing mathematical operations is the same as the one used by MATLAB's Symbolic Math Toolbox. State variables <U>have to be</U> denoted as <I>x1</I>, <I>x2</I>, ..., <I>xN</I>. Modifying of any of these fields causes deletion of previously calculated results.</P>
+	<DT><I>Desired poles</I><DD><P ALIGN="JUSTIFY">Vector of roots of the characteristic polynomial of the closed-loop system. Based on these roots a parametric gain-scheduled linear controller to the system is designed via pole placement technique. Modification of this field causes deletion of previously calculated results.</P>
+	<DT><I>Scheduling type [none / input / output / mixed scheduling]</I><DD><P ALIGN="JUSTIFY">This setting determines which process value (i.e. real measurable process variable) should be used as the scheduling variable; in case of input scheduling the desired value <I>w</I> is used, in case of output scheduling system output <I>y</I> is used. Mixed scheduling means that some weighted average of these two process variables is used i.e. <I>m*w+(1-m)*y</I> where <I>0 &lt;= m &lt;= 1</I>. Alternatively, a fixed operating point can be specified instead of the scheduling variable, which corresponds to linear state-space controller without gain scheduling. Modification of this field causes deletion of previously calculated results.</P>
+	<DT><I>Evaluation</I><DD><P ALIGN="JUSTIFY">Clicking this button starts the calculation of the controller i.e. the evaluation of system equilibrium points and the calculation of the control law <I>u = u(w,x)</I>.</P>
+	<DT><I>Clear</I><DD><P ALIGN="JUSTIFY">Clicking this button resets the whole form i.e. deletes all contents of the form.</P>
+	<DT><I>Simulation</I><DD><P ALIGN="JUSTIFY">Clicking this button opens the Simulink simulation <I>Gain Scheduling for SISO systems</I> that lets the user judge the performance of designed gain-scheduled state-space controller (for details <A HREF="#Simul">see below</A>). Parameters of the blocks used in the simulation are taken from the <I>ProgZos</I> application via symbolic variables <I>F</I>, <I>G</I>, <I>H</I> (state-space description), <I>n</I> (system order) and <I>u</I> (control law).</P>
+	<DT><I>Exit</I><DD><P ALIGN="JUSTIFY">Clicking this button closes all windows opened by the application and exits the program.</P>
+	<DT><I>Help</I><DD><P ALIGN="JUSTIFY">Clicking the <I>Help</I> button opens a HTML browser and displays in it this file.</P>
+	<DT><I>System equilibrium points</I><DD><P ALIGN="JUSTIFY">This field contains equations determining the equilibrium points of the system i.e. the points where <I>f(x)&nbsp;+&nbsp;g(x)u&nbsp;=&nbsp;0</I>. Every equation expresses one element of the states vector <I>x</I> or control action <I>u</I> as a function of a single parameter (scheduling variable).</P>
+	<DT><I>Calculated control law</I><DD><P ALIGN="JUSTIFY">The result of gain-scheduling control design - control algorithm to be performed by a state-space controller. By clicking the <I>pretty</I> button next to this field, the control law equation can be printed in MATLAB Command Window in a more user-friendly fashion i.e. in a format that resembles type-set mathematics (for more information type <I>help pretty</I> in MATLAB Command Window).</P>
+</DL>
+
+<A NAME="TextRozhr"></A>
+<H3>Text-based user interface</H3>
+<P ALIGN="JUSTIFY">Text-based version of the <I>ProgZos</I> application can be found in <I>\TextRozhr</I> subdirectory. It is run from MATLAB Command Window by typing <I>progzos</I>. From the operational point of view, this version allows user to do everything that is possible to do with GUI version, besides, unlike the GUI version, it is able to cope with non-numeric parameters (symbols other than <I>x</I>) in the expressions <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>. Moreover, it displays intermediate data of the controller design e.g. matrices <I>A, B, C, D</I> corresponding to the linearization of the nonlinear system in the neighbourhood of chosen (variable, non-fixed) operating point. Usage example:</P>
+<PRE>
+Gain Scheduling control for SISO systems 
+---------------------------------------- 
+                      .                  
+Nonlinear system: (1) x = f(x,u)         
+                      y = h(x,u)         
+                      .                  
+                  (2) x = f(x) + g(x) u  
+                      y = h(x)           
+ 
+Choose one of the options: 2
+ 
+System order: 2
+ 
+Specify parameters' identifiers (separated by spaces), if there are any: b1 b2 b3 S1
+ 
+System matrix function: f(x) = [-b1*sqrt(x1); b2*sqrt(x1)-b3*sqrt(x2)]
+Input matrix function:  g(x) = [1/S1; 0]
+Output matrix function: h(x) = x2
+                        .                 
+System linearization: /|x = A /|x + B /|u 
+                      /|y = C /|x + D /|u 
+                                          
+A = 
+ 
+                         [       b1                 ]
+                         [- 1/2 -----         0     ]
+                         [        1/2               ]
+                         [      x1                  ]
+                         [                          ]
+                         [      b2              b3  ]
+                         [ 1/2 -----     - 1/2 -----]
+                         [       1/2             1/2]
+                         [     x1              x2   ]
+B = 
+ 
+                                    [ 1  ]
+                                    [----]
+                                    [ S1 ]
+                                    [    ]
+                                    [ 0  ]
+C = 
+ 
+                                   [0    1]
+D = 
+ 
+                                       0
+ 
+System equilibrium points: u = b1*(b3^2*x2/b2^2)^(1/2)*S1, x1 = b3^2*x2/b2^2
+ 
+Desired poles of the closed-loop system: [-2 -2]
+ 
+Controller for the system linearization: /|u = f0 /|w - K /|x
+f0 = 
+ 
+                                           1/2
+                                   S1 b3 x2
+                                 8 -----------
+                                         2
+                                       b2
+K = 
+ 
+    [            2                  1/2
+    [      S1 (b3  + b1 b2 - 8 b3 x2   )
+    [- 1/2 ----------------------------- ,
+    [                  1/2
+    [                x2    b3
+
+                 2          1/2         ]
+        b3 S1 (b3  - 8 b3 x2    + 16 x2)]
+    1/2 --------------------------------]
+                     1/2   2            ]
+                   x2    b2             ]
+                                                               
+Gain Scheduling type: (1) no scheduling (fixed operating point)
+                      (2) input scheduling (w)                 
+                      (3) output scheduling (y)                
+                      (4) mixed scheduling (m*w+(1-m)*y)       
+Selected scheduling type: 2
+ 
+Control action: u = 
+ 
+               2        2      2        3         1/2         2     4
+1/2 S1 (b1 w b3  b2 + b3  x1 b2  + b1 b2  x1 - 8 w    b3 x1 b2  - b3  x2
+
+           3  1/2           2             2  2    /   1/2      2
+     + 8 b3  w    x2 - 16 b3  w x2 + 16 b3  w )  /  (w    b3 b2 )
+                                                /
+</PRE>
+
+<A NAME="Simul"></A>
+<H3>Simulation of  designed closed-loop system</H3>
+<P ALIGN="JUSTIFY">The <I>ProgZos</I> application lets user evaluate the performance of designed control loop (by means of simulation) immediately after the control law is calculated. The simulation scheme employed requires only very little user intervention before it is able to be run - parameters of the blocks <I>Controlled system</I> (except for initial values of state variables) and <I>State-space GS controller</I> are taken from the <I>ProgZos</I> application via <I>F</I>, <I>G</I>, <I>H</I> and <I>u</I> symbolic variables.</P>
+<CENTER><IMG SRC="progzos_simulacia.jpg" ALT="Simulation of designed control loop"></CENTER>
+
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">See demo <A HREF="demo_gs.html"><I>Gain-scheduling control of a SISO system</I></A></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="exaktsiso.html"><I>Exact linearization for SISO systems</I></A>
+<LI><A HREF="exaktmimo.html"><I>Exact linearization for MIMO systems</I></A>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

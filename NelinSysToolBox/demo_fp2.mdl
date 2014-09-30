@@ -1,0 +1,182 @@
+Model {
+  Name			  "demo_fp2"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "demo_fp2"
+    Location		    [4, 74, 394, 356]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Reference
+      Name		      "Phase portrait\nx2 = f(x1)"
+      Ports		      [2, 0, 0, 0, 0]
+      Position		      [295, 45, 365, 125]
+      SourceBlock	      "NelinSys/Nonlinear Systems Analysis/Vector XY G"
+"raph\nfor Phase Portraits"
+      SourceType	      "Vector XY Graph for Phase-Plane Portraits"
+      xmin		      "-15"
+      xmax		      "15"
+      ymin		      "-15"
+      ymax		      "15"
+      st		      "-1"
+      use_grid		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Phase-plane analysis computation"
+      Ports		      [0, 2, 0, 0, 0]
+      Position		      [15, 96, 180, 174]
+      SourceBlock	      "NelinSys/Nonlinear Systems Analysis/Phase Portr"
+"aits of 2nd-Order Systems"
+      SourceType	      "Phase-Plane Portrait of a 2nd-Order Autonomous "
+"System"
+      vRovnica		      "D2y+y=0"
+      x1min		      "-5"
+      x1max		      "5"
+      x1num		      "10"
+      x2min		      "-1"
+      x2max		      "10"
+      x2num		      "3"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Time responses\nx1 = x1(t)"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [295, 164, 365, 246]
+      Floating		      off
+      Location		      [397, 359, 795, 569]
+      Open		      on
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-12"
+      YMax		      "12"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Phase-plane analysis computation"
+      SrcPort		      2
+      Points		      [70, 0; 0, -50]
+      DstBlock		      "Phase portrait\nx2 = f(x1)"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Phase-plane analysis computation"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	Points			[0, -50]
+	DstBlock		"Phase portrait\nx2 = f(x1)"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 90]
+	DstBlock		"Time responses\nx1 = x1(t)"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Position		      [196, 17]
+      Text		      "Phase-Plane Analysis of a 2nd-order system"
+      FontSize		      14
+    }
+    Annotation {
+      Position		      [181, 37]
+      Text		      "y''(t) + y(t) = 0"
+      FontSize		      14
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+  }
+}

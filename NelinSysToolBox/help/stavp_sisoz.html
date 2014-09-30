@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+	<TITLE>Nonlinear SISO system with disturbance</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Nonlinear SISO system with disturbance</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">The block implements a nonlinear SISO (single-input single-output) system with disturbance whose behaviour is defined by nonlinear state-space equations of the form</P>
+<CENTER><IMG SRC="stavp_sisoz_vzorec.gif" ALT="Nonlinear state-space description of a system with disturbance"></CENTER>
+<P ALIGN="JUSTIFY">where <I>x&nbsp;=&nbsp;(x1,x2,...,xN)<SUP>T</SUP></I> is the state vector, <I>u</I> is the input, <I>y</I> is the output and <I>z</I> is the disturbance. Nonlinear functions <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>, <I>e(z)</I> can be specified either by symbolic expressions or by identifiers of symbolic variables defined in MATLAB workspace - see detailed description of block parameters below.</P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="stavp_sisoz_dialog.jpg" ALT="Dialog box for block parameters setup"></CENTER>
+<DL>
+	<DT><I>System order (number of states, N)</I></DT><DD><P ALIGN="JUSTIFY">Positive integer specifying the number of state variables of the system i.e. the dimension of the system state vector <I>x</I>.</P></DD>
+	<DT><I>f(x), g(x), h(x), e(z) - symbolic expression</I></DT><DD><P ALIGN="JUSTIFY">Symbolic expressions defining the nonlinear functions <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>, <I>e(z)</I> used in the state-space equations. The convention how to write these equations and mathematical operations within them is the same as the one used by Symbolic Math Toolbox. State variables <U>have to be denoted</U> by <I>x1</I>, <I>x2</I>, ..., <I>xN</I> and the disturbance by <I>z</I>. If any of the <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>, <I>e(z)</I> functions is not specified by a symbolic expression but by an identifier of a variable (see below), it is necessary to leave corresponding field blank.</P></DD>
+	<DT><I>f(x), g(x), h(x), e(z) - variable identifier</I></DT><DD><P ALIGN="JUSTIFY">Identifiers of symbolic variables (<I>class sym</I> objects) containing the <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>, <I>e(z)</I> functions used in the state-space description of the system. If any of the <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>, <I>e(z)</I> functions is not specified by an identifier of a variable but by a symbolic expression (see previous parameters), it is necessary to set corresponding field to 0 (zero).</P></DD>
+	<DT><I>Initial conditions (initial states)</I></DT><DD><P ALIGN="JUSTIFY">Column vector consisting of the values of the system state variables at the beginning of the simulation.</P></DD>
+</DL>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="stavp_siso.html"><I>Nonlinear SISO system (State-Space model)</I></A></LI>
+<LI><A HREF="stavp_mimo.html"><I>Nonlinear MIMO system (State-Space model)</I></A></LI>
+<LI><A HREF="stavp_mimoz.html"><I>Nonlinear MIMO system with disturbance</I></A></LI>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

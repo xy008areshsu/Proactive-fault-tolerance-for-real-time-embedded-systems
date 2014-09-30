@@ -1,0 +1,325 @@
+Model {
+  Name			  "exakt_siso"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  on
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "20.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  CloseFcn		  ";slview('closediagram',bdroot);"
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "exakt_siso"
+    Location		    [104, 74, 726, 544]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Reference
+      Name		      "Compensation\nof nonlinearities"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [200, 144, 275, 186]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Linearizing control law\nfor SISO systems"
+      SourceType	      "Linearizing control law for SISO systems"
+      n			      "n"
+      vzorec		      ""
+      vzorecP		      "u"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Controlled system"
+      Ports		      [1, 2, 0, 0, 0]
+      Position		      [370, 115, 500, 190]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Nonlinear "
+"SISO system\n(State-Space model)"
+      SourceType	      "Nonlinear SISO system - state-space model"
+      n			      "n"
+      F			      ""
+      Fp		      "F"
+      G			      ""
+      Gp		      "G"
+      H			      ""
+      Hp		      "H"
+      pp		      "[0.1; 0.01]"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Desired value"
+      Position		      [20, 80, 50, 110]
+      Orientation	      down
+      Time		      "5"
+      Before		      "2"
+      After		      "10"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Input     \nDisturbance"
+      Position		      [275, 80, 305, 110]
+      Orientation	      down
+      NamePlacement	      alternate
+      Time		      "15"
+      Before		      "0"
+      After		      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Linear state-space\ncontroller"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [65, 129, 150, 176]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Linear controller\nfor SISO systems"
+      SourceType	      "State-space controller for an \"r-integrator\" "
+"SISO system"
+      r			      "r"
+      kor		      "[-2 -2 -6]"
+      integ		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "State-Coordinates transformation"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [395, 320, 455, 350]
+      Orientation	      left
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Coordinates transformation\nfor SISO systems"
+      SourceType	      "Coordinates transformation for SISO systems"
+      n			      "n"
+      r			      "r"
+      Z			      ""
+      Zp		      "qx"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [320, 127, 335, 178]
+      ShowName		      off
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\noutput"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [565, 120, 595, 150]
+      Floating		      off
+      Location		      [5, 30, 805, 583]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\nstates"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [565, 260, 595, 290]
+      Floating		      off
+      Location		      [5, 30, 805, 583]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Linear state-space\ncontroller"
+      SrcPort		      1
+      DstBlock		      "Compensation\nof nonlinearities"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Compensation\nof nonlinearities"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Controlled system"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Controlled system"
+      SrcPort		      2
+      Points		      [30, 0; 0, 105]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"State-Coordinates transformation"
+	DstPort			1
+      }
+      Branch {
+	Points			[-370, 0; 0, -100]
+	DstBlock		"Compensation\nof nonlinearities"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"System\nstates"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Controlled system"
+      SrcPort		      1
+      DstBlock		      "System\noutput"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Input     \nDisturbance"
+      SrcPort		      1
+      Points		      [0, 25]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "State-Coordinates transformation"
+      SrcPort		      1
+      Points		      [-355, 0; 0, -170]
+      DstBlock		      "Linear state-space\ncontroller"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Desired value"
+      SrcPort		      1
+      Points		      [0, 25]
+      DstBlock		      "Linear state-space\ncontroller"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [231, 262]
+      Text		      "LINEARIZATION LOOP"
+    }
+    Annotation {
+      Position		      [86, 322]
+      Text		      "CONTROL LOOP"
+    }
+    Annotation {
+      Position		      [306, 22]
+      Text		      "Exact linearization for SISO systems"
+      FontSize		      18
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [311, 42]
+      Text		      "Simulation of a control loop designed by ExaktS"
+"iso.m application"
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [311, 407]
+      Text		      "Before running the simulation, it is necessary "
+"to check the parameters of all blocks, especially those\nof linear controller,"
+" desired value, disturbance and initial values of state variables of the cont"
+"rolled system."
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [316, 442]
+      Text		      "It is not recommended to change parameters conn"
+"ected with exact linearization or state-space equations."
+      FontSize		      12
+    }
+  }
+}

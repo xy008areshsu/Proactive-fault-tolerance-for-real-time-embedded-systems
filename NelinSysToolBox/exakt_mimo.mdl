@@ -1,0 +1,296 @@
+Model {
+  Name			  "exakt_mimo"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "5.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  CloseFcn		  ";slview('closediagram',bdroot);"
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "exakt_mimo"
+    Location		    [104, 74, 726, 514]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Step
+      Name		      " Desired values"
+      Position		      [20, 55, 50, 85]
+      Orientation	      down
+      Time		      "[1 0]"
+      Before		      "[0 0]"
+      After		      "[2800/9.55 0.26]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Controlled system"
+      Ports		      [1, 2, 0, 0, 0]
+      Position		      [360, 90, 490, 165]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Nonlinear "
+"MIMO system\n(State-Space model)"
+      SourceType	      "Nonlinear MIMO system - state-space model"
+      n			      "n"
+      F			      ""
+      Fp		      "F"
+      G			      ""
+      Gp		      "G"
+      H			      ""
+      Hp		      "H"
+      pp		      "[0; 0; 1e-9]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Linear state-space\ncontroller"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [65, 94, 150, 141]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Linear controller\nfor MIMO systems"
+      SourceType	      "State-space controller for an integrator-type M"
+"IMO system"
+      r			      "r"
+      nout		      "nout"
+      kor		      "[-20 -20 -20]"
+      integ		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Nonlinearity\ncompensation"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [210, 109, 285, 151]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Linearizing control law\nfor MIMO systems"
+      SourceType	      "Linearizing control law for MIMO systems"
+      n			      "n"
+      nout		      "nout"
+      vzorec		      ""
+      vzorecP		      "u"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "States transformation"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [400, 295, 460, 325]
+      Orientation	      left
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Coordinates transformation\nfor MIMO systems"
+      SourceType	      "Coordinates transformation for MIMO systems"
+      n			      "n"
+      r			      "r"
+      Z			      ""
+      Zp		      "qx"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\noutput"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [565, 95, 595, 125]
+      Floating		      off
+      Location		      [5, 30, 805, 583]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\nstates"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [565, 235, 595, 265]
+      Floating		      off
+      Location		      [5, 30, 805, 583]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Linear state-space\ncontroller"
+      SrcPort		      1
+      DstBlock		      "Nonlinearity\ncompensation"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "States transformation"
+      SrcPort		      1
+      Points		      [-360, 0; 0, -180]
+      DstBlock		      "Linear state-space\ncontroller"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      " Desired values"
+      SrcPort		      1
+      Points		      [0, 15]
+      DstBlock		      "Linear state-space\ncontroller"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Controlled system"
+      SrcPort		      2
+      Points		      [40, 0; 0, 105]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"States transformation"
+	DstPort			1
+      }
+      Branch {
+	Points			[-370, 0; 0, -110]
+	DstBlock		"Nonlinearity\ncompensation"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"System\nstates"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Controlled system"
+      SrcPort		      1
+      DstBlock		      "System\noutput"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Nonlinearity\ncompensation"
+      SrcPort		      1
+      DstBlock		      "Controlled system"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [231, 237]
+      Text		      "LINEARIZATION LOOP"
+    }
+    Annotation {
+      Position		      [86, 297]
+      Text		      "CONTROL LOOP"
+    }
+    Annotation {
+      Position		      [306, 22]
+      Text		      "Exact linearization for MIMO systems"
+      FontSize		      18
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [311, 42]
+      Text		      "Simulation of a control loop designed by ExaktM"
+"imo.m application"
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [311, 382]
+      Text		      "Before running the simulation, it is necessary "
+"to check the parameters of all blocks, especially those\nof the linear contro"
+"ller, desired values and initial values of state variables of the controlled "
+"system."
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [316, 417]
+      Text		      "It is not recommended to change parameters conn"
+"ected with exact linearization or state-space equations."
+      FontSize		      12
+    }
+  }
+}

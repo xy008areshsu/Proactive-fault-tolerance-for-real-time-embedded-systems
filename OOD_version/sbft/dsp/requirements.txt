@@ -1,0 +1,9 @@
+SciPy
+NumPy
+matplotlib
+spectrum
+Nose
+pyaudio
+scikits.audiolab
+sphinx
+sphinx_rtd_theme

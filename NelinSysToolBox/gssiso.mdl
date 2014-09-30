@@ -1,0 +1,236 @@
+Model {
+  Name			  "gssiso"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  on
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "20.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "gssiso"
+    Location		    [162, 112, 666, 450]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Reference
+      Name		      "Controlled system"
+      Ports		      [1, 2, 0, 0, 0]
+      Position		      [265, 80, 395, 155]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Nonlinear "
+"SISO system\n(State-Space model)"
+      SourceType	      "Nonlinear SISO system - state-space model"
+      n			      "n"
+      F			      ""
+      Fp		      "F"
+      G			      ""
+      Gp		      "G"
+      H			      ""
+      Hp		      "H"
+      pp		      "[0.1; 0.01]"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Desired\nvalue"
+      Position		      [20, 90, 50, 120]
+      Time		      "5"
+      Before		      "2"
+      After		      "10"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "State-space\nGS controller"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [120, 94, 200, 141]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Gain Sched"
+"uling Blocks/State-space gain-scheduling\ncontroller for SISO systems"
+      SourceType	      "State-space gain-scheduling controller for SISO"
+" systems"
+      n			      "n"
+      vzorec		      ""
+      vzorecP		      "u"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\noutput"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [455, 85, 485, 115]
+      Floating		      off
+      Location		      [5, 30, 805, 583]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\nstates"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [450, 190, 480, 220]
+      Floating		      off
+      Location		      [1, 18, 801, 571]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "State-space\nGS controller"
+      SrcPort		      1
+      DstBlock		      "Controlled system"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Controlled system"
+      SrcPort		      1
+      DstBlock		      "System\noutput"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Controlled system"
+      SrcPort		      2
+      Points		      [15, 0; 0, 70]
+      Branch {
+	Points			[-340, 0; 0, -75]
+	DstBlock		"State-space\nGS controller"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"System\nstates"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Desired\nvalue"
+      SrcPort		      1
+      DstBlock		      "State-space\nGS controller"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [246, 32]
+      Text		      "Gain Scheduling for SISO systems"
+      FontSize		      18
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [246, 52]
+      Text		      "Simulation of a control loop designed by ProgZo"
+"s.m application"
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [251, 282]
+      Text		      "Before running the simulation, it is recommende"
+"d to check the parameters of all blocks,\nespecially the desired value and in"
+"itial values of state variables of controlled system."
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [251, 317]
+      Text		      "Parameters specified by variable identifiers wi"
+"ll be taken from the ProgZos.m application."
+      FontSize		      12
+    }
+  }
+}

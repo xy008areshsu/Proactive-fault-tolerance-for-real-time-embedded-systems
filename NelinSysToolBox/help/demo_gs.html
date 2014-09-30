@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+	<TITLE>Gain Scheduling - demo simulations</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Gain Scheduling - demo simulations</H2>
+
+<P ALIGN="JUSTIFY">This part of the <I>NelinSys</I> library contains two demos illustrating the use of its function blocks for simulation of nonlinear systems controlled by gain-scheduled controllers. Simulation of chosen example is started automatically, immediately after its selection from the menu (see the following picture) and during its first run it cannot be stopped - modifications of the simulation scheme are allowed only after the first simulation is over.</P>
+<CENTER><IMG SRC="demo_gs_menu.jpg" ALT="Example selection menu"></CENTER>
+
+<H3>Input and output gain scheduling</H3>
+<P ALIGN="JUSTIFY">Simulation of gain-scheduled control of a <I>2 tanks without interaction</I> nonlinear system (both input and output scheduling is included). The nonlinear system is described by following equations:</P>
+<CENTER><IMG SRC="stavp_siso_vzorec2.gif" ALT="State-space description of the '2 tanks without interaction' system"></CENTER>
+<P ALIGN="JUSTIFY">Simulink simulation scheme:</P>
+<CENTER><IMG SRC="gs_demo1_schema.gif" ALT="Simulink scheme"></CENTER>
+<P ALIGN="JUSTIFY">The control law of each of the two gain-scheduled controllers was calculated by the <A HREF="progzos.html"><I>ProgZos</I></A> application, desired closed-loop poles being <I>[-2 -2]</I>. Simulation results:</P>
+<CENTER><IMG SRC="gs_demo1_vystup.jpg" ALT="System output corresponding to input and output scheduling, respectively"><BR><BR><IMG SRC="gs_demo1_stav1.jpg" ALT="System states corresponding to input scheduling">&nbsp;&nbsp;<IMG SRC="gs_demo1_stav2.jpg" ALT="System states corresponding to output scheduling"></CENTER>
+
+<H3>Comparison with exact linearization</H3>
+<P ALIGN="JUSTIFY">Simulation of control of a <I>2 tanks without interaction</I> SISO system (see the state-space description above) by different types of controllers: linear controller designed for fixed operating point <I>y0 = 1</I>, input and output gain-scheduled controllers and exact-linearization-based controller. Simulink simulation scheme:</P>
+<CENTER><IMG SRC="gs_demo2_schema.gif" ALT="Simulink scheme"></CENTER>
+<P ALIGN="JUSTIFY">Synthesis of the gain-scheduled controllers and the fixed-point linear controller was carried out through the <A HREF="progzos.html"><I>ProgZos</I></A> application, while the exact linearization control design was performed by the <A HREF="exaktsiso.html"><I>ExaktSiso</I></A> application. Simulation results:</P>
+<CENTER><IMG SRC="gs_demo2_vystupy.jpg" ALT="System outputs corresponding to different controllers"></CENTER>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

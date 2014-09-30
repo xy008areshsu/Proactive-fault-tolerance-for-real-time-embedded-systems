@@ -1,0 +1,7 @@
+dspy.egg-info
+*.pyc
+*.pyo
+dist
+build
+docs/build
+docs/source/api

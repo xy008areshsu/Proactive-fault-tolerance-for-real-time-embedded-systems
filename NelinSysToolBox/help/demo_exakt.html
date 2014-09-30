@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+	<TITLE>Exact linearization - demo simulations</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Exact linearization - demo simulations</H2>
+
+<P ALIGN="JUSTIFY">This part of the <I>NelinSys</I> library contains three demos illustrating the use of its function blocks for simulation of exact linearization control loops. Simulation of chosen example is started automatically, immediately after its selection from the menu (see the following picture) and during its first run it cannot be stopped - modifications of the simulation scheme are allowed only after the first simulation is over.</P>
+<CENTER><IMG SRC="demo_exakt_menu.jpg" ALT="Example selection menu"></CENTER>
+
+<A NAME="siso"></A>
+<H3>Exact linearization of a SISO system</H3>
+<P ALIGN="JUSTIFY">Simulation of exact linearization control of a <I>2 tanks without interaction</I> nonlinear system. The nonlinear system is described by following equations:</P>
+<CENTER><IMG SRC="stavp_siso_vzorec2.gif" ALT="State-space description of the '2 tanks without interaction' system"></CENTER>
+<P ALIGN="JUSTIFY">Simulink simulation scheme:</P>
+<CENTER><IMG SRC="exakt_demo1_schema.gif" ALT="Simulink scheme"></CENTER>
+<P ALIGN="JUSTIFY">The linearizing control law as well as the transformation of state variables were calculated by the <A HREF="exaktsiso.html"><I>ExaktSiso</I></A> application, the linear controller was designed via pole placement, desired closed-loop poles being <I>[-2 -2]</I>. Simulation results:</P>
+<CENTER><IMG SRC="exakt_demo1_vystup.jpg" ALT="System output responses">&nbsp;&nbsp;<IMG SRC="exakt_demo1_stav.jpg" ALT="System states responses"></CENTER>
+
+<A NAME="mimo"></A>
+<H3>Exact linearization of a MIMO system</H3>
+<P ALIGN="JUSTIFY">Simulation of exact linearization control of a MIMO nonlinear system <I>DC motor with separate excitation</I>. The system is described by following equations:</P>
+<CENTER><IMG SRC="exakt_demo2_vzorec.gif" ALT="State-space description of the system"></CENTER>
+<P ALIGN="JUSTIFY">Simulink simulation scheme:</P>
+<CENTER><IMG SRC="exakt_demo2_schema.gif" ALT="Simulink scheme"></CENTER>
+<P ALIGN="JUSTIFY">The linearizing control law as well as the transformation of state variables were calculated by the <A HREF="exaktmimo.html"><I>ExaktMimo</I></A> application, the linear controller with integral actions was designed via pole placement, desired closed-loop poles being <I>[-20 -20 -60 -20 -60]</I>. The simulation shows the rise of the field current at the time instant <I>t<SUB>1</SUB> = 0s</I>, the start of the motor without a load at the time <I>t<SUB>2</SUB> = 0.3s</I>, its load at the time <I>t<SUB>3</SUB> = 2s</I> and the decrease in the field current at the time <I>t<SUB>4</SUB> = 4s</I>. Simulation results:</P>
+<CENTER><IMG SRC="exakt_demo2_vystup1.jpg" ALT="Angular velocity of the motor">&nbsp;&nbsp;<IMG SRC="exakt_demo2_stav.jpg" ALT="State variables of the system"></CENTER>
+
+<H3>System with unstable zero dynamics</H3>
+<P ALIGN="JUSTIFY">Simulation of exact linearization control of a SISO nonlinear system. The system is described by following equations:</P>
+<CENTER><IMG SRC="exakt_demo3_vzorec.gif" ALT="State-space description of the system"></CENTER>
+<P ALIGN="JUSTIFY">Simulink simulation scheme:</P>
+<CENTER><IMG SRC="exakt_demo3_schema.gif" ALT="Simulink scheme"></CENTER>
+<P ALIGN="JUSTIFY">The linearizing control law as well as the transformation of state variables were calculated by the <A HREF="exaktsiso.html"><I>ExaktSiso</I></A> application, the linear controller was designed via pole placement, desired closed-loop poles being <I>[-2 -2]</I>. The system contains unstable internal dynamics, which means that calculated controller is practically useless. The consequences of this instability can be seen from the state responses of the system - the <I>x<SUB>3</SUB></I> variable tends to infinity. Simulation results:</P>
+<CENTER><IMG SRC="exakt_demo3_vystup.jpg" ALT="System output response">&nbsp;&nbsp;<IMG SRC="exakt_demo3_stav.jpg" ALT="System states responses"></CENTER>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,11 @@
+import numpy
+
+from cps import CPS
+
+class LinearCPS(CPS):
+
+    def __init__(self, A, B, K, initX = numpy.mat(numpy.zeros((A.shape[0], 1))), initU = -K * initX):
+        super().__init__(initX, initU)
+        self.A = A
+        self.B = B
+        self.K = K

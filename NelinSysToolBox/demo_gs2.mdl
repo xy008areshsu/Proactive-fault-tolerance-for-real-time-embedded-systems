@@ -1,0 +1,817 @@
+Model {
+  Name			  "demo_gs2"
+  Version		  2.20
+  SimParamPage		  Diagnostics
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "15"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "demo_gs2"
+    Location		    [128, 74, 694, 370]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Step
+      Name		      "Desired\nvalue"
+      Position		      [15, 55, 45, 85]
+      Time		      "5"
+      Before		      "1"
+      After		      "10"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Exact linearization"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [445, 120, 535, 170]
+      Orientation	      down
+      DropShadow	      on
+      NamePlacement	      alternate
+      ShowName		      off
+      ShowPortLabels	      on
+      MaskType		      "Exact linearization"
+      MaskDisplay	      "disp('Exact\\nlinearization');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      none
+      MaskIconUnits	      autoscale
+      System {
+	Name			"Exact linearization"
+	Location		[77, 109, 643, 346]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  Inport
+	  Name			  "w"
+	  Position		  [15, 23, 45, 37]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compensation of\nnonlinearities"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [220, 34, 295, 76]
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Exact "
+"Linearization Blocks/Linearizing control law\nfor SISO systems"
+	  SourceType		  "Linearizing control law for SISO systems"
+	  n			  "2"
+	  vzorec		  "x1/sqrt(x2)+2*sqrt(x1)*v"
+	  vzorecP		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Controlled system"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [335, 15, 465, 90]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Nonlin"
+"ear SISO system\n(State-Space model)"
+	  SourceType		  "Nonlinear SISO system - state-space model"
+	  n			  "2"
+	  F			  "[-sqrt(x1); sqrt(x1)-sqrt(x2)]"
+	  Fp			  "0"
+	  G			  "[1; 0]"
+	  Gp			  "0"
+	  H			  "x2"
+	  Hp			  "0"
+	  pp			  "[0.1; 0.01]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Exact\nlinearization"
+	  Ports			  [1, 0, 0, 0, 0]
+	  Position		  [515, 130, 545, 160]
+	  Floating		  off
+	  Location		  [5, 30, 805, 583]
+	  Open			  off
+	  Grid			  on
+	  TickLabels		  on
+	  ZoomMode		  on
+	  TimeRange		  "auto"
+	  YMin			  "0"
+	  YMax			  "12"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Linear controller"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [85, 19, 170, 66]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Exact "
+"Linearization Blocks/Linear controller\nfor SISO systems"
+	  SourceType		  "State-space controller for an \"r-integrato"
+"r\" SISO system"
+	  r			  "2"
+	  kor			  "[-2 -2]"
+	  integ			  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "State-coordinates transformation"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [335, 180, 395, 210]
+	  Orientation		  left
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Exact "
+"Linearization Blocks/Coordinates transformation\nfor SISO systems"
+	  SourceType		  "Coordinates transformation for SISO systems"
+	  n			  "2"
+	  r			  "2"
+	  Z			  "[x2; sqrt(x1)-sqrt(x2)]"
+	  Zp			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [515, 28, 545, 42]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Compensation of\nnonlinearities"
+	  SrcPort		  1
+	  DstBlock		  "Controlled system"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Linear controller"
+	  SrcPort		  1
+	  DstBlock		  "Compensation of\nnonlinearities"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "State-coordinates transformation"
+	  SrcPort		  1
+	  Points		  [-270, 0; 0, -140]
+	  DstBlock		  "Linear controller"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  2
+	  Points		  [20, 0; 0, 75]
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "State-coordinates transformation"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [-310, 0; 0, -80]
+	    DstBlock		    "Compensation of\nnonlinearities"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Exact\nlinearization"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "w"
+	  SrcPort		  1
+	  DstBlock		  "Linear controller"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [251, 132]
+	  Text			  "LINEARIZATION LOOP"
+	}
+	Annotation {
+	  Position		  [116, 182]
+	  Text			  "CONTROL LOOP"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Input scheduling"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [235, 120, 325, 170]
+      Orientation	      down
+      DropShadow	      on
+      NamePlacement	      alternate
+      ShowName		      off
+      ShowPortLabels	      on
+      MaskType		      "Input scheduling"
+      MaskDisplay	      "disp('Input\\nscheduling');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      none
+      MaskIconUnits	      autoscale
+      System {
+	Name			"Input scheduling"
+	Location		[175, 85, 655, 282]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  Inport
+	  Name			  "w"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Controlled system"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [220, 35, 350, 110]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Nonlin"
+"ear SISO system\n(State-Space model)"
+	  SourceType		  "Nonlinear SISO system - state-space model"
+	  n			  "2"
+	  F			  "[-sqrt(x1); sqrt(x1)-sqrt(x2)]"
+	  Fp			  "0"
+	  G			  "[1; 0]"
+	  Gp			  "0"
+	  H			  "x2"
+	  Hp			  "0"
+	  pp			  "[0.1; 0.01]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Input\nscheduling"
+	  Ports			  [1, 0, 0, 0, 0]
+	  Position		  [420, 125, 450, 155]
+	  Floating		  off
+	  Location		  [1, 18, 801, 571]
+	  Open			  off
+	  Grid			  on
+	  TickLabels		  on
+	  ZoomMode		  on
+	  TimeRange		  "auto"
+	  YMin			  "0"
+	  YMax			  "12"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Input scheduling"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [90, 49, 170, 96]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Gain S"
+"cheduling Blocks/State-space gain-scheduling\ncontroller for SISO systems"
+	  SourceType		  "State-space gain-scheduling controller for "
+"SISO systems"
+	  n			  "2"
+	  vzorec		  "-(-w^(1/2)+4*w)/w*x1+4*w+1/2*(-w^(1/2)+8*w-"
+"16*w^(3/2))/w*(x2-w)"
+	  vzorecP		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [415, 48, 445, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Input scheduling"
+	  SrcPort		  1
+	  DstBlock		  "Controlled system"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 50]
+	  Branch {
+	    DstBlock		    "Input\nscheduling"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [-320, 0; 0, -55]
+	    DstBlock		    "Input scheduling"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "w"
+	  SrcPort		  1
+	  DstBlock		  "Input scheduling"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Linear controller"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [130, 120, 220, 170]
+      Orientation	      down
+      DropShadow	      on
+      NamePlacement	      alternate
+      ShowName		      off
+      ShowPortLabels	      on
+      MaskType		      "Linear controller"
+      MaskDisplay	      "disp('Linear\\ncontroller');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      none
+      MaskIconUnits	      autoscale
+      System {
+	Name			"Linear controller"
+	Location		[175, 85, 655, 282]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  Inport
+	  Name			  "w"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Controlled system"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [220, 35, 350, 110]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Nonlin"
+"ear SISO system\n(State-Space model)"
+	  SourceType		  "Nonlinear SISO system - state-space model"
+	  n			  "2"
+	  F			  "[-sqrt(x1); sqrt(x1)-sqrt(x2)]"
+	  Fp			  "0"
+	  G			  "[1; 0]"
+	  Gp			  "0"
+	  H			  "x2"
+	  Hp			  "0"
+	  pp			  "[0.1; 0.01]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Linear\ncontroller"
+	  Ports			  [1, 0, 0, 0, 0]
+	  Position		  [420, 125, 450, 155]
+	  Floating		  off
+	  Location		  [1, 18, 801, 571]
+	  Open			  off
+	  Grid			  on
+	  TickLabels		  on
+	  ZoomMode		  on
+	  TimeRange		  "auto"
+	  YMin			  "0"
+	  YMax			  "12"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Linear controller\n(fixed operating point y"
+"0=1)"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [95, 49, 175, 96]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Gain S"
+"cheduling Blocks/State-space gain-scheduling\ncontroller for SISO systems"
+	  SourceType		  "State-space gain-scheduling controller for "
+"SISO systems"
+	  n			  "2"
+	  vzorec		  "1/2+8*w-3*x1-9/2*x2"
+	  vzorecP		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [415, 48, 445, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "w"
+	  SrcPort		  1
+	  DstBlock		  "Linear controller\n(fixed operating point y"
+"0=1)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 50]
+	  Branch {
+	    Points		    [-330, 0; 0, -55]
+	    DstBlock		    "Linear controller\n(fixed operating point"
+" y0=1)"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Linear\ncontroller"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Linear controller\n(fixed operating point y"
+"0=1)"
+	  SrcPort		  1
+	  DstBlock		  "Controlled system"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [5, 1, 0, 0, 0]
+      Position		      [15, 215, 545, 220]
+      Orientation	      down
+      BackgroundColor	      black
+      NamePlacement	      alternate
+      ShowName		      off
+      Inputs		      "5"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Output scheduling"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [341, 120, 429, 170]
+      Orientation	      down
+      DropShadow	      on
+      NamePlacement	      alternate
+      ShowName		      off
+      ShowPortLabels	      on
+      MaskType		      "Output scheduling"
+      MaskDisplay	      "disp('Output\\nscheduling');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      none
+      MaskIconUnits	      autoscale
+      System {
+	Name			"Output scheduling"
+	Location		[175, 85, 655, 282]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  Inport
+	  Name			  "w"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Controlled system"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [220, 35, 350, 110]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Nonlin"
+"ear SISO system\n(State-Space model)"
+	  SourceType		  "Nonlinear SISO system - state-space model"
+	  n			  "2"
+	  F			  "[-sqrt(x1); sqrt(x1)-sqrt(x2)]"
+	  Fp			  "0"
+	  G			  "[1; 0]"
+	  Gp			  "0"
+	  H			  "x2"
+	  Hp			  "0"
+	  pp			  "[0.1; 0.01]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Output\nscheduling"
+	  Ports			  [1, 0, 0, 0, 0]
+	  Position		  [420, 125, 450, 155]
+	  Floating		  off
+	  Location		  [5, 30, 805, 583]
+	  Open			  off
+	  Grid			  on
+	  TickLabels		  on
+	  ZoomMode		  on
+	  TimeRange		  "auto"
+	  YMin			  "0"
+	  YMax			  "12"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Output scheduling"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [90, 49, 170, 96]
+	  DropShadow		  on
+	  SourceBlock		  "NelinSys/Nonlinear Systems Synthesis/Gain S"
+"cheduling Blocks/State-space gain-scheduling\ncontroller for SISO systems"
+	  SourceType		  "State-space gain-scheduling controller for "
+"SISO systems"
+	  n			  "2"
+	  vzorec		  "-(-x2^(1/2)+4*x2)/x2*x1+8*x2^(1/2)*(w-x2)+4"
+"*x2"
+	  vzorecP		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [415, 48, 445, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "w"
+	  SrcPort		  1
+	  DstBlock		  "Output scheduling"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Controlled system"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, 50]
+	  Branch {
+	    Points		    [-320, 0; 0, -55]
+	    DstBlock		    "Output scheduling"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Output\nscheduling"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Output scheduling"
+	  SrcPort		  1
+	  DstBlock		  "Controlled system"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System output"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [475, 245, 505, 275]
+      Floating		      off
+      Location		      [129, 319, 695, 573]
+      Open		      on
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "15              "
+      YMin		      "0               "
+      YMax		      "12              "
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Output scheduling"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Input scheduling"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Linear controller"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Exact linearization"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Desired\nvalue"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	Points			[105, 0]
+	Branch {
+	  DstBlock		  "Linear controller"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [105, 0]
+	  Branch {
+	    DstBlock		    "Input scheduling"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [105, 0]
+	    Branch {
+	      DstBlock		      "Output scheduling"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [105, 0]
+	      DstBlock		      "Exact linearization"
+	      DstPort		      1
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [0, 35]
+      DstBlock		      "System output"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [271, 27]
+      Text		      "Comparison of different methods for nonlinear s"
+"ystems synthesis"
+      FontSize		      14
+      FontWeight	      bold
+    }
+    Annotation {
+      Position		      [266, 47]
+      Text		      "Control of \"2 tanks without interaction\" syst"
+"em"
+      FontSize		      14
+    }
+    Annotation {
+      Position		      [91, 192]
+      Text		      "yellow"
+    }
+    Annotation {
+      Position		      [196, 192]
+      Text		      "purple"
+    }
+    Annotation {
+      Position		      [301, 192]
+      Text		      "cyan"
+    }
+    Annotation {
+      Position		      [401, 192]
+      Text		      "red"
+    }
+    Annotation {
+      Position		      [511, 192]
+      Text		      "green"
+    }
+  }
+}

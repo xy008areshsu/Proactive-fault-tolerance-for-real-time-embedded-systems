@@ -1,0 +1,166 @@
+Model {
+  Name			  "demo_typ1"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "100"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "1e-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "demo_typ1"
+    Location		    [6, 74, 396, 320]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Reference
+      Name		      "Phase-Plane\nPortrait"
+      Ports		      [2, 0, 0, 0, 0]
+      Position		      [295, 100, 365, 180]
+      SourceBlock	      "NelinSys/Nonlinear Systems Analysis/Vector XY G"
+"raph\nfor Phase Portraits"
+      SourceType	      "Vector XY Graph for Phase-Plane Portraits"
+      xmin		      "0"
+      xmax		      "25"
+      ymin		      "-1"
+      ymax		      "1"
+      st		      "-1"
+      use_grid		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Phase-Plane Analysis Computation"
+      Ports		      [0, 2, 0, 0, 0]
+      Position		      [20, 101, 185, 179]
+      SourceBlock	      "NelinSys/Nonlinear Systems Analysis/Phase Portr"
+"aits of 1st-Order Loops\nwith Hard Nonlinearities"
+      SourceType	      "Phase-Plane Portrait of a 1st-Order Loop with a"
+" Hard Nonlinearity"
+      num		      "0.01"
+      den		      "[1 0.01]"
+      nelintyp		      "Relay with hysteresis"
+      nelinpar		      "[-1 0 1 100]"
+      w			      "20"
+      x10		      "[0 25]"
+    }
+    Line {
+      SrcBlock		      "Phase-Plane Analysis Computation"
+      SrcPort		      2
+      DstBlock		      "Phase-Plane\nPortrait"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Phase-Plane Analysis Computation"
+      SrcPort		      1
+      DstBlock		      "Phase-Plane\nPortrait"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [196, 22]
+      Text		      "Demo: Phase-Plane Analysis of a 1st-Order Loop"
+      FontSize		      14
+    }
+    Annotation {
+      Position		      [271, 47]
+      Text		      "100y'(t) + y(t) = u(t)"
+      FontSize		      14
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [276, 67]
+      Text		      "relay with hysteresis"
+      FontSize		      14
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [151, 47]
+      Text		      "linear part:"
+      FontSize		      14
+    }
+    Annotation {
+      Position		      [146, 67]
+      Text		      "nonlinearity:"
+      FontSize		      14
+    }
+  }
+}

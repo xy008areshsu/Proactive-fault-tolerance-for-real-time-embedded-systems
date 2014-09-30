@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+	<TITLE>Linear controller for SISO systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Linear controller for SISO systems</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">Block works as linear state-space controller designed for <I>r-integrator</I> SISO system given by state-space description in 1st&nbsp;Frobenius form i.e. in the form<BR><BR>
+<CENTER><IMG SRC="ppreg_siso_system.gif" ALT="State-space description of an 'r-integrator' system"></CENTER>
+<P ALIGN="JUSTIFY">The controller is designed via pole placement during the initialization of the block, desired poles has to be specified as parameters (see below). The block is typically used in outer loop of the exact linearization scheme for SISO systems (exact linearization procedure transforms a nonlinear SISO system to a linear system of the <I>r-integrator</I>-in-1st-Frobenius-form type).</P>
+<P ALIGN="JUSTIFY"><FONT COLOR="Red"><U>Important remark:</U> This block is intended to control linear systems of the <I>r-integrator</I> type in 1st Frobenius form only and <B>does not work correctly with other systems</B>!</FONT></P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="ppreg_siso_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>Linear system order</I><DD><P ALIGN="JUSTIFY">Positive integer specifying the number of state variables of the linear system i.e. the length of the system states vector.</P>
+	<DT><I>Desired poles of closed-loop system</I><DD><P ALIGN="JUSTIFY">Vector of values determining the desired dynamics of the closed-loop system. The length of the vector i.e. the number of desired poles must be equal to system order (if controller without integral action is used) or one greater than system order (if controller includes integral action).</P>
+	<DT><I>Controller includes integral action</I><DD><P ALIGN="JUSTIFY">Checking this field means that the state-space controller will be extended so as to include integral action. Controller with integral action is able to cancel the influence of disturbances to the system output <I>y</I>.</P>
+</DL>
+
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">See demo <A HREF="demo_exakt.html#siso"><I>Exact linearization of a SISO system</I></A></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="ppreg_mimo.html"><I>Linear controller for MIMO systems</I></A>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

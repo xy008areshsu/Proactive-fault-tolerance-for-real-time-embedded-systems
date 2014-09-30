@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+	<TITLE>Phase-plane portraits of 1st-order loops with hard nonlinearities</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Phase-plane portraits of 1st-order loops with hard nonlinearities</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">Block calculates numeric solution of a 1st-order nonlinear system with structure according to the picture below - the loop consists of a 1st-order linear system and an isolated hard nonlinearity. As to the type of the nonlinearity, there are four possible options: ideal relay, saturation, relay with dead-zone and relay with hysteresis.</P>
+<CENTER><IMG SRC="fazrov_typ1_obvod.gif" ALT="1st-order loop with hard nonlinearity"></CENTER>
+<P ALIGN="JUSTIFY">The time interval in which the solution is calculated is specified by Simulink simulation parameters, however, if either <I>NaN</I> or <I>Inf</I> value is reached during the simulation, it is stopped immediately. The block is usually used in combination with the <I>Vector XY Graph for Phase Portraits</I> block that plots the calculated solution in phase plane, but it can also co-operate with other blocks (e.g. <I>Selector</I> or <I>Scope</I>) in order to treat phase trajectories individually.</P>
+<P ALIGN="JUSTIFY">The block has two vector outputs: <I>y(t) = x1(t)</I> and <I>y'(t) = x2(t)</I> i.e. vectors of horizontal and vertical coordinates of the phase-plane portrait corresponding to different initial conditions.</P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="fazrov_typ1_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>Linear part - transfer function numerator</I> and <I>denominator</I></DT><DD><P ALIGN="JUSTIFY">
+Coefficients of the numerator and the denominator of the transfer function of the linear part of the loop. The block requires two coefficients for the denominator (a vector with two elements) and one coefficient for the numerator.</P></DD>
+	<DT><I>Nonlinear part - nonlinearity type</I></DT><DD><P ALIGN="JUSTIFY">Dropdown menu for selection of the nonlinearity type. There are following four options:</P></DD></DL><CENTER><IMG SRC="fazrov_typnl_nelinearity.jpg" ALT="Ideal relay, Saturation, Relay with dead-zone, Relay with hysteresis"></CENTER><DL>
+	<DT><I>Nonlinear part - parameters</I></DT><DD><P ALIGN="JUSTIFY">Vector of parameters determining the characteristics and the behaviour of the nonlinearity; the number of the parameters depends on the nonlinearity type. To understand the meaning of these parameters, see the following table:<BR><BR>
+<CENTER><TABLE BORDER="1" CELLPADDING="5">
+<TR>
+	<TH>Nonlinearity type</TH>
+	<TH>Parameters</TH>
+	<TH>Parameter definitions</TH>
+</TR>
+<TR>
+	<TD>Ideal relay</TD>
+	<TD><I>[k1 k2]</I></TD>
+	<TD><I>u = k1</I> if <I>e &lt; 0</I>,<BR><I>u = k2</I> if <I>e &gt;= 0</I></TD>
+</TR>
+<TR>
+	<TD>Saturation</TD>
+	<TD><I>[b1 k1 b2 k2]</I></TD>
+	<TD><I>u = k1</I> if <I>e &lt;= b1</I>,<BR><I>u = k2</I> if <I>e &gt;= b2</I>,<BR><I>u = (k2-k1)/(b2-b1)*e + k1 - b1*(k2-k1)/(b2-b1)</I> otherwise</TD>
+</TR>
+<TR>
+	<TD>Relay with dead-zone</TD>
+	<TD><I>[b1 k1 b2 k2]</I></TD>
+	<TD><I>u = k1</I> if <I>e &lt;= b1</I>,<BR><I>u = 0</I> if <I>b1 &lt; e &lt; b2</I>,<BR><I>u = k2</I> if <I>e &gt;= b2</I></TD>
+</TR>
+<TR>
+	<TD>Relay with hysteresis</TD>
+	<TD><I>[b1 k1 b2 k2]</I></TD>
+	<TD><I>u = k1</I> if <I>e &lt;= b1</I>,<BR><I>u = k1</I> if <I>b1 &lt; e &lt; b2</I> a <I>e' &gt; 0</I>,<BR><I>u = k2</I> if <I>b1 &lt; e &lt; b2</I> a <I>e' &lt;= 0</I>,<BR><I>u = k2</I> if <I>e &gt;= b2</I></TD>
+</TR>
+</TABLE></CENTER></P></DD>
+	<DT><I>Setpoint</I></DT><DD><P ALIGN="JUSTIFY">Desired value (denoted as <I>w</I> in the introductory picture). This value is often equal to zero.</P></DD>
+	<DT><I>Initial conditions</I></DT><DD><P ALIGN="JUSTIFY">Real vector determining initial points of phase trajectories. Elements of the vector correspond to the <I>x1</I>-coordinates, the <I>x2</I>s are computed so that the points belong to system phase-plane trajectories. The size of the initial conditions vector determines the number of simultaneously running calculations.</P></DD>
+</DL>
+
+<A NAME="priklad"></A>
+<H3>Usage example</H3>
+<CENTER><IMG SRC="fazrov_typ1_priklad1.jpg" ALT="Simulation of a nonlinear loop with hard nonlinearity"></CENTER>
+<P ALIGN="JUSTIFY">Simulink scheme and phase-plane portrait for above nonlinear loop, initial conditions being <FONT COLOR="Blue"><I>x1(0) = 0</I></FONT> and <FONT COLOR="Red"><I>x2(0) = 25</I></FONT>. Setpoint <I>w = 20</I>.<BR><BR>
+<CENTER><IMG SRC="fazrov_typ1_priklad.gif" ALT="Simulink scheme"><BR><IMG SRC="fazrov_typ1_priklad.jpg" ALT="Phase-plane portrait"></CENTER></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="fazrov_typnl.html"><I>Phase-plane portraits of 2nd-order loops with hard nonlinearities</I></A></LI>
+<LI><A HREF="fazrov_auton1.html"><I>Phase-plane portraits of 1st-order autonomous systems</I></A></LI>
+<LI><A HREF="fazrov_auton2.html"><I>Phase-plane portraits of 2nd-order autonomous systems</I></A></LI>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

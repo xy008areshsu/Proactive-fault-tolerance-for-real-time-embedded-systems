@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+	<TITLE>Phase-plane portraits of 1st-order autonomous systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Phase-plane portraits of 1st-order autonomous systems</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">Block calculates numeric solution of a 1st-order nonlinear autonomous system. The time interval in which the solution is calculated is specified by Simulink simulation parameters, however, if either <I>NaN</I> or <I>Inf</I> value is reached during the simulation, it is stopped immediately. The block is usually used in combination with the <I>Vector XY Graph for Phase Portraits</I> block that plots the calculated solution in phase plane, but it can also co-operate with other blocks (e.g. <I>Selector</I> or <I>Scope</I>) in order to treat phase trajectories individually.</P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="fazrov_auton1_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>System differential equation: y' + f(y) = 0</I><DD><P ALIGN="JUSTIFY">Differential equation of a 1st-order nonlinear autonomous system in symbolic form. The convention to write mathematical operations is the same as the one used by MATLAB's Symbolic Math Toolbox. System output is denoted as <I>y</I>.</P>
+	<DT><I>Initial conditions</I><DD><P ALIGN="JUSTIFY">Real vector determining initial points of phase trajectories. Elements of the vector correspond to the <I>x1</I>-coordinates, the <I>x2</I>s are computed so that the points belong to system phase-plane trajectories. The size of the initial conditions vector determines the number of calculations running simultaneously.</P>
+</DL>
+
+<A NAME="priklad"></A>
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">Simulink scheme and phase-plane portrait of nonlinear autonomous system <I>y'(t) - y<SUP>2</SUP>(t) + 1 = 0</I> with initial conditions being <FONT COLOR="Blue"><I>y(0) = -10</I></FONT>, <FONT COLOR="Red"><I>y(0) = 0.9999</I></FONT>, <FONT COLOR="Green"><I>y(0) = 1.000001</I></FONT>.<BR><BR>
+<CENTER><IMG SRC="fazrov_auton1_priklad.gif" ALT="Simulink simulation scheme"><BR><IMG SRC="fazrov_auton1_priklad.jpg" ALT="Phase-plane portrait"></CENTER></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="fazrov_auton2.html"><I>Phase-plane portraits of 2nd-order autonomous systems</I></A>
+<LI><A HREF="fazrov_typ1.html"><I>Phase-plane portraits of 1st-order loops with hard nonlinearities</I></A>
+<LI><A HREF="fazrov_typnl.html"><I>Phase-plane portraits of 2nd-order loops with hard nonlinearities</I></A>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

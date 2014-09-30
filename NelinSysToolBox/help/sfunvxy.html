@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+	<TITLE>Vector XY Graph for Phase Portraits</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Vector XY Graph for Phase Portraits</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">This block is a more general equivalent of the <I>XY Graph</I> block from the <I>Simulink/Sinks</I> library - unlike <I>XY Graph</I>, it is not restricted to scalar inputs, it can handle vector <I>X</I> and <I>Y</I> as well (of course, the two vectors need to have the same number of elements). In every time instant <I>t</I> during the simulation, for a couple of vectors <I>X&nbsp;=&nbsp;(x1,x2,...,xN)</I>, <I>Y&nbsp;=&nbsp;(y1,y2,...,yN)</I>, <I>N</I> points <I>(x1,y1)</I>, <I>(x2,y2)</I>, ..., <I>(xN,yN)</I> are drawn simultaneously. In order to be able to distinguish individual curves, they are drawn in colours - 8 different colours are used in this order: <FONT COLOR="Blue">blue</FONT>, <FONT COLOR="Red">red</FONT>, <FONT COLOR="#00FF00">green</FONT>, <FONT COLOR="#FF00FF">violet</FONT>, <FONT COLOR="#00FFFF">cyan</FONT>, <FONT COLOR="Black">black</FONT>, <FONT COLOR="Yellow">yellow</FONT>, <FONT COLOR="#CCCCCC">gray</FONT> - if <I>N &gt; 8</I>, these colours are repeated in given order.</P>
+<P ALIGN="JUSTIFY">The block is typically used to display a phase-plane portrait of a system - if this is the case, then each phase-plane trajectory corresponds to one pair of elements of the vectors <I>X</I> and <I>Y</I>.</P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="sfunvxy_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>x-min, x-max, y-min, y-max</I></DT><DD><P ALIGN="JUSTIFY">Real numbers determining the display range i.e. the <I>x</I> and <I>y</I> margins. As the block is most typically used to display phase-plane portraits, the axes are denoted as <I>x1</I> and <I>x2</I> in the graphic plot.</DD></P>
+	<DT><I>Sample time</I></DT><DD><P ALIGN="JUSTIFY">Sampling period - the meaning of this field is the same as the meaning of corresponding field of the <I>XY Graph</I> block. If the sampling period does not need to be specified explicitly, set this field to <I>-1</I>.</DD></P>
+	<DT><I>Show grid</I></DT><DD><P ALIGN="JUSTIFY">Checking this box will display the grid (similarly as MATLAB command <I>grid on</I> does).</DD></P>
+</DL>
+
+<H3>Usage examples</H3>
+<P ALIGN="JUSTIFY">The block is used in following Simulink schemes:</P>
+<UL>
+<LI><A HREF="fazrov_auton1.html#priklad"><I>Phase-plane portraits of 1st-order autonomous systems</I></A></LI>
+<LI><A HREF="fazrov_auton2.html#priklad"><I>Phase-plane portraits of 2nd-order autonomous systems</I></A></LI>
+<LI><A HREF="fazrov_typ1.html#priklad"><I>Phase-plane portraits of 1st-order loops with hard nonlinearities</I></A></LI>
+<LI><A HREF="fazrov_typnl.html#priklad"><I>Phase-plane portraits of 2nd-order loops with hard nonlinearities</I></A></LI>
+</UL>
+
+<H3>See also</H3>
+<UL>
+<LI><I>XY Graph (from Simulink/Sinks library)</I>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

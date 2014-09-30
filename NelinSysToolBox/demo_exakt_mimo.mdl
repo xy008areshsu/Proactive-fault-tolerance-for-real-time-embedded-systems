@@ -1,0 +1,350 @@
+Model {
+  Name			  "demo_exakt_mimo"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  on
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "5.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  CloseFcn		  ";slview('closediagram',bdroot);"
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "demo_exakt_mimo"
+    Location		    [-1, 74, 635, 478]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Step
+      Name		      " Desired values:\n    angular speed & field cur"
+"rent"
+      Position		      [15, 80, 45, 110]
+      Orientation	      down
+      Time		      "[0.3 4]"
+      Before		      "[0 0.26]"
+      After		      "[10 0.2]"
+    }
+    Block {
+      BlockType		      Step
+      Name		      " Disturbance (load)"
+      Position		      [295, 90, 325, 120]
+      Orientation	      down
+      Time		      "2"
+      Before		      "0"
+      After		      "0.2"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Angular\nspeed"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [575, 105, 605, 135]
+      Floating		      off
+      Location		      [501, 30, 795, 233]
+      Open		      on
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "5               "
+      YMin		      "0               "
+      YMax		      "15              "
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Compensation of\nnonlinearities"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [205, 139, 280, 181]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Linearizing control law\nfor MIMO systems"
+      SourceType	      "Linearizing control law for MIMO systems"
+      n			      "3"
+      nout		      "2"
+      vzorec		      "[1167173990052591/17592186044416000*x1*x3+1/40*"
+"x2+2/421245/x3*v1-1/2500*x2/x3*v2; 153846/9799*x3+10000/9799*v2]"
+      vzorecP		      "0"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 2, 0, 0, 0]
+      Position		      [530, 139, 535, 181]
+      BackgroundColor	      black
+      ShowName		      off
+      Outputs		      "2"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Field\ncurrent"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [575, 185, 605, 215]
+      Floating		      off
+      Location		      [501, 220, 795, 419]
+      Open		      on
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "5"
+      YMin		      "0"
+      YMax		      "0.3"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Linear controller"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [60, 124, 145, 171]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Linear controller\nfor MIMO systems"
+      SourceType	      "State-space controller for an integrator-type M"
+"IMO system"
+      r			      "[2 1]"
+      nout		      "2"
+      kor		      "[-20 -20 -60 -20 -60]"
+      integ		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Nonlinear MIMO system\n(DC motor)"
+      Ports		      [2, 2, 0, 0, 0]
+      Position		      [360, 140, 490, 215]
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Nonlinear "
+"MIMO system\nwith disturbance"
+      SourceType	      "Nonlinear MIMO system with disturbance - state-"
+"space model"
+      n			      "3"
+      F			      "[84.249*x2*x3; -165.8654*x1*x3-62.5*x2; -15.384"
+"6*x3]"
+      Fp		      "0"
+      G			      "[0 0; 2500 0; 0 0.9799]"
+      Gp		      "0"
+      H			      "[x1; x3]"
+      Hp		      "0"
+      E			      "[-31.746*z1; 0; 0]"
+      Ep		      "0"
+      pp		      "[0; 0; 1e-9]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "State-coordinates transformation"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [395, 340, 455, 370]
+      Orientation	      left
+      DropShadow	      on
+      SourceBlock	      "NelinSys/Nonlinear Systems Synthesis/Exact Line"
+"arization Blocks/Coordinates transformation\nfor MIMO systems"
+      SourceType	      "Coordinates transformation for MIMO systems"
+      n			      "3"
+      r			      "[2 1]"
+      Z			      "[x1; 84.249*x2*x3; x3]"
+      Zp		      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System\nstates"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [575, 280, 605, 310]
+      Floating		      off
+      Location		      [499, 395, 795, 594]
+      Open		      on
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "5               "
+      YMin		      "0               "
+      YMax		      "15              "
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Linear controller"
+      SrcPort		      1
+      DstBlock		      "Compensation of\nnonlinearities"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "State-coordinates transformation"
+      SrcPort		      1
+      Points		      [-360, 0; 0, -195]
+      DstBlock		      "Linear controller"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      " Desired values:\n    angular speed & field cur"
+"rent"
+      SrcPort		      1
+      Points		      [0, 20]
+      DstBlock		      "Linear controller"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Nonlinear MIMO system\n(DC motor)"
+      SrcPort		      2
+      Points		      [35, 0; 0, 100]
+      Branch {
+	Points			[0, 60]
+	DstBlock		"State-coordinates transformation"
+	DstPort			1
+      }
+      Branch {
+	Points			[-370, 0; 0, -125]
+	DstBlock		"Compensation of\nnonlinearities"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"System\nstates"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Compensation of\nnonlinearities"
+      SrcPort		      1
+      DstBlock		      "Nonlinear MIMO system\n(DC motor)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      " Disturbance (load)"
+      SrcPort		      1
+      Points		      [0, 70]
+      DstBlock		      "Nonlinear MIMO system\n(DC motor)"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Nonlinear MIMO system\n(DC motor)"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [20, 0]
+      DstBlock		      "Angular\nspeed"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [20, 0]
+      DstBlock		      "Field\ncurrent"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [226, 282]
+      Text		      "LINEARIZATION LOOP"
+    }
+    Annotation {
+      Position		      [81, 342]
+      Text		      "CONTROL LOOP"
+    }
+    Annotation {
+      Position		      [316, 32]
+      Text		      "Exact linearization of a MIMO system - demo sim"
+"ulation"
+      FontSize		      14
+      FontWeight	      bold
+    }
+    Annotation {
+      Position		      [316, 52]
+      Text		      "Control of a \"DC motor with independent excita"
+"tion\" MIMO system"
+      FontSize		      14
+    }
+  }
+}

@@ -1,0 +1,13 @@
+#include <Python.h>
+#include <iostream>
+#include <math.h>
+
+static PyObject *extError;
+
+int Prime(int n)
+{
+  if(n <= 1) {
+    std::cout<<"Not Prime" << std::endl;
+    return -1;
+  }
+}

@@ -1,0 +1,2924 @@
+Library {
+  Name			  "NelinSys"
+  Version		  2.20
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "NelinSys"
+    Location		    [162, 97, 626, 396]
+    Open		    on
+    ToolBar		    off
+    StatusBar		    off
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      SubSystem
+      Name		      "Nonlinear Systems Analysis"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [48, 84, 213, 182]
+      DropShadow	      on
+      ShowPortLabels	      on
+      MaskType		      "Nonlinear Systems Analysis"
+      MaskDisplay	      "disp('Analysis');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      none
+      MaskIconUnits	      autoscale
+      System {
+	Name			"Nonlinear Systems Analysis"
+	Location		[46, 104, 683, 386]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Demo simulations"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [516, 147, 613, 191]
+	  DropShadow		  on
+	  OpenFcn		  "demos_fp"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp('Phase Plane\\nAnalysis')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "Demo simulations"
+	    Location		    [378, 306, 630, 435]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Phase Portraits of 1st-Order Loops\nwith Ha"
+"rd Nonlinearities"
+	  Ports			  [0, 2, 0, 0, 0]
+	  Position		  [270, 31, 435, 109]
+	  ShowPortLabels	  on
+	  MaskType		  "Phase-Plane Portrait of a 1st-Order Loop wi"
+"th a Hard Nonlinearity"
+	  MaskDescription	  "\nComputation of a phase-plane portrait of "
+"a closed loop system consisting of an isolated hard nonlinearity and a linear"
+" part specified by a 1st-order transfer function.\n\nBlock has two vector out"
+"puts, y = x1 (system output) and y' = x2 (derivative of the system output), i"
+".e. horizontal and vertical coordinates of phase-plane trajectories correspon"
+"ding to different initial conditions - the initial conditions themselves are "
+"specified by the vector x1(0) below.\n\nIt is recommended to use the \"Vector"
+" XY Graph for Phase Portraits\" block to plot the portrait graphically, since"
+" the \"XY Graph\" block from Sinks library cannot handle vector inputs.\n\nFo"
+"r a detailed description of the block, click \"Help\" button.\n\n"
+	  MaskHelp		  "web(fullfile(cd,'help','fazrov_typ1.html'))"
+";"
+	  MaskPromptString	  "Linear part - transfer function numerator:|"
+"Linear part - transfer function denominator:|Nonlinear part - nonlinearity ty"
+"pe:|Nonlinear part - parameters:|Setpoint:|Initial conditions: x1(0) = y(0) ="
+	  MaskStyleString	  "edit,edit,popup(Ideal relay|Saturation|Rela"
+"y with dead-zone|Relay with hysteresis),edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskVariables		  "num=@1;den=@2;nelintyp=@3;nelinpar=@4;w=@5;"
+"x10=@6;"
+	  MaskInitialization	  "if (length(den) ~= 2) | (length(num) ~= 1) "
+"| (den(1) == 0)\n    error('Linear part must be a 1st-order system!');\nend\n"
+"\nif (nelintyp == 1) & (length(nelinpar) ~= 2)\n    error('Invalid number of "
+"nonlinearity parameters!');\nend\nif (nelintyp > 1) & ((length(nelinpar) ~= 4"
+") | nelinpar(1) > nelinpar(3))\n    error('Invalid nonlinearity parameters!')"
+";\nend\n\nfor k = 1:length(x10)\n    if (w-x10(k)>nelinpar(1)) & (w-x10(k)<ne"
+"linpar(3))\n        error(['Invalid initial conditions!']);\n    end\nend"
+	  MaskDisplay		  "disp('Phase Portraits of\\n1st-Order Loops"
+"\\nwith Hard Nonlinearities');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "0.01|[1 0.01]|Relay with hysteresis|[-1 0 1"
+" 100]|20|[0 25]"
+	  System {
+	    Name		    "Phase Portraits of 1st-Order Loops\nwith "
+"Hard Nonlinearities"
+	    Location		    [209, 285, 475, 460]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3, 0, 0, 0]
+	      Position		      [185, 18, 190, 162]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[length(x10) length(x10) 1]"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      Ports		      [0, 1, 0, 0, 0]
+	      Position		      [20, 55, 150, 125]
+	      FunctionName	      "fazrov_typ1"
+	      Parameters	      "num,den,w,nelintyp,nelinpar,x10"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Stop
+	      Name		      "Stop Simulation"
+	      Position		      [220, 117, 255, 153]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x1(t)"
+	      Position		      [220, 38, 250, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x2(t)"
+	      Position		      [220, 83, 250, 97]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "x1(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "x2(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Stop Simulation"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Phase Portraits of 1st-Order Systems"
+	  Ports			  [0, 2, 0, 0, 0]
+	  Position		  [35, 31, 200, 109]
+	  ShowPortLabels	  on
+	  MaskType		  "Phase-Plane Portrait of a 1st-Order Autonom"
+"ous System"
+	  MaskDescription	  "\nComputation of a phase-plane portrait of "
+"a 1st-order nonlinear autonomous system. The system is specified by a differe"
+"ntial equation y' + f(y) = 0, where y(t) is the output of the system and f(y)"
+" is arbitrary continuous function.\n\nBlock has two vector outputs, y = x1 an"
+"d y' = x2, i.e. horizontal and vertical coordinates of phase-plane trajectori"
+"es corresponding to different initial conditions - the initial conditions the"
+"mselves are specified by the vector x1(0) below.\n\nIt is recommended to use "
+"the \"Vector XY Graph for Phase Portraits\" block to plot the portrait graphi"
+"cally, since the \"XY Graph\" block from Sinks library cannot handle vector i"
+"nputs.\n\nFor a detailed description of the block, click \"Help\" button.\n\n"
+	  MaskHelp		  "web(fullfile(cd,'help','fazrov_auton1.html'"
+"));"
+	  MaskPromptString	  "System differential equation: y' + f(y) = 0"
+":|Initial conditions: y(0) = x1(0) ="
+	  MaskStyleString	  "edit,edit"
+	  MaskTunableValueString  "on,on"
+	  MaskVariables		  "vRovnica=&1;x10=@2;"
+	  MaskInitialization	  "% Overenie, ci system nie je vyssieho radu "
+"%\nif (~strcmp(findsym(sym(vRovnica)),'Dy, y') & ~strcmp(findsym(sym(vRovnica"
+")),'Dy'))\n	error('Error: Invalid differential equation!');\nend\n\n% "
+"Vyjadrenie derivacie vystupu z rovnice %\nskt = solve(vRovnica, 'Dy');"
+	  MaskDisplay		  "disp('Phase Portraits of 1st-Order\\nAutono"
+"mous Systems\\n\\ny'' + f (y) = 0');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "Dy-y^2+1=0|[-10 0.9999 (1+1e-6)]"
+	  System {
+	    Name		    "Phase Portraits of 1st-Order Systems"
+	    Location		    [209, 281, 491, 432]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3, 0, 0, 0]
+	      Position		      [200, 11, 205, 129]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[length(x10) length(x10) 1]"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      Ports		      [0, 1, 0, 0, 0]
+	      Position		      [30, 35, 160, 105]
+	      FunctionName	      "fazrov_auton1"
+	      Parameters	      "skt,x10"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Stop
+	      Name		      "Stop Simulation"
+	      Position		      [235, 92, 270, 128]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x1(t)"
+	      Position		      [235, 23, 265, 37]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x2(t)"
+	      Position		      [235, 63, 265, 77]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "x1(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "x2(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Stop Simulation"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Phase Portraits of 2nd-Order Loops\nwith Ha"
+"rd Nonlinearities"
+	  Ports			  [0, 2, 0, 0, 0]
+	  Position		  [270, 151, 435, 229]
+	  ShowPortLabels	  on
+	  MaskType		  "Phase-Plane Portrait of a 2nd-Order Loop wi"
+"th a Hard Nonlinearity"
+	  MaskDescription	  "For a detailed description of block paramet"
+"ers, click \"Help\" button."
+	  MaskHelp		  "web(fullfile(cd,'help','fazrov_typnl.html')"
+");"
+	  MaskPromptString	  "Linear part - transfer function numerator:|"
+"Linear part - transfer function denominator:|Nonlinear part - nonlinearity ty"
+"pe:|Nonlinear part - parameters:|Setpoint:|Initial conditions range: x1(0) mi"
+"nimum|Initial conditions range: x1(0) maximum|Number of initial conditions fo"
+"r x1|Initial conditions range: x2(0) minimum|Initial conditions range: x2(0) "
+"maximum|Number of initial conditions for x2"
+	  MaskStyleString	  "edit,edit,popup(Ideal relay|Saturation|Rela"
+"y with dead-zone|Relay with hysteresis),edit,edit,edit,edit,edit,edit,edit,ed"
+"it"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVariables		  "num=@1;den=@2;nelintyp=@3;nelinpar=@4;w=@5;"
+"x1min=@6;x1max=@7;x1num=@8;x2min=@9;x2max=@10;x2num=@11;"
+	  MaskInitialization	  "if (length(den) ~= 3) | (length(num) ~= 1) "
+"| (den(1) == 0)\n    error('Linear part must be a 2nd-order system!');\nend\n"
+"\nif (nelintyp == 1) & (length(nelinpar) ~= 2)\n    error('Invalid number of "
+"nonlinearity parameters!');\nend\nif (nelintyp > 1) & ((length(nelinpar) ~= 4"
+") | nelinpar(1) > nelinpar(3))\n    error('Invalid nonlinearity parameters!')"
+";\nend"
+	  MaskDisplay		  "disp('Phase Portraits of\\n2nd-Order Loops"
+"\\nwith Hard Nonlinearities');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "1|conv([1 3],[1 -1])|Saturation|[-1 -4 1 4]"
+"|0|-2|2|10|-2|5|3"
+	  System {
+	    Name		    "Phase Portraits of 2nd-Order Loops\nwith "
+"Hard Nonlinearities"
+	    Location		    [209, 285, 483, 466]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3, 0, 0, 0]
+	      Position		      [185, 19, 190, 161]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[(x1num*x2num) (x1num*x2num) 1]"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [20, 55, 150, 125]
+	      FunctionName	      "fazrov_typnl"
+	      Parameters	      "num,den,w,nelintyp,nelinpar,x1min,x1max"
+",x1num,x2min,x2max,x2num"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Stop
+	      Name		      "Stop Simulation"
+	      Position		      [220, 117, 255, 153]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x1(t)"
+	      Position		      [220, 38, 250, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x2(t)"
+	      Position		      [220, 83, 250, 97]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "x2(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "x1(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Stop Simulation"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Phase Portraits of 2nd-Order Systems"
+	  Ports			  [0, 2, 0, 0, 0]
+	  Position		  [35, 151, 200, 229]
+	  ShowPortLabels	  on
+	  MaskType		  "Phase-Plane Portrait of a 2nd-Order Autonom"
+"ous System"
+	  MaskDescription	  "\nComputation of a phase-plane portrait of "
+"a 2nd-order nonlinear autonomous system. The system is specified by a differe"
+"ntial equation y'' + f(y, y') = 0, where y(t) is the output of the system and"
+" f(y, y') is arbitrary continuous function.\n\nBlock has two vector outputs, "
+"y = x1 and y' = x2, i.e. horizontal and vertical coordinates of phase-plane t"
+"rajectories corresponding to different initial conditions - the initial condi"
+"tions themselves are specified by the range-parameters below.\n\nTo plot the "
+"portrait graphically, it is necessary to use the \"Vector XY Graph for Phase "
+"Portraits\" block, since the \"XY Graph\" block from Sinks library cannot han"
+"dle vector inputs.\n\nFor a detailed description of the block, click \"Help\""
+" button.\n\n"
+	  MaskHelp		  "web(fullfile(cd,'help','fazrov_auton2.html'"
+"));"
+	  MaskPromptString	  "System differential equation: y'' + f(y, y'"
+") = 0:|Initial conditions range: y(0) = x1(0) minimum|Initial conditions rang"
+"e: y(0) = x1(0) maximum|Number of initial conditions for x1|Initial condition"
+"s range: y' (0) = x2(0) minimum|Initial conditions range: y' (0) = x2(0) maxi"
+"mum|Number of initial conditions for x2"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskVariables		  "vRovnica=&1;x1min=@2;x1max=@3;x1num=@4;x2mi"
+"n=@5;x2max=@6;x2num=@7;"
+	  MaskInitialization	  "% Overenie, ci system nie je vyssieho radu "
+"%\nif (~strcmp(findsym(sym(vRovnica)),'D2y, Dy, y') & ~strcmp(findsym(sym(vRo"
+"vnica)),'D2y, Dy') & ~strcmp(findsym(sym(vRovnica)),'D2y, y') & ~strcmp(finds"
+"ym(sym(vRovnica)),'D2y'))\n	error('Error: Invalid differential equatio"
+"n!');\nend\n\n% Vytvorenie kanonickeho tvaru z opisu diferencialnou rovnicou "
+"%\nvRovnica = subs(vRovnica, 'D2y', 'v');\nvRovnica = subs(vRovnica, 'Dy', 'x"
+"2');\nvRovnica = subs(vRovnica, 'y', 'x1');\n\n% Vyjadrenie druhej derivacie "
+"vystupu z rovnice %\nskt = solve(vRovnica, 'v');"
+	  MaskDisplay		  "disp('Phase Portraits of 2nd-Order\\nAutono"
+"mous Systems\\n\\ny'''' + f (y, y'') = 0');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "D2y+(Dy)^2=0|-5|5|10|-1|10|3"
+	  System {
+	    Name		    "Phase Portraits of 2nd-Order Systems"
+	    Location		    [209, 281, 493, 434]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 3, 0, 0, 0]
+	      Position		      [200, 10, 205, 130]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[(x1num*x2num) (x1num*x2num) 1]"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [30, 35, 160, 105]
+	      FunctionName	      "fazrov_auton2"
+	      Parameters	      "skt,x1min,x1max,x1num,x2min,x2max,x2num"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Stop
+	      Name		      "Stop Simulation"
+	      Position		      [235, 92, 270, 128]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x1(t)"
+	      Position		      [235, 23, 265, 37]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x2(t)"
+	      Position		      [235, 63, 265, 77]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nvypocet fazoveho"
+" portretu"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "x1(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "x2(t)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Stop Simulation"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Vector XY Graph\nfor Phase Portraits"
+	  Ports			  [2, 0, 0, 0, 0]
+	  Position		  [530, 15, 600, 95]
+	  CopyFcn		  "sfunvxy([],[],[],'CopyBlock')"
+	  DeleteFcn		  "sfunvxy([],[],[],'DeleteBlock')"
+	  LoadFcn		  "sfunvxy([],[],[],'LoadBlock')"
+	  StartFcn		  "sfunvxy([],[],[],'Start')"
+	  StopFcn		  "sfunvxy([],[],[],'Stop')"
+	  NameChangeFcn		  "sfunvxy([],[],[],'NameChange')"
+	  ShowPortLabels	  on
+	  MaskType		  "Vector XY Graph for Phase-Plane Portraits"
+	  MaskDescription	  "\nPlots function dependancies of the type Y"
+" = Y(X), where X and Y are vectors of the same size (N). In every time instan"
+"t, N scalar dependancies of the type yi = yi(xi) are plotted simultaneously."
+"\n\nThe most typical use of the block is to plot phase-plane portraits of sys"
+"tems in which every phase trajectory (every pair of initial conditions) corre"
+"sponds with one pair of elements of vectors X, Y.\n\nFor a detailed descripti"
+"on of the block, click \"Help\" button.\n\n"
+	  MaskHelp		  "web(fullfile(cd,'help','sfunvxy.html'));"
+	  MaskPromptString	  "x-min:|x-max:|y-min:|y-max:|Sample time (-1"
+" for unspecified):|Show grid"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskVariables		  "xmin=@1;xmax=@2;ymin=@3;ymax=@4;st=@5;use_g"
+"rid=@6;"
+	  MaskInitialization	  "if (xmin >= xmax) | (ymin >= ymax)\n    err"
+"or('Invalid scaling! Must be: x-min < x-max, y-min < y-max.');\nend"
+	  MaskDisplay		  "plot([.05 .95 .95 .05 .05],[.45 .45 .95 .95"
+" .45], 0.5+cos(0:0.1:2*pi)*0.3,0.7+sin(0:0.1:2*pi)*0.2)\ndisp('\\n\\n\\nVecto"
+"rXY')"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  normalized
+	  MaskValueString	  "-6|6|-10|10|-1|on"
+	  System {
+	    Name		    "Vector XY Graph\nfor Phase Portraits"
+	    Location		    [290, 337, 596, 520]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x"
+	      Position		      [10, 30, 30, 50]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "y"
+	      Position		      [10, 100, 30, 120]
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [100, 61, 130, 94]
+	      ShowName		      off
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "sfunvxy"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [185, 70, 235, 90]
+	      FunctionName	      "sfunvxy"
+	      Parameters	      "[xmin xmax ymin ymax],use_grid,st"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Line {
+	      SrcBlock		      "y"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -25]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "x"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, 30]
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "sfunvxy"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "m2ch"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [516, 227, 614, 267]
+	  DropShadow		  on
+	  ShowName		  off
+	  OpenFcn		  "met2char"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp('Two-Characteristics\\nMethod')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "m2ch"
+	    Location		    [378, 306, 630, 435]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	  }
+	}
+	Annotation {
+	  Position		  [221, 167]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [226, 207]
+	  Text			  "y' (t)"
+	}
+	Annotation {
+	  Position		  [506, 32]
+	  Text			  "x(t)"
+	}
+	Annotation {
+	  Position		  [506, 77]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [456, 172]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [461, 207]
+	  Text			  "y' (t)"
+	}
+	Annotation {
+	  Position		  [221, 47]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [226, 87]
+	  Text			  "y' (t)"
+	}
+	Annotation {
+	  Position		  [456, 52]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [461, 87]
+	  Text			  "y' (t)"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Nonlinear Systems Synthesis"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [254, 84, 418, 182]
+      DropShadow	      on
+      ShowPortLabels	      on
+      MaskType		      "Nonlinear Systems Synthesis"
+      MaskDisplay	      "disp('Synthesis');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      none
+      MaskIconUnits	      autoscale
+      System {
+	Name			"Nonlinear Systems Synthesis"
+	Location		[91, 154, 711, 409]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Exact Linearization Blocks"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [455, 20, 584, 94]
+	  DropShadow		  on
+	  ShowPortLabels	  off
+	  MaskType		  "Blocks for Exact Linearization"
+	  MaskDisplay		  "disp('Exact Linearization');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "Exact Linearization Blocks"
+	    Location		    [37, 215, 747, 403]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Controller synthesis\nfor MIMO systems"
+	      Ports		      [0, 0, 0, 0, 0]
+	      Position		      [464, 105, 550, 144]
+	      DropShadow	      on
+	      OpenFcn		      "exaktmimo"
+	      ShowPortLabels	      on
+	      MaskType		      "Exact linearization for MIMO systems"
+	      MaskDisplay	      "disp('ExactMIMO');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      System {
+		Name			"Controller synthesis\nfor MIMO system"
+"s"
+		Location		[203, 331, 569, 538]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Controller synthesis\nfor SISO systems"
+	      Ports		      [0, 0, 0, 0, 0]
+	      Position		      [464, 15, 550, 54]
+	      DropShadow	      on
+	      OpenFcn		      "exaktsiso"
+	      ShowPortLabels	      on
+	      MaskType		      "Exact linearization for SISO systems"
+	      MaskDisplay	      "disp('ExactSISO');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      System {
+		Name			"Controller synthesis\nfor SISO system"
+"s"
+		Location		[203, 331, 569, 538]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Coordinates transformation\nfor MIMO sy"
+"stems"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [195, 110, 255, 140]
+	      Orientation	      left
+	      ShowPortLabels	      on
+	      MaskType		      "Coordinates transformation for MIMO sys"
+"tems"
+	      MaskDescription	      "This block performs a nonlinear transfo"
+"rmation of system state variables according to the exact linearization rules."
+" Together with the corresponding \"Linearizing control law\" block, it implem"
+"ents a transformation\n\n               dx/dt = f(x) + g(x) u          --->  "
+"        dq/dt = Aq + Bv\n                      y = h(x)                     -"
+"-->                 y = Cq\n\ni.e. the transformation of a nonlinear system i"
+"nto a linear and controllable form. This version of the block is designed for"
+" use with MIMO systems. To compute the coordinates transformation Q = Q(x) fo"
+"r a given system, the \"ExaktMimo.m\" application can be used.\n\nTransformat"
+"ion formula can be specified either as a symbolic expression or as an identif"
+"ier of a symbolic variable.\n\nFor a detailed description of block parameters"
+", click \"Help\" button below."
+	      MaskHelp		      "web(fullfile(cd,'help','transf_mimo.htm"
+"l'));"
+	      MaskPromptString	      "System order (number of states, N):|Rel"
+"ative degrees of subsystems (r1+r2+...+rK <= n):|Transformation formula - sym"
+"bolic expression: q = Q(x) = |Transformation formula - variable identifier:"
+	      MaskStyleString	      "edit,edit,edit,edit"
+	      MaskTunableValueString  "on,on,on,on"
+	      MaskVariables	      "n=@1;r=@2;Z=&3;Zp=@4;"
+	      MaskInitialization      "% Overenie spravnosti zadania parametro"
+"v bloku %\nif ~isempty(Z) & (Zp == 0)\n   Z = sym(Z);\nelseif isempty(Z) & (a"
+"ny(Zp ~= 0))\n   Z = sym(Zp);\nelse\n   error(['Transformation formula not sp"
+"ecified or specified more than once - cannot continue!']);\nend\n\n% Zisti si"
+" symbolicke premenne, ktore vystupuju vo vyraze %\nprem = strrep(strrep(finds"
+"ym(sym(Z)),', ',''),',',' ');\n\n% Premenne x1, x2, ..., xN su korektne, pres"
+"koc ich %\nfor k = 1 : n\n   prem = strrep(prem, sprintf('x%d',k), '');\nend"
+"\n\n% Ak retazec nezostal prazdny, vyhlas chybu %\nif ~isempty(prem)\n   erro"
+"r(['Unknown symbol found in transformation formula - cannot continue!']);\nen"
+"d\n\nif (sum(r) > n)\n error('Error: Total relative degree (i.e. the sum of r"
+"elative degrees of subsystems) cannot be higher than system order!');\nend\n"
+"\n% Otestovanie spravnosti rozmeru matice Z (podla \"r\") %\nif ~all(size(sym"
+"(Z)) == [sum(r),1])\n   error(['Wrong number of transformation equations (wro"
+"ng number of rows of transformation matrix) !']);\nend\n\n% Nahradenie identi"
+"fikatorov \"xI\" identifikatormi \"u(I)\" %\nco_str = '{''x1'; cim_str = '{''"
+"u(1)';\n\nfor k = 2 : n\n    co_str = sprintf('%s'',''x%d', co_str, k);\n    "
+"cim_str = sprintf('%s'',''u(%d)', cim_str, k);\nend\n\nco_str = strcat(co_str"
+", '''}'); cim_str = strcat(cim_str, '''}');\nZ = eval(sprintf('subs(Z,%s,%s)'"
+", co_str, cim_str));"
+	      MaskDisplay	      "disp('Q = Q(X)');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "3|[2 1]|[x1; 84.249*x2*x3; x3]|0"
+	      System {
+		Name			"Coordinates transformation\nfor MIMO "
+"systems"
+		Location		[149, 235, 423, 350]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "x"
+		  Position		  [15, 38, 45, 52]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-funkcia realizujuca\ntransformaci"
+"u suradnic"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [80, 20, 190, 70]
+		  FunctionName		  "transf_mimo"
+		  Parameters		  "n,r,Z"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "q"
+		  Position		  [230, 38, 260, 52]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "x"
+		  SrcPort		  1
+		  DstBlock		  "S-funkcia realizujuca\ntransformaci"
+"u suradnic"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-funkcia realizujuca\ntransformaci"
+"u suradnic"
+		  SrcPort		  1
+		  DstBlock		  "q"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Coordinates transformation\nfor SISO sy"
+"stems"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [195, 20, 255, 50]
+	      Orientation	      left
+	      ShowPortLabels	      on
+	      MaskType		      "Coordinates transformation for SISO sys"
+"tems"
+	      MaskDescription	      "This block performs a nonlinear transfo"
+"rmation of system state variables according to the exact linearization rules."
+" Together with the corresponding \"Linearizing control law\" block, it implem"
+"ents a transformation\n\n               dx/dt = f(x) + g(x) u          --->  "
+"        dq/dt = Aq + bv\n                      y = h(x)                     -"
+"-->                 y = cq\n\ni.e. the transformation of a nonlinear system i"
+"nto a linear and controllable form. This version of the block is designed for"
+" use with SISO systems. To compute the coordinates transformation q = q(x) fo"
+"r a given system, the \"Exakt.m\" application can be used.\n\nTransformation "
+"formula can be specified either as a symbolic expression or as an identifier "
+"of a symbolic variable.\n\nFor a detailed description of block parameters, cl"
+"ick \"Help\" button below."
+	      MaskHelp		      "web(fullfile(cd,'help','transf_surad.ht"
+"ml'));"
+	      MaskPromptString	      "System order (number of states, N):|Rel"
+"ative degree of the system (r <= n):|Transformation formula - symbolic expres"
+"sion: q = q(x) = |Transformation formula - variable identifier:"
+	      MaskStyleString	      "edit,edit,edit,edit"
+	      MaskTunableValueString  "on,on,on,on"
+	      MaskVariables	      "n=@1;r=@2;Z=&3;Zp=@4;"
+	      MaskInitialization      "% Overenie spravnosti zadania parametro"
+"v bloku %\nif ~isempty(Z) & (Zp == 0)\n   Z = sym(Z);\nelseif isempty(Z) & (a"
+"ny(Zp ~= 0))\n   Z = Zp;\nelse\n   error(['Transformation formula not specifi"
+"ed or specified more than once - cannot continue!']);\nend\n\n% Zisti si symb"
+"olicke premenne, ktore vystupuju vo vyraze %\nprem = strrep(strrep(findsym(sy"
+"m(Z)),', ',''),',',' ');\n\n% Premenne x1, x2, ..., xN su korektne, preskoc i"
+"ch %\nfor k = 1 : n\n   prem = strrep(prem, sprintf('x%d',k), '');\nend\n\n% "
+"Ak retazec nezostal prazdny, vyhlas chybu %\nif ~isempty(prem)\n   error(['Un"
+"known symbol found in transformation formula - cannot continue!']);\nend\n\ni"
+"f (r > n)\n error('Error: Relative degree cannot be higher than system order!"
+"');\nend\n\n% Otestovanie spravnosti rozmeru matice Z (podla \"r\") %\nif ~al"
+"l(size(sym(Z)) == [r,1])\n   error(['Wrong number of transformation equations"
+"!']);\nend\n\n% Nahradenie identifikatorov \"xI\" identifikatormi \"u(I)\" %"
+"\nco_str = '{''x1'; cim_str = '{''u(1)';\n\nfor k = 2 : n\n    co_str = sprin"
+"tf('%s'',''x%d', co_str, k);\n    cim_str = sprintf('%s'',''u(%d)', cim_str, "
+"k);\nend\n\nco_str = strcat(co_str, '''}'); cim_str = strcat(cim_str, '''}');"
+"\nZ = eval(sprintf('subs(Z,%s,%s)', co_str, cim_str));"
+	      MaskDisplay	      "disp('q = q(x)');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "2|2|[x2; sqrt(x1)-sqrt(x2)]|0"
+	      System {
+		Name			"Coordinates transformation\nfor SISO "
+"systems"
+		Location		[149, 235, 423, 350]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "x"
+		  Position		  [15, 38, 45, 52]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-funkcia realizujuca\ntransformaci"
+"u suradnic"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [80, 20, 190, 70]
+		  FunctionName		  "transf_surad"
+		  Parameters		  "n,r,Z"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "q"
+		  Position		  [230, 38, 260, 52]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "x"
+		  SrcPort		  1
+		  DstBlock		  "S-funkcia realizujuca\ntransformaci"
+"u suradnic"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-funkcia realizujuca\ntransformaci"
+"u suradnic"
+		  SrcPort		  1
+		  DstBlock		  "q"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Demonstracne simulacie"
+	      Ports		      [0, 0, 0, 0, 0]
+	      Position		      [588, 43, 690, 118]
+	      DropShadow	      on
+	      ShowName		      off
+	      OpenFcn		      "demos_exakt"
+	      ShowPortLabels	      on
+	      MaskDisplay	      "disp('Demo\\nsimulations')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      System {
+		Name			"Demonstracne simulacie"
+		Location		[378, 306, 630, 435]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Linear controller\nfor MIMO systems"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [330, 104, 415, 151]
+	      ShowPortLabels	      on
+	      MaskType		      "State-space controller for an integrato"
+"r-type MIMO system"
+	      MaskDescription	      "This block works as a linear state-spac"
+"e controller for MIMO systems with autonomous subsystems of \"rI-integrator\""
+" type described by state-space equations in a so-called 1st Frobenius form (s"
+"ee help for details). Controller is calculated via pole placement technique d"
+"uring block initialization. Block is typically used in exact-linearization-ba"
+"sed control loops.\n\nImportant: This controller is intended ONLY to control "
+"linear MIMO systems of the structure described above and does not work correc"
+"tly with any other systems!\n\nFor a detailed description of block parameters"
+", click \"Help\" button below."
+	      MaskHelp		      "web(fullfile(cd,'help','ppreg_mimo.html"
+"'));"
+	      MaskPromptString	      "Orders of subsystems of the linear MIMO"
+" system:|Number of inputs/outputs of the system:|Desired poles of a closed-lo"
+"op system:|Controller includes integral actions (one per each subsystem)"
+	      MaskStyleString	      "edit,edit,edit,checkbox"
+	      MaskTunableValueString  "on,on,on,on"
+	      MaskVariables	      "r=@1;nout=@2;kor=@3;integ=@4;"
+	      MaskInitialization      "if ~all(r>0)\n   error('Linear controll"
+"er: Invalid subsytem orders!');\nend\nif (nout<0)\n   error('Linear controlle"
+"r: Wrong number of inputs/outputs!');\nend\nif (size(r)~=[nout,1]) & (size(r)"
+"~=[1,nout])\n   error('Linear controller: Number of subsystems not correspond"
+"ing with the number of inputs/outputs!');\nend\nif (length(kor) ~= sum(r)+nou"
+"t*integ)\n   error('Linear controller: Wrong number of desired poles!');\nend"
+"\n\nC = zeros(nout,sum(r));\nK = zeros(nout,sum(r));\nKi = zeros(nout,1);\nP "
+"= zeros(nout,1);\n\ni1 = 1;\ni2 = 1;\nfor l = 1 : nout\n\n   char_polynom = p"
+"oly(kor(i1:i1+r(l)+integ-1));\n   K(l,i2:i2+r(l)-1) = fliplr(char_polynom(2:r"
+"(l)+1));\n   C(l,i2) = 1;\n\n   if (integ)\n      Ki(l) = char_polynom(r(l)+2"
+");\n      P(l) = 0;\n   else\n      Ki(l) = 0;\n      P(l) = char_polynom(end"
+");\n   end\n\n   i1 = i1+r(l)+integ;\n   i2 = i2+r(l);\nend\n\nKi = diag(Ki);"
+"\nP = diag(P);"
+	      MaskDisplay	      "disp('Pole Placement\\nMIMO');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "[2 1]|2|[-20 -20 -20]|off"
+	      System {
+		Name			"Linear controller\nfor MIMO systems"
+		Location		[152, 125, 700, 357]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "w"
+		  Position		  [15, 38, 45, 52]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "q"
+		  Position		  [15, 163, 45, 177]
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "C"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [100, 105, 130, 135]
+		  SourceBlock		  "simulink/Linear/Matrix\nGain"
+		  SourceType		  "Matrix Gain"
+		  K			  "C"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "I - zlozka"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [280, 90, 310, 120]
+		  ExternalReset		  none
+		  InitialConditionSource  internal
+		  InitialCondition	  "0"
+		  LimitOutput		  off
+		  UpperSaturationLimit	  "inf"
+		  LowerSaturationLimit	  "-inf"
+		  ShowSaturationPort	  off
+		  ShowStatePort		  off
+		  AbsoluteTolerance	  "auto"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "K"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [365, 155, 395, 185]
+		  SourceBlock		  "simulink/Linear/Matrix\nGain"
+		  SourceType		  "Matrix Gain"
+		  K			  "K"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Ki"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [215, 90, 245, 120]
+		  SourceBlock		  "simulink/Linear/Matrix\nGain"
+		  SourceType		  "Matrix Gain"
+		  K			  "Ki"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [345, 16, 350, 134]
+		  BackgroundColor	  black
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "P*w"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [215, 30, 245, 60]
+		  SourceBlock		  "simulink/Linear/Matrix\nGain"
+		  SourceType		  "Matrix Gain"
+		  K			  "P"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "Selector1"
+		  Position		  [385, 60, 415, 90]
+		  ShowName		  off
+		  Elements		  "~integ*(1:nout)+integ*(nout+1:2*nou"
+"t)"
+		  InputPortWidth	  "2*nout"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [450, 29, 470, 216]
+		  ShowName		  off
+		  Inputs		  "+-"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum1"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [165, 74, 180, 136]
+		  ShowName		  off
+		  Inputs		  "+-"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "v"
+		  Position		  [500, 118, 530, 132]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "v"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "K"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Ki"
+		  SrcPort		  1
+		  DstBlock		  "I - zlozka"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "C"
+		  SrcPort		  1
+		  DstBlock		  "Sum1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum1"
+		  SrcPort		  1
+		  DstBlock		  "Ki"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Selector1"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "Selector1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "I - zlozka"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "q"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    DstBlock		    "K"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "C"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "P*w"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "w"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "Sum1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "P*w"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Linear controller\nfor SISO systems"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [330, 14, 415, 61]
+	      ShowPortLabels	      on
+	      MaskType		      "State-space controller for an \"r-integ"
+"rator\" SISO system"
+	      MaskDescription	      "This block works as a linear state-spac"
+"e controller for an \"r-integrator\" SISO system in a so-called 1st Frobenius"
+" form (see help for details). Controller is calculated via pole placement tec"
+"hnique during block initialization. Block is typically used in exact-lineariz"
+"ation-based control loops.\n\nImportant: This controller is intended ONLY to "
+"control linear \"r-integrator\" SISO systems in 1st Frobenius form and does n"
+"ot work correctly with any other systems!\n\nFor a detailed description of bl"
+"ock parameters, click \"Help\" button below."
+	      MaskHelp		      "web(fullfile(cd,'help','ppreg_siso.html"
+"'));"
+	      MaskPromptString	      "Linear system order:|Desired poles of a"
+" closed-loop system:|Controller includes integral action"
+	      MaskStyleString	      "edit,edit,checkbox"
+	      MaskTunableValueString  "on,on,on"
+	      MaskVariables	      "r=@1;kor=@2;integ=@3;"
+	      MaskInitialization      "if (length(kor) ~= r+integ)\n	er"
+"ror('Linear controller: Wrong number of desired poles');\nend\n\nchar_polynom"
+" = poly(kor);\nK = fliplr(char_polynom(2:r+1));\n\nif (integ)\n	Ki =ch"
+"ar_polynom(r+2);\nelse\n	Ki = 0;\nend"
+	      MaskDisplay	      "disp('Pole Placement\\nSISO');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "2|[-2 -2]|off"
+	      System {
+		Name			"Linear controller\nfor SISO systems"
+		Location		[152, 125, 700, 357]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "w"
+		  Position		  [15, 38, 45, 52]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "q"
+		  Position		  [15, 163, 45, 177]
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "I - zlozka"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [280, 90, 310, 120]
+		  ExternalReset		  none
+		  InitialConditionSource  internal
+		  InitialCondition	  "0"
+		  LimitOutput		  off
+		  UpperSaturationLimit	  "inf"
+		  LowerSaturationLimit	  "-inf"
+		  ShowSaturationPort	  off
+		  ShowStatePort		  off
+		  AbsoluteTolerance	  "auto"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "K"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [365, 155, 395, 185]
+		  SourceBlock		  "simulink/Linear/Matrix\nGain"
+		  SourceType		  "Matrix Gain"
+		  K			  "K"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Ki"
+		  Position		  [220, 90, 250, 120]
+		  Gain			  "Ki"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [345, 16, 350, 134]
+		  BackgroundColor	  black
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "P*w"
+		  Position		  [220, 30, 250, 60]
+		  Gain			  "char_polynom(end)"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "Selector1"
+		  Position		  [385, 60, 415, 90]
+		  ShowName		  off
+		  Elements		  "integ+1"
+		  InputPortWidth	  "2"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [450, 29, 470, 216]
+		  ShowName		  off
+		  Inputs		  "+-"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum1"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [165, 74, 180, 136]
+		  ShowName		  off
+		  Inputs		  "+-"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "y"
+		  Position		  [100, 105, 130, 135]
+		  Elements		  "1"
+		  InputPortWidth	  "r"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "v"
+		  Position		  [500, 118, 530, 132]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "w"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    DstBlock		    "P*w"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "Sum1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "P*w"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "q"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "y"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "K"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "I - zlozka"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "Selector1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Selector1"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum1"
+		  SrcPort		  1
+		  DstBlock		  "Ki"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "y"
+		  SrcPort		  1
+		  DstBlock		  "Sum1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Ki"
+		  SrcPort		  1
+		  DstBlock		  "I - zlozka"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "K"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "v"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Linearizing control law\nfor MIMO syste"
+"ms"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [45, 104, 120, 146]
+	      ShowPortLabels	      on
+	      MaskType		      "Linearizing control law for MIMO system"
+"s"
+	      MaskDescription	      "This block performs a feedback compensa"
+"tion of system nonlinearities according to the exact linearization rules. Tog"
+"ether with the \"Coordinates transformation\" block, it implements a transfor"
+"mation\n\n               dx/dt = f(x) + g(x) u          --->          dq/dt ="
+" Aq + bv\n                      y = h(x)                     --->            "
+"     y = cq\n\ni.e. the transformation of a nonlinear system into a linear an"
+"d controllable form. This version of the block is designed for use with MIMO "
+"systems. To compute the linearization control law U = U(X,V) for a given syst"
+"em, the \"ExaktMimo.m\" application can be used.\n\nLinearizing control law c"
+"an be specified either as a symbolic expression or as an identifier of a symb"
+"olic variable.\n\nFor a detailed description of block parameters, click \"Hel"
+"p\" button below."
+	      MaskHelp		      "web(fullfile(cd,'help','lineariz_mimo.h"
+"tml'));"
+	      MaskPromptString	      "System order (number of states, N)|Numb"
+"er of system outputs:|Linearizing law - symbolic expression: u = U(x,v) =|Lin"
+"earizing law - variable identifier:"
+	      MaskStyleString	      "edit,edit,edit,edit"
+	      MaskTunableValueString  "on,on,on,on"
+	      MaskVariables	      "n=@1;nout=@2;vzorec=&3;vzorecP=@4;"
+	      MaskInitialization      "% Overenie spravnosti zadania parametro"
+"v bloku %\nif ~isempty(vzorec) & (vzorecP == 0)\n   vzorec = sym(vzorec);\nel"
+"seif isempty(vzorec) & (any(vzorecP ~= 0))\n   vzorec = sym(vzorecP);\nelse\n"
+"   error(['Linearizing law not specified or specified more than once - cannot"
+" continue!']);\nend\n\n% Zisti si symbolicke premenne, ktore vystupuju vo vyr"
+"aze %\nprem = strrep(strrep(findsym(sym(vzorec)),', ',''),',',' ');\n\n% Prem"
+"enne x1, x2, ..., xN su korektne, preskoc ich %\nfor k = 1 : n\n   prem = str"
+"rep(prem, sprintf('x%d',k), '');\nend\n\n% Aj \"v\" je korektne, preskoc aj t"
+"o %\nfor k = 1 : nout\n   prem = strrep(prem, sprintf('v%d',k), '');\nend\n\n"
+"% Ak retazec nezostal prazdny, vyhlas chybu %\nif ~isempty(prem)\n   error(['"
+"Unknown symbol in the linearizing law - cannot continue!']);\nend\n\n% Nahrad"
+"enie identifikatorov \"xI\" identifikatormi \"u(I+nout)\" %\nco_str = '{''x1'"
+"; cim_str = sprintf('{''u(%d)',nout+1);\n\nfor k = 2 : n\n    co_str = sprint"
+"f('%s'',''x%d', co_str, k);\n    cim_str = sprintf('%s'',''u(%d)', cim_str, n"
+"out+k);\nend\n\n% Nahradenie identifikatorov \"vI\" identifikatormi \"u(1)\" "
+"%\nfor k = 1 : nout\n    co_str = sprintf('%s'',''v%d', co_str, k);\n    cim_"
+"str = sprintf('%s'',''u(%d)', cim_str, k);\nend\n\nco_str = strcat(co_str, ''"
+"'}'); cim_str = strcat(cim_str, '''}');\nvzorec = eval(sprintf('subs(vzorec,%"
+"s,%s)', co_str, cim_str));\n"
+	      MaskDisplay	      "disp('U = U(X,V)');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "3|2|[1167173990052591/17592186044416000"
+"*x1*x3+1/40*x2+2/421245/x3*v1-1/2500*x2/x3*v2; 153846/9799*x3+10000/9799*v2]|"
+"0"
+	      System {
+		Name			"Linearizing control law\nfor MIMO sys"
+"tems"
+		Location		[322, 144, 608, 280]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "v"
+		  Position		  [25, 28, 55, 42]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "x"
+		  Position		  [25, 73, 55, 87]
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [100, 37, 105, 73]
+		  BackgroundColor	  black
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "s-funkcia pocita\nakcny zasah\nna z"
+"aklade x,v\n"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [130, 38, 210, 72]
+		  FunctionName		  "lineariz_mimo"
+		  Parameters		  "n,nout,vzorec"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "u"
+		  Position		  [235, 48, 265, 62]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "s-funkcia pocita\nakcny zasah\nna z"
+"aklade x,v\n"
+		  SrcPort		  1
+		  DstBlock		  "u"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "s-funkcia pocita\nakcny zasah\nna z"
+"aklade x,v\n"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "v"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "x"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Linearizing control law\nfor SISO syste"
+"ms"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [45, 14, 120, 56]
+	      ShowPortLabels	      on
+	      MaskType		      "Linearizing control law for SISO system"
+"s"
+	      MaskDescription	      "This block performs a feedback compensa"
+"tion of system nonlinearities according to the exact linearization rules. Tog"
+"ether with the \"Coordinates transformation\" block, it implements a transfor"
+"mation\n\n               dx/dt = f(x) + g(x) u          --->          dq/dt ="
+" Aq + bv\n                      y = h(x)                     --->            "
+"     y = cq\n\ni.e. the transformation of a nonlinear system into a linear an"
+"d controllable form. This version of the block is designed for use with SISO "
+"systems. To compute the linearization control law u = u(x,v) for a given syst"
+"em, the \"Exakt.m\" application can be used.\n\nLinearizing control law can b"
+"e specified either as a symbolic expression or as an identifier of a symbolic"
+" variable.\n\nFor a detailed description of block parameters, click \"Help\" "
+"button below."
+	      MaskHelp		      "web(fullfile(cd,'help','lineariz_vztah."
+"html'));"
+	      MaskPromptString	      "System order (number of states, N)|Line"
+"arizing law - symbolic expression: u = u(x,v) =|Linearizing law - variable id"
+"entifier:"
+	      MaskStyleString	      "edit,edit,edit"
+	      MaskTunableValueString  "on,on,on"
+	      MaskVariables	      "n=@1;vzorec=&2;vzorecP=@3;"
+	      MaskInitialization      "% Overenie spravnosti zadania parametro"
+"v bloku %\nif isempty(n)\n   error(['System order not specified - cannot cont"
+"inue!']);\nend\n\nif ~isempty(vzorec) & (vzorecP == 0)\n   vzorec = sym(vzore"
+"c);\nelseif isempty(vzorec) & (any(vzorecP ~= 0))\n   vzorec = sym(vzorecP);"
+"\nelse\n   error(['Linearizing law not specified or specified more than once "
+"- cannot continue!']);\nend\n\n% Zisti si symbolicke premenne, ktore vystupuj"
+"u vo vyraze %\nprem = strrep(strrep(findsym(sym(vzorec)),', ',''),',',' ');\n"
+"\n% Premenne x1, x2, ..., xN su korektne, preskoc ich %\nfor k = 1 : n\n   pr"
+"em = strrep(prem, sprintf('x%d',k), '');\nend\n\n% Aj \"v\" je korektne, pres"
+"koc aj to %\nprem = strrep(prem,'v','');\n\n% Ak niektory retazec nezostal pr"
+"azdny, vyhlas chybu %\nif ~isempty(prem)\n   error(['Unknown symbol in the li"
+"nearizing law - cannot continue!']);\nend\n\n% Nahradenie identifikatorov \"x"
+"I\" identifikatormi \"u(I+1)\" a \"v\" pomocou \"u(1)\" %\nco_str = '{''v'','"
+"'x1'; cim_str = '{''u(1)'',''u(2)';\n\nfor k = 2 : n\n    co_str = sprintf('%"
+"s'',''x%d', co_str, k);\n    cim_str = sprintf('%s'',''u(%d)', cim_str, k+1);"
+"\nend\n\nco_str = strcat(co_str, '''}'); cim_str = strcat(cim_str, '''}');\nv"
+"zorec = eval(sprintf('subs(vzorec,%s,%s)', co_str, cim_str));\n"
+	      MaskDisplay	      "disp('u = u(x,v)');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "2|x1/sqrt(x2)+2*sqrt(x1)*v|0"
+	      System {
+		Name			"Linearizing control law\nfor SISO sys"
+"tems"
+		Location		[322, 144, 608, 280]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "v"
+		  Position		  [25, 28, 55, 42]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "x"
+		  Position		  [25, 73, 55, 87]
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [100, 37, 105, 73]
+		  BackgroundColor	  black
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "s-funkcia pocita\nakcny zasah\nna z"
+"aklade x,v\n"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [130, 38, 210, 72]
+		  FunctionName		  "lineariz_vztah"
+		  Parameters		  "n,vzorec"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "u"
+		  Position		  [235, 48, 265, 62]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "s-funkcia pocita\nakcny zasah\nna z"
+"aklade x,v\n"
+		  SrcPort		  1
+		  DstBlock		  "u"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "s-funkcia pocita\nakcny zasah\nna z"
+"aklade x,v\n"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "v"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "x"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Annotation {
+	      Position		      [276, 32]
+	      Text		      "x(t)"
+	    }
+	    Annotation {
+	      Position		      [276, 122]
+	      Text		      "x(t)"
+	    }
+	    Annotation {
+	      Position		      [176, 32]
+	      Text		      "q(t)"
+	    }
+	    Annotation {
+	      Position		      [176, 122]
+	      Text		      "q(t)"
+	    }
+	    Annotation {
+	      Position		      [141, 32]
+	      Text		      "u(t)"
+	    }
+	    Annotation {
+	      Position		      [141, 122]
+	      Text		      "u(t)"
+	    }
+	    Annotation {
+	      Position		      [26, 22]
+	      Text		      "v(t)"
+	    }
+	    Annotation {
+	      Position		      [26, 47]
+	      Text		      "x(t)"
+	    }
+	    Annotation {
+	      Position		      [26, 112]
+	      Text		      "v(t)"
+	    }
+	    Annotation {
+	      Position		      [26, 137]
+	      Text		      "x(t)"
+	    }
+	    Annotation {
+	      Position		      [311, 22]
+	      Text		      "w(t)"
+	    }
+	    Annotation {
+	      Position		      [311, 47]
+	      Text		      "q(t)"
+	    }
+	    Annotation {
+	      Position		      [436, 37]
+	      Text		      "v(t)"
+	    }
+	    Annotation {
+	      Position		      [311, 112]
+	      Text		      "w(t)"
+	    }
+	    Annotation {
+	      Position		      [311, 137]
+	      Text		      "q(t)"
+	    }
+	    Annotation {
+	      Position		      [436, 127]
+	      Text		      "v(t)"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Gain Scheduling Blocks"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [455, 135, 584, 209]
+	  DropShadow		  on
+	  ShowPortLabels	  off
+	  MaskType		  "Blocks for Gain Scheduling"
+	  MaskDisplay		  "disp('Gain Scheduling');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "Gain Scheduling Blocks"
+	    Location		    [454, 274, 744, 444]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Controller synthesis\nfor SISO systems"
+	      Ports		      [0, 0, 0, 0, 0]
+	      Position		      [179, 20, 265, 59]
+	      DropShadow	      on
+	      OpenFcn		      "progzos"
+	      ShowPortLabels	      on
+	      MaskType		      "Gain Scheduling - controller design for"
+" SISO systems"
+	      MaskDisplay	      "disp('GS SISO');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      System {
+		Name			"Controller synthesis\nfor SISO system"
+"s"
+		Location		[203, 331, 569, 538]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Demonstracne simulacie"
+	      Ports		      [0, 0, 0, 0, 0]
+	      Position		      [84, 110, 220, 151]
+	      DropShadow	      on
+	      ShowName		      off
+	      OpenFcn		      "demos_gs"
+	      ShowPortLabels	      on
+	      MaskType		      "Gain Scheduling - demo simulations"
+	      MaskDisplay	      "disp('Demo simulations');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      System {
+		Name			"Demonstracne simulacie"
+		Location		[203, 331, 569, 538]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "State-space gain-scheduling\ncontroller"
+" for SISO systems"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [45, 19, 125, 66]
+	      ShowPortLabels	      on
+	      MaskType		      "State-space gain-scheduling controller "
+"for SISO systems"
+	      MaskDescription	      "Block carries out control action of a s"
+"tate-space controller for nonlinear SISO system. The control action equation "
+"u = u(w,x) can be specified either as a symbolic expression or as an identifi"
+"er of a symbolic variable.\n\nBlock is typically used in place of a state-spa"
+"ce controller designed via gain scheduling - to design such controller, \"Pro"
+"gZos.m\" application can be used - however, in fact, the block can perform ar"
+"bitrary control action specified by equation u = u(w,x), where w(t) is desire"
+"d value and x(t) is states vector.\n\nFor a detailed description of block par"
+"ameters, click \"Help\" button below."
+	      MaskHelp		      "web(fullfile(cd,'help','gs_siso.html'))"
+";"
+	      MaskPromptString	      "System order (number of states):|Contro"
+"l action - symbolic expression:|Control action - variable identifier:"
+	      MaskStyleString	      "edit,edit,edit"
+	      MaskTunableValueString  "on,on,on"
+	      MaskVariables	      "n=@1;vzorec=&2;vzorecP=@3;"
+	      MaskInitialization      "% Overenie spravnosti zadania parametro"
+"v bloku %\nif isempty(n)\n   error(['System order not specified - cannot cont"
+"inue!']);\nend\n\nif ~isempty(vzorec) & (vzorecP == 0)\n   vzorec = sym(vzore"
+"c);\nelseif isempty(vzorec) & (any(vzorecP ~= 0))\n   vzorec = sym(vzorecP);"
+"\nelse\n   error(['Equation for control action not specified or specified mor"
+"e than once - cannot continue!']);\nend\n\n% Zisti si symbolicke premenne, kt"
+"ore vystupuju vo vyraze %\nprem = strrep(strrep(findsym(sym(vzorec)),', ','')"
+",',',' ');\n\n% Premenne x1, x2, ..., xN su korektne, preskoc ich %\nfor k = "
+"1 : n\n   prem = strrep(prem, sprintf('x%d',k), '');\nend\n\n% Aj \"w\" je ko"
+"rektne, preskoc aj to %\nprem = strrep(prem,'w','');\n\n% Ak niektory retazec"
+" nezostal prazdny, vyhlas chybu %\nif ~isempty(prem)\n   error(['Unknown symb"
+"ol in control action equation - cannot continue!']);\nend\n\n% Nahradenie ide"
+"ntifikatorov \"xI\" identifikatormi \"u(I+1)\" a \"w\" pomocou \"u(1)\" %\nco"
+"_str = '{''w'',''x1'; cim_str = '{''u(1)'',''u(2)';\n\nfor k = 2 : n\n    co_"
+"str = sprintf('%s'',''x%d', co_str, k);\n    cim_str = sprintf('%s'',''u(%d)'"
+", cim_str, k+1);\nend\n\nco_str = strcat(co_str, '''}'); cim_str = strcat(cim"
+"_str, '''}');\nvzorec = eval(sprintf('subs(vzorec,%s,%s)', co_str, cim_str));"
+"\n"
+	      MaskDisplay	      "disp('GS SISO\\nu = u(w,x)');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      none
+	      MaskIconUnits	      autoscale
+	      MaskValueString	      "2|-(-w^(1/2)+4*w)/w*x1+4*w+1/2*(-w^(1/2"
+")+8*w-16*w^(3/2))/w*(x2-w)|0"
+	      System {
+		Name			"State-space gain-scheduling\ncontroll"
+"er for SISO systems"
+		Location		[365, 204, 634, 323]
+		Open			off
+		ToolBar			off
+		StatusBar		off
+		ScreenColor		white
+		PaperOrientation	landscape
+		PaperPositionMode	auto
+		PaperType		usletter
+		PaperUnits		inches
+		Block {
+		  BlockType		  Inport
+		  Name			  "w"
+		  Position		  [25, 28, 55, 42]
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "x"
+		  Position		  [25, 68, 55, 82]
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [80, 16, 85, 94]
+		  BackgroundColor	  black
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "s-funkcia\nrealizujuca\nregulator"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [125, 40, 185, 70]
+		  FunctionName		  "gs_siso"
+		  Parameters		  "n,vzorec"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "u"
+		  Position		  [225, 48, 255, 62]
+		  Port			  "1"
+		  OutputWhenDisabled	  held
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "s-funkcia\nrealizujuca\nregulator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "x"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "s-funkcia\nrealizujuca\nregulator"
+		  SrcPort		  1
+		  DstBlock		  "u"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "w"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Annotation {
+	      Position		      [26, 27]
+	      Text		      "w(t)"
+	    }
+	    Annotation {
+	      Position		      [26, 52]
+	      Text		      "x(t)"
+	    }
+	    Annotation {
+	      Position		      [146, 42]
+	      Text		      "u(t)"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Nonlinear MIMO system\n(State-Space model)"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [255, 20, 385, 95]
+	  ShowPortLabels	  off
+	  MaskType		  "Nonlinear MIMO system - state-space model"
+	  MaskDescription	  "Nonlinear MIMO system is described by follo"
+"wing nonlinear differential equations:\n                       dx/dt = f(x) +"
+" g(x) u\n                        y = h(x)\n\n             states vector:  x ="
+" [x1; x2; ...; xN]\n             system input: u (vector)\n             syste"
+"m output: y (vector)\n\nParameters f(x), g(x), h(x) can be specified either a"
+"s a symbolic expression or as an identifier of a symbolic variable.\n\nFor a "
+"detailed description of parameters, click \"Help\" button."
+	  MaskHelp		  "web(fullfile(cd,'help','stavp_mimo.html'));"
+	  MaskPromptString	  "System order (number of states, N)|f(x) - s"
+"ymbolic expression:|f(x) - variable identifier:|g(x) - symbolic expression:|g"
+"(x) - variable identifier:|h(x) - symbolic expression:|h(x) - variable identi"
+"fier:|Initial conditions (initial states):"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	  MaskVariables		  "n=@1;F=&2;Fp=@3;G=&4;Gp=@5;H=&6;Hp=@7;pp=@8"
+";"
+	  MaskInitialization	  "% Overenie spravnosti zadania parametrov bl"
+"oku %\nif ~isempty(F) & (Fp == 0)\n   F = sym(F);\nelseif isempty(F) & (any(F"
+"p ~= 0))\n   F = sym(Fp);\nelse\n   error(['Matrix f(x) unspecified or specif"
+"ied more than once - cannot continue!']);\nend\n\nif ~isempty(G) & (Gp == 0)"
+"\n   G = sym(G);\nelseif isempty(G) & (any(Gp ~= 0))\n   G = sym(Gp);\nelse\n"
+"   error(['Matrix g(x) unspecified or specified more than once - cannot conti"
+"nue!']);\nend\n\nif ~isempty(H) & (Hp == 0)\n   H = sym(H);\nelseif isempty(H"
+") & (any(Hp ~= 0))\n   H = sym(Hp);\nelse\n   error(['Matrix h(x) unspecified"
+" or specified more than once - cannot continue!']);\nend\n\n% Zisti si symbol"
+"icke premenne, ktore vystupuju vo vyrazoch %\npremF = strrep(strrep(findsym(s"
+"ym(F)),', ',''),',',' ');\npremG = strrep(strrep(findsym(sym(G)),', ',''),','"
+",' ');\npremH = strrep(strrep(findsym(sym(H)),', ',''),',',' ');\n\n% Premenn"
+"e x1, x2, ..., xN su korektne, preskoc ich %\nfor k = 1 : n\n   premF = strre"
+"p(premF, sprintf('x%d',k), '');\n   premG = strrep(premG, sprintf('x%d',k), '"
+"');\n   premH = strrep(premH, sprintf('x%d',k), '');\nend\n\n% Ak niektory re"
+"tazec nezostal prazdny, vyhlas chybu %\nif ~isempty(premF)\n   error(['Unknow"
+"n symbol in f(x) expression - cannot continue!']);\nend\nif ~isempty(premG)\n"
+"   error(['Unknown symbol in g(x) expression - cannot continue!']);\nend\nif "
+"~isempty(premH)\n   error(['Unknown symbol in h(x) expression - cannot contin"
+"ue!']);\nend\n\n% Otestovanie spravnosti rozmerov matic F,G,H (podla \"n\") %"
+"\nif ~all(size(F) == [n,1])\n   error(['Invalid matrix dimensions: f(x) - can"
+"not continue!']);\n   return;\nend\n\nnin = size(G);\nif (nin(1,1) ~= n)\n   "
+"error(['Invalid matrix dimensions: g(x) - cannot continue!']);\n   return;\ne"
+"nd\nnin = nin(1,2);\n\nnout = size(H);\nif (nout(1,2) ~= 1)\n   error(['Inval"
+"id matrix dimensions: h(x) - cannot continue!']);\n   return;\nend\nnout = no"
+"ut(1,1);\n\n% Kontrola vektora pociatocnych podmienok (pociatocnych stavov) %"
+"\nif ~all(size(pp) == [n,1])\n   error(['Initial conditions vector: invalid d"
+"imensions - cannot continue!']);\n   return;\nend\n\n% Nahradenie identifikat"
+"orov \"xI\" identifikatormi \"x(I)\" %\nco_str = '{''x1'; cim_str = '{''x(1)'"
+";\n\nfor k = 2 : n\n    co_str = sprintf('%s'',''x%d', co_str, k);\n    cim_s"
+"tr = sprintf('%s'',''x(%d)', cim_str, k);\nend\n\nco_str = strcat(co_str, '''"
+"}'); cim_str = strcat(cim_str, '''}');\n\nF = eval(sprintf('subs(F,%s,%s)', c"
+"o_str, cim_str));\nG = eval(sprintf('subs(G,%s,%s)', co_str, cim_str));\nH = "
+"eval(sprintf('subs(H,%s,%s)', co_str, cim_str));\n"
+	  MaskDisplay		  "disp('Nonlinear MIMO system\\n\\nx'' = f(x)"
+" + g(x) u\\ny = h(x)');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "3|[84.249*x2*x3; -165.8654*x1*x3-62.5*x2; -"
+"15.3846*x3]|0|[0 0; 2500 0; 0 0.9799]|0|[x1; x3]|0|[0; 0; 1e-9]"
+	  System {
+	    Name		    "Nonlinear MIMO system\n(State-Space model"
+")"
+	    Location		    [124, 225, 456, 399]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vstup"
+	      Position		      [15, 78, 45, 92]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2, 0, 0, 0]
+	      Position		      [235, 6, 240, 159]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[nout n]"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [85, 60, 195, 110]
+	      FunctionName	      "stavp_mimo"
+	      Parameters	      "n,nin,nout,F,G,H,pp"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vystup"
+	      Position		      [280, 38, 310, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Stavovy\nvektor"
+	      Position		      [280, 113, 310, 127]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Stavovy\nvektor"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Vystup"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Vstup"
+	      SrcPort		      1
+	      DstBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Nonlinear MIMO system\nwith disturbance"
+	  Ports			  [2, 2, 0, 0, 0]
+	  Position		  [255, 135, 385, 210]
+	  ShowPortLabels	  off
+	  MaskType		  "Nonlinear MIMO system with disturbance - st"
+"ate-space model"
+	  MaskDescription	  "Nonlinear MIMO system is described by follo"
+"wing nonlinear differential equations:\n                        dx/dt = f(x) "
+"+ g(x) u + e(z)\n                         y = h(x)\n\n             states vec"
+"tor:  x = [x1; x2; ...; xN]\n             disturbances: z = [z1; z2; ... zN]"
+"\n             system inputs: u (vector)\n             system outputs: y (vec"
+"tor)\n\nParameters f(x), g(x), h(x), e(z) can be specified either as a symbol"
+"ic expression or as an identifier of a symbolic variable.\n\nFor a detailed d"
+"escription of parameters, click \"Help\" button."
+	  MaskHelp		  "web(fullfile(cd,'help','stavp_mimoz.html'))"
+";"
+	  MaskPromptString	  "System order (number of states, N)|f(x) - s"
+"ymbolic expression:|f(x) - variable identifier:|g(x) - symbolic expression:|g"
+"(x) - variable identifier:|h(x) - symbolic expression:|h(x) - variable identi"
+"fier:|e(z) - symbolic expression:|e(z) - variable identifier:|Initial conditi"
+"ons (initial states):"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit,edi"
+"t,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on"
+	  MaskVariables		  "n=@1;F=&2;Fp=@3;G=&4;Gp=@5;H=&6;Hp=@7;E=&8;"
+"Ep=@9;pp=@10;"
+	  MaskInitialization	  "% Overenie spravnosti zadania parametrov bl"
+"oku %\nif ~isempty(F) & (Fp == 0)\n   F = sym(F);\nelseif isempty(F) & (any(F"
+"p ~= 0))\n   F = sym(Fp);\nelse\n   error(['Matrix f(x) unspecified or specif"
+"ied more than once - cannot continue!']);\nend\n\nif ~isempty(G) & (Gp == 0)"
+"\n   G = sym(G);\nelseif isempty(G) & (any(Gp ~= 0))\n   G = sym(Gp);\nelse\n"
+"   error(['Matrix g(x) unspecified or specified more than once - cannot conti"
+"nue!']);\nend\n\nif ~isempty(H) & (Hp == 0)\n   H = sym(H);\nelseif isempty(H"
+") & (any(Hp ~= 0))\n   H = sym(Hp);\nelse\n   error(['Matrix h(x) unspecified"
+" or specified more than once - cannot continue!']);\nend\n\nif ~isempty(E) & "
+"(Ep == 0)\n   E = sym(E);\nelseif isempty(E) & (any(Ep ~= 0))\n   E = sym(Ep)"
+";\nelse\n   error(['Matrix e(z) unspecified or specified more than once - can"
+"not continue!']);\nend\n\n% Zisti si symbolicke premenne, ktore vystupuju vo "
+"vyrazoch %\npremF = strrep(strrep(findsym(sym(F)),', ',''),',',' ');\npremG ="
+" strrep(strrep(findsym(sym(G)),', ',''),',',' ');\npremH = strrep(strrep(find"
+"sym(sym(H)),', ',''),',',' ');\npremE = strrep(strrep(findsym(sym(E)),', ',''"
+"),',',' ');\n\n% Premenne x1, x2, ..., xN su korektne, preskoc ich %\nfor k ="
+" 1 : n\n   premF = strrep(premF, sprintf('x%d',k), '');\n   premG = strrep(pr"
+"emG, sprintf('x%d',k), '');\n   premH = strrep(premH, sprintf('x%d',k), '');"
+"\n   premE = strrep(premE, sprintf('z%d',k), '');\nend\n\n% Ak niektory retaz"
+"ec nezostal prazdny, vyhlas chybu %\nif ~isempty(premF)\n   error(['Unknown s"
+"ymbol in f(x) expression - cannot continue!']);\nend\nif ~isempty(premG)\n   "
+"error(['Unknown symbol in g(x) expression - cannot continue!']);\nend\nif ~is"
+"empty(premH)\n   error(['Unknown symbol in h(x) expression - cannot continue!"
+"']);\nend\nif ~isempty(premE)\n   error(['Unknown symbol in e(z) expression -"
+" cannot continue!']);\nend\n\n% Otestovanie spravnosti rozmerov matic F,G,H,E"
+" (podla \"n\") %\nif ~all(size(sym(F)) == [n,1])\n   error(['Invalid matrix d"
+"imensions: f(x) - cannot continue!']);\nend\n\n% Zistenie poctu vstupov syste"
+"mu podla rozmeru G %\nnin = size(sym(G));\nif (nin(1,1) ~= n)\n   error(['Inv"
+"alid matrix dimensions: g(x) - cannot continue!']);\nend\nnin = nin(1,2);\n\n"
+"% Zistenie poctu vystupov systemu podla rozmeru H %\nnout = size(sym(H));\nif"
+" (nout(1,2) ~= 1)\n   error(['Invalid matrix dimensions: h(x) - cannot contin"
+"ue!']);\nend\nnout = nout(1,1);\n\n% Zistenie poctu poruch podla rozmeru E %"
+"\nnz = size(sym(E));\nif (nz(1,1) ~= n)\n   error(['Invalid matrix dimensions"
+": e(z) - cannot continue!']);\nend\nnz = nz(1,2);\n\n% Kontrola vektora pocia"
+"tocnych podmienok (pociatocnych stavov) %\nif ~all(size(pp) == [n,1])\n   err"
+"or(['Initial conditions vector: invalid dimensions - cannot continue!']);\nen"
+"d\n\n% Nahradenie identifikatorov \"xI\" identifikatormi \"x(I)\" %\nco_str ="
+" '{''x1'; cim_str = '{''x(1)';\n\nfor k = 2 : n\n    co_str = sprintf('%s'','"
+"'x%d', co_str, k);\n    cim_str = sprintf('%s'',''x(%d)', cim_str, k);\nend\n"
+"\nco_str = strcat(co_str, '''}'); cim_str = strcat(cim_str, '''}');\n\nF = ev"
+"al(sprintf('subs(F,%s,%s)', co_str, cim_str));\nG = eval(sprintf('subs(G,%s,%"
+"s)', co_str, cim_str));\nH = eval(sprintf('subs(H,%s,%s)', co_str, cim_str));"
+"\n\n% Nahradenie identifikatorov \"zI\" identifikatormi \"u(nin+I)\" %\nco_st"
+"r = '{''z1'; cim_str = sprintf('{''u(%d)', nin+1);\n\nfor k = 2 : nz\n   co_s"
+"tr = sprintf('%s'',''z%d', co_str, k);\n   cim_str = sprintf('%s'',''u(%d)', "
+"cim_str, nin+k);\nend\n\nco_str = strcat(co_str, '''}'); cim_str = strcat(cim"
+"_str, '''}');\nE = eval(sprintf('subs(E,%s,%s)', co_str, cim_str));\n"
+	  MaskDisplay		  "disp('Nonlinear MIMO system\\nwith disturba"
+"nce\\n\\nx'' = f(x) + g(x) u + e(z)\\ny = h(x)');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "3|[84.249*x2*x3; -165.8654*x1*x3-62.5*x2; -"
+"15.3846*x3]|0|[0 0; 2500 0; 0 0.9799]|0|[x1; x3]|0|[-31.746*z1; 0; 0]|0|[0; 0"
+"; 1e-9]"
+	  System {
+	    Name		    "Nonlinear MIMO system\nwith disturbance"
+	    Location		    [124, 225, 456, 399]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vstupy"
+	      Position		      [15, 43, 45, 57]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Poruchy"
+	      Position		      [15, 108, 45, 122]
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2, 0, 0, 0]
+	      Position		      [235, 6, 240, 159]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[nout n]"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [70, 16, 75, 149]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [100, 60, 210, 110]
+	      FunctionName	      "stavp_mimoz"
+	      Parameters	      "n,nin,nout,nz,F,G,H,E,pp"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vystupy"
+	      Position		      [280, 38, 310, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Stavovy\nvektor"
+	      Position		      [280, 113, 310, 127]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Vystupy"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Stavovy\nvektor"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Vstupy"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Poruchy"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Nonlinear SISO system\n(State-Space model)"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [45, 20, 175, 95]
+	  ShowPortLabels	  off
+	  MaskType		  "Nonlinear SISO system - state-space model"
+	  MaskDescription	  "Nonlinear SISO system is described by follo"
+"wing nonlinear differential equations:\n                     dx/dt = f(x) + g"
+"(x) u\n                      y = h(x)\n\n             states vector:  x = [x1"
+"; x2; ...; xN]\n             system input: u\n             system output: y\n"
+"\nParameters f(x), g(x), h(x) can be specified either as a symbolic expressio"
+"n or as an identifier of a symbolic variable.\n\nFor a detailed description o"
+"f parameters, click \"Help\" button."
+	  MaskHelp		  "web(fullfile(cd,'help','stavp_siso.html'));"
+	  MaskPromptString	  "System order (number of states, N)|f(x) - s"
+"ymbolic expression: |f(x) - variable identifier:|g(x) - symbolic expression:|"
+"g(x) - variable identifier:|h(x) - symbolic expression:|h(x) - variable ident"
+"ifier:|Initial conditions (initial states):"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	  MaskVariables		  "n=@1;F=&2;Fp=@3;G=&4;Gp=@5;H=&6;Hp=@7;pp=@8"
+";"
+	  MaskInitialization	  "% Overenie spravnosti zadania parametrov bl"
+"oku %\nif ~isempty(F) & (Fp == 0)\n   F = sym(F);\nelseif isempty(F) & (any(F"
+"p ~= 0))\n   F = sym(Fp);\nelse\n   error(['Matrix f(x) unspecified or specif"
+"ied more than once - cannot continue!']);\nend\n\nif ~isempty(G) & (Gp == 0)"
+"\n   G = sym(G);\nelseif isempty(G) & (any(Gp ~= 0))\n   G = sym(Gp);\nelse\n"
+"   error(['Matrix g(x) unspecified or specified more than once - cannot conti"
+"nue!']);\nend\n\nif ~isempty(H) & (Hp == 0)\n   H = sym(H);\nelseif isempty(H"
+") & (any(Hp ~= 0))\n   H = sym(Hp);\nelse\n   error(['Matrix h(x) unspecified"
+" or specified more than once - cannot continue!']);\nend\n\n% Zisti si symbol"
+"icke premenne, ktore vystupuju vo vyrazoch %\npremF = strrep(strrep(findsym(s"
+"ym(F)),', ',''),',',' ');\npremG = strrep(strrep(findsym(sym(G)),', ',''),','"
+",' ');\npremH = strrep(strrep(findsym(sym(H)),', ',''),',',' ');\n\n% Premenn"
+"e x1, x2, ..., xN su korektne, preskoc ich %\nfor k = 1 : n\n   premF = strre"
+"p(premF, sprintf('x%d',k), '');\n   premG = strrep(premG, sprintf('x%d',k), '"
+"');\n   premH = strrep(premH, sprintf('x%d',k), '');\nend\n\n% Ak niektory re"
+"tazec nezostal prazdny, vyhlas chybu %\nif ~isempty(premF)\n   error(['Unknow"
+"n symbol in f(x) expression - cannot continue!']);\nend\nif ~isempty(premG)\n"
+"   error(['Unknown symbol in g(x) expression - cannot continue!']);\nend\nif "
+"~isempty(premH)\n   error(['Unknown symbol in h(x) expression - cannot contin"
+"ue!']);\nend\n\n% Otestovanie spravnosti rozmerov matic F,G,H (podla \"n\") %"
+"\nif ~all(size(F) == [n,1])\n   error(['Invalid matrix dimensions: f(x) - can"
+"not continue!']);\nend\nif ~all(size(G) == [n,1])\n   error(['Invalid matrix "
+"dimensions: g(x) - cannot continue!']);\nend\nif ~all(size(H) == [1,1])\n   e"
+"rror(['Invalid matrix dimensions: h(x) - cannot continue!']);\nend\n\n% Kontr"
+"ola vektora pociatocnych podmienok (pociatocnych stavov) %\nif ~all(size(pp) "
+"== [n,1])\n   error(['Invalid dimensions: initial conditions vector - cannot "
+"continue!']);\nend\n\n% Nahradenie identifikatorov \"xI\" identifikatormi \"x"
+"(I)\" %\nco_str = '{''x1'; cim_str = '{''x(1)';\n\nfor k = 2 : n\n    co_str "
+"= sprintf('%s'',''x%d', co_str, k);\n    cim_str = sprintf('%s'',''x(%d)', ci"
+"m_str, k);\nend\n\nco_str = strcat(co_str, '''}'); cim_str = strcat(cim_str, "
+"'''}');\n\nF = eval(sprintf('subs(F,%s,%s)', co_str, cim_str));\nG = eval(spr"
+"intf('subs(G,%s,%s)', co_str, cim_str));\nH = eval(sprintf('subs(H,%s,%s)', c"
+"o_str, cim_str));\n"
+	  MaskDisplay		  "disp('Nonlinear SISO system\\n\\nx'' = f(x)"
+" + g(x) u\\ny = h(x)');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "2|[-sqrt(x1); sqrt(x1)-sqrt(x2)]|0|[1; 0]|0"
+"|x2|0|[0.1; 0.01]"
+	  System {
+	    Name		    "Nonlinear SISO system\n(State-Space model"
+")"
+	    Location		    [124, 225, 456, 399]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vstup"
+	      Position		      [15, 78, 45, 92]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2, 0, 0, 0]
+	      Position		      [235, 6, 240, 159]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[1 n]"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [85, 60, 195, 110]
+	      FunctionName	      "stavp_siso"
+	      Parameters	      "n,F,G,H,pp"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vystup"
+	      Position		      [280, 38, 310, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Stavovy\nvektor"
+	      Position		      [280, 113, 310, 127]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Vstup"
+	      SrcPort		      1
+	      DstBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Vystup"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Stavovy\nvektor"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Nonlinear SISO system\nwith disturbance"
+	  Ports			  [2, 2, 0, 0, 0]
+	  Position		  [45, 135, 175, 210]
+	  ShowPortLabels	  off
+	  MaskType		  "Nonlinear SISO system with disturbance - st"
+"ate-space model"
+	  MaskDescription	  "Nonlinear SISO system is described by follo"
+"wing nonlinear differential equations:\n                      dx/dt = f(x) + "
+"g(x) u + e(z)\n                       y = h(x)\n\n             states vector:"
+"  x = [x1; x2; ...; xN]\n             system input: u\n             system ou"
+"tput: y\n             disturbance: z\n\nParameters f(x), g(x), h(x), e(z) can"
+" be specified either as a symbolic expression or as an identifier of a symbol"
+"ic variable.\n\nFor a detailed description of parameters, click \"Help\" butt"
+"on."
+	  MaskHelp		  "web(fullfile(cd,'help','stavp_sisoz.html'))"
+";"
+	  MaskPromptString	  "System order (number of states, N)|f(x) - s"
+"ymbolic expression:|f(x) - variable identifier:|g(x) - symbolic expression:|g"
+"(x) - variable identifier:|h(x) - symbolic expression:|h(x) - variable identi"
+"fier:|e(z) - symbolic expression:|e(z) - variable identifier:|Initial conditi"
+"ons (initial states):"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit,edi"
+"t,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on"
+	  MaskVariables		  "n=@1;F=&2;Fp=@3;G=&4;Gp=@5;H=&6;Hp=@7;E=&8;"
+"Ep=@9;pp=@10;"
+	  MaskInitialization	  "% Overenie spravnosti zadania parametrov bl"
+"oku %\nif ~isempty(F) & (Fp == 0)\n   F = sym(F);\nelseif isempty(F) & (any(F"
+"p ~= 0))\n   F = sym(Fp);\nelse\n   error(['Matrix f(x) unspecified or specif"
+"ied more than once - cannot continue!']);\nend\n\nif ~isempty(G) & (Gp == 0)"
+"\n   G = sym(G);\nelseif isempty(G) & (any(Gp ~= 0))\n   G = sym(Gp);\nelse\n"
+"   error(['Matrix g(x) unspecified or specified more than once - cannot conti"
+"nue!']);\nend\n\nif ~isempty(H) & (Hp == 0)\n   H = sym(H);\nelseif isempty(H"
+") & (any(Hp ~= 0))\n   H = sym(Hp);\nelse\n   error(['Matrix h(x) unspecified"
+" or specified more than once - cannot continue!']);\nend\n\nif ~isempty(E) & "
+"(Ep == 0)\n   E = sym(E);\nelseif isempty(E) & (any(Ep ~= 0))\n   E = sym(Ep)"
+";\nelse\n   error(['Matrix e(z) unspecified or specified more than once - can"
+"not continue!']);\nend\n\n% Zisti si symbolicke premenne, ktore vystupuju vo "
+"vyrazoch %\npremF = strrep(strrep(findsym(sym(F)),', ',''),',',' ');\npremG ="
+" strrep(strrep(findsym(sym(G)),', ',''),',',' ');\npremH = strrep(strrep(find"
+"sym(sym(H)),', ',''),',',' ');\npremE = strrep(strrep(findsym(sym(E)),', ',''"
+"),',',' ');\n\n% Premenne x1, x2, ..., xN su korektne, preskoc ich %\nfor k ="
+" 1 : n\n   premF = strrep(premF, sprintf('x%d',k), '');\n   premG = strrep(pr"
+"emG, sprintf('x%d',k), '');\n   premH = strrep(premH, sprintf('x%d',k), '');"
+"\nend\n\n% Ak niektory retazec nezostal prazdny, vyhlas chybu %\nif ~isempty("
+"premF)\n   error(['Unknown symbol in f(x) expression - cannot continue!']);\n"
+"end\nif ~isempty(premG)\n   error(['Unknown symbol in g(x) expression - canno"
+"t continue!']);\nend\nif ~isempty(premH)\n   error(['Unknown symbol in h(x) e"
+"xpression - cannot continue!']);\nend\nif ~isempty(premE) & ~strcmp(premE,'z'"
+")\n   error(['Unknown symbol in e(z) expression - cannot continue!']);\nend\n"
+"\n% Otestovanie spravnosti rozmerov matic F,G,H,E (podla \"n\") %\nif ~all(si"
+"ze(sym(F)) == [n,1])\n   error(['Invalid matrix dimensions: f(x) - cannot con"
+"tinue!']);\nend\nif ~all(size(sym(G)) == [n,1])\n   error(['Invalid matrix di"
+"mensions: g(x) - cannot continue!']);\nend\nif ~all(size(sym(E)) == [n,1])\n "
+"  error(['Invalid matrix dimensions: e(z) - cannot continue!']);\nend\nif ~al"
+"l(size(sym(H)) == [1,1])\n   error(['Invalid matrix dimensions: h(x) - cannot"
+" continue!']);\nend\n\n% Kontrola vektora pociatocnych podmienok (pociatocnyc"
+"h stavov) %\nif ~all(size(pp) == [n,1])\n   error(['Initial conditions vector"
+": invalid dimensions - cannot continue!']);\nend\n\n% Nahradenie identifikato"
+"rov \"xI\" identifikatormi \"x(I)\" %\nco_str = '{''x1'; cim_str = '{''x(1)';"
+"\n\nfor k = 2 : n\n    co_str = sprintf('%s'',''x%d', co_str, k);\n    cim_st"
+"r = sprintf('%s'',''x(%d)', cim_str, k);\nend\n\nco_str = strcat(co_str, '''}"
+"'); cim_str = strcat(cim_str, '''}');\n\nF = eval(sprintf('subs(F,%s,%s)', co"
+"_str, cim_str));\nG = eval(sprintf('subs(G,%s,%s)', co_str, cim_str));\nH = e"
+"val(sprintf('subs(H,%s,%s)', co_str, cim_str));\n\n% Nahradenie identifikator"
+"a \"z\" identifikatorom \"u(2)\" %\nE = subs(E, 'z','u(2)');"
+	  MaskDisplay		  "disp('Nonlinear SISO system\\nwith disturba"
+"nce\\n\\nx'' = f(x) + g(x) u + e(z)\\ny = h(x)');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  none
+	  MaskIconUnits		  autoscale
+	  MaskValueString	  "2|[-sqrt(x1); sqrt(x1)-sqrt(x2)]|0|[1; 0]|0"
+"|x2|0|[z; 0]|0|[0.1; 0.01]"
+	  System {
+	    Name		    "Nonlinear SISO system\nwith disturbance"
+	    Location		    [126, 227, 460, 403]
+	    Open		    off
+	    ToolBar		    off
+	    StatusBar		    off
+	    ScreenColor		    white
+	    PaperOrientation	    landscape
+	    PaperPositionMode	    auto
+	    PaperType		    usletter
+	    PaperUnits		    inches
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vstup"
+	      Position		      [15, 43, 45, 57]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Porucha"
+	      Position		      [15, 108, 45, 122]
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2, 0, 0, 0]
+	      Position		      [235, 6, 240, 159]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Outputs		      "[1 n]"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [75, 16, 80, 149]
+	      BackgroundColor	      black
+	      ShowName		      off
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [105, 60, 215, 110]
+	      FunctionName	      "stavp_sisoz"
+	      Parameters	      "n,F,G,H,E,pp"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Vystup"
+	      Position		      [280, 38, 310, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Stavovy\nvektor"
+	      Position		      [280, 113, 310, 127]
+	      Port		      "2"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Stavovy\nvektor"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Vystup"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "S-funkcia realizujuca\nnelinearny syste"
+"m"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Vstup"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Porucha"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Annotation {
+	  Position		  [26, 57]
+	  Text			  "u(t)"
+	}
+	Annotation {
+	  Position		  [196, 37]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [196, 72]
+	  Text			  "x(t)"
+	}
+	Annotation {
+	  Position		  [231, 57]
+	  Text			  "u(t)"
+	}
+	Annotation {
+	  Position		  [406, 37]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [406, 72]
+	  Text			  "x(t)"
+	}
+	Annotation {
+	  Position		  [406, 152]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [406, 187]
+	  Text			  "x(t)"
+	}
+	Annotation {
+	  Position		  [196, 152]
+	  Text			  "y(t)"
+	}
+	Annotation {
+	  Position		  [196, 187]
+	  Text			  "x(t)"
+	}
+	Annotation {
+	  Position		  [236, 152]
+	  Text			  "u(t)"
+	}
+	Annotation {
+	  Position		  [26, 152]
+	  Text			  "u(t)"
+	}
+	Annotation {
+	  Position		  [236, 187]
+	  Text			  "z(t)"
+	}
+	Annotation {
+	  Position		  [26, 187]
+	  Text			  "z(t)"
+	}
+      }
+    }
+    Annotation {
+      Position		      [231, 47]
+      Text		      "(a tool for analysis and synthesis of nonlinear"
+" systems)"
+      FontSize		      12
+    }
+    Annotation {
+      Position		      [231, 27]
+      Text		      "NelinSys"
+      FontSize		      18
+      FontWeight	      bold
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [226, 232]
+      Text		      "Created by Martin Ondera, 2002-2006"
+      FontSize		      12
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [236, 247]
+      Text		      "(during his studies at KKUI FEI TU Kosice and U"
+"RPI FEI STU Bratislava)"
+      FontSize		      12
+      FontAngle		      italic
+    }
+    Annotation {
+      Position		      [236, 277]
+      Text		      "This version is distributed via MATLAB Central "
+"under the terms of BSD License."
+      FontSize		      12
+    }
+  }
+}

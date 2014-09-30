@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+	<TITLE>Linear controller for MIMO systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Linear controller for MIMO systems</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">Block works as linear state-space controller designed for a MIMO system with independent SISO subsystems of <I>rI-integrator</I> type given by state-space description in canonical form i.e. in the form<BR><BR>
+<CENTER><IMG SRC="ppreg_mimo_system.gif" ALT="State-space description of a MIMO system with 'rI-integrator' SISO subsystems"></CENTER>
+<P ALIGN="JUSTIFY">The controller is designed via pole placement during the initialization of the block, desired poles has to be specified as parameters (see below). The block is typically used in outer loop of the exact linearization scheme for SISO systems (exact linearization procedure transforms a nonlinear MIMO system to a linear system of the above type).</P>
+<P ALIGN="JUSTIFY"><FONT COLOR="Red"><U>Important remark:</U> This block is intended to control <B>only</B> linear MIMO systems of above type and <B>does not work correctly with other systems</B>!</FONT></P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="ppreg_mimo_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>Orders of subsystems of the linear MIMO system</I><DD><P ALIGN="JUSTIFY">Vector of positive integer elements specifying the number of state variables belonging to different subsystems. The sum of the elements is equal to the order of the MIMO system. The number of subsystems has to be equal to the number of inputs/outputs of the MIMO system (see the following parameter).</P>
+	<DT><I>Number of inputs/outputs of the system</I><DD><P ALIGN="JUSTIFY">Positive integer specifying the number of system inputs as well as the number of system outputs (if a MIMO system is composed of independent SISO subsystems the number of its inputs and outputs must be the same).</P>
+	<DT><I>Desired poles of a closed-loop system</I><DD><P ALIGN="JUSTIFY">Vector of values determining the desired dynamics of the closed-loop system. The length of the vector i.e. the number of desired poles must be equal to the order of the MIMO system (in case a controller without integral actions is used) or to the order of the MIMO system increased by the number of system outputs (if controller includes integral actions). The poles are assigned to the subsystems in the order given by the elements of the vector - for example if a 3rd-order MIMO system with two subsystems, one of them 2nd-order and the other 1st-order and a controller without integral actions are considered and if desired poles are <I>[-2 -1 -1]</I>, then the poles <I>[-2 -1]</I> will be assigned to the first and the pole <I>-1</I> to the second subsystem. Or, if a controller with integral actions is considered, desired poles being <I>[-2 -2 -6 -1 -3]</I>, the poles <I>[-2 -2 -6]</I> belong to the first and the poles <I>[-1 -3]</I> to the second subsystem.</P>
+	<DT><I>Controller includes integral actions (one per each subsystem)</I><DD><P ALIGN="JUSTIFY">Checking this box means that the state-space controller will be extended so as to include integral actions (integrals of control errors corresponding to output variables). Controller with integral actions is able to cancel the influence of disturbances to system outputs <I>y</I>.</P>
+</DL>
+
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">See demo <A HREF="demo_exakt.html#mimo"><I>Exact linearization of a MIMO system</I></A></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="ppreg_siso.html"><I>Linear controller for SISO systems</I></A>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

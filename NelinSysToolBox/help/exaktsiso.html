@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+	<TITLE>Exact linearization for SISO systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Exact linearization for SISO systems</H2>
+
+<P ALIGN="JUSTIFY">The <I>ExaktSiso</I> application serves as a tool for exact linearization of nonlinear SISO systems. It calculates both the <A HREF="transf_surad.html"><I>state coordinates transformation</I></A> and the <A HREF="lineariz_vztah.html"><I>nonlinear feedback (linearizing control law)</I></A> - two main results of the control design procedure that can be utilised in simulation or in physical implementation of the controller. There are two versions of the application - a <A HREF="#GrafRozhr">GUI version</A> and a <A HREF="#TextRozhr">text-based version</A>.</P>
+<P ALIGN="JUSTIFY">The objective of exact linearization is to control a nonlinear system given in the form<BR><BR>
+<CENTER><IMG SRC="stavp_siso_vzorec.gif" ALT="State-space description of the nonlinear system to be controlled"></CENTER><BR>
+by turning it into a linear and controllable one i.e. such that can be described by linear state space equations<BR>
+<CENTER><IMG SRC="linear_siso_vzorec.gif" ALT="State-space description of a linear system"></CENTER>
+via states transformation <I>q</I> = <I>q</I>(<I>x</I>) and nonlinear state feedback <I>u</I> = <I>u</I>(<I>x</I>,<I>v</I>) where <I>x&nbsp;=&nbsp;(x1,x2,...,xN)<SUP>T</SUP></I> is the states vector of the nonlinear system, <I>u</I> and <I>y</I> input and output of the system, respectively; vector <I>q&nbsp;=&nbsp;(q1,q2,...,qNr)<SUP>T</SUP></I> is the states vector and <I>v</I> the input of the linear system resulting from the transformation (a more detailed discussion on exact linearization is available in literature dealing with nonlinear control systems). The <I>ExaktSiso</I> application automates almost every step of the exact linearization control design.</P>
+
+<A NAME="GrafRozhr"></A>
+<H3>Graphical user interface (GUI)</H3>
+<CENTER><IMG SRC="exaktsiso_dialog.jpg" ALT="GUI of the 'ExaktSiso' application"></CENTER>
+<DL>
+	<DT><I>Nonlinear system state-space equations - f(x), g(x), h(x)</I><DD><P ALIGN="JUSTIFY">Symbolic expressions for <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I> defining the state-space description of the nonlinear system to be controlled i.e. the system to which the application should design a suitable controller via exact linearization. The convention for writing mathematical operations is the same as the one used by MATLAB's Symbolic Math Toolbox. State variables <U>have to be</U> denoted as <I>x1</I>, <I>x2</I>, ..., <I>xN</I>. Modifying of any of these fields causes deletion of previously calculated results.</P>
+	<DT><I>Evaluate</I><DD><P ALIGN="JUSTIFY">Clicking this button starts the calculation of the controller i.e. the evaluation of controllability, calculation of the transformation <I>q&nbsp;=&nbsp;q(x)</I> and linearizing control law <I>u&nbsp;=&nbsp;u(x,v)</I> for a given nonlinear system. The result of these calculations will be displayed in corresponding fields (see below).</P>
+	<DT><I>Clear</I><DD><P ALIGN="JUSTIFY">Clicking this button resets the whole form i.e. deletes all contents of the form.</P>
+	<DT><I>Simulation</I><DD><P ALIGN="JUSTIFY">Clicking this button opens the Simulink simulation <I>Exact linearization for SISO systems</I> that lets the user judge the performance of the system with designed controller (<A HREF="#Simul">see details below</A>). Parameters of the blocks used in the simulation are taken from the <I>ExaktSiso</I> application via symbolic variables <I>F</I>, <I>G</I>, <I>H</I> (state-space description), <I>qx</I> (state coordinates transformation), <I>u</I> (linearizing control law), <I>n</I> (system order) and <I>r</I> (system relative degree).</P>
+	<DT><I>Exit</I><DD><P ALIGN="JUSTIFY">Clicking this button closes all windows opened by the application and exits the program.</P>
+	<DT><I>Help</I><DD><P ALIGN="JUSTIFY">Clicking the <I>Help</I> button opens a HTML browser and displays this file in it.</P>
+	<DT><I>Controllability evaluation</I><DD><P ALIGN="JUSTIFY">This field contains conditions under which the nonlinear system is controllable - there are three options: either <I>system is controllable</I> (i.e. there are no further conditions to hold), or <I>system is controllable if and only if some expression is nonzero</I> or <I>system is not controllable</I> at all (in this last case, exact linearization cannot be used to design the controller). In the second case i.e. if some expression determining the controllability is involved, it is possible to print it in MATLAB Command Window in a more user-friendly fashion i.e. in a format that resembles type-set
+mathematics (for more information type <I>help pretty</I> in MATLAB Command Window).</P>
+	<DT><I>Transformation equations</I><DD><P ALIGN="JUSTIFY">Result - transformation equations <I>q&nbsp;=&nbsp;q(x)</I> for transforming state coordinates (elements of the state-space vector) of the nonlinear system to be controlled (<I>x</I>) into state coordinates of the linear system (<I>q</I>). The number of these equations is the same as system relative degree. By clicking the <I>pretty</I> button next to this field, the transformation equations can be printed in MATLAB Command Window in a more user-friendly fashion i.e. in a format that resembles type-set mathematics (for more information type <I>help pretty</I> in MATLAB Command Window).</P>
+	<DT><I>Linearizing control law (nonlinear feedback)</I><DD><P ALIGN="JUSTIFY">Result - linearizing control law <I>u&nbsp;=&nbsp;u(x,v)</I> i.e. nonlinear feedback exactly compensating system nonlinearities by control action. By clicking the <I>pretty</I> button next to this field, the linearizing control law can be printed in MATLAB Command Window in a more user-friendly fashion i.e. in a format that resembles type-set mathematics (for more information type <I>help pretty</I> in MATLAB Command Window).</P>
+	<DT><I>Internal dynamics evaluation</I><DD><P ALIGN="JUSTIFY">Evaluation of existence or nonexistence of internal dynamics in the nonlinear system. If the relative degree of the system is equal to the system order, there is no internal dynamics and calculated results can be used safely. However, if the relative degree is lower than system order, it is necessary to analyze stability of system zero dynamics and only if that is stable, the exact linearization results can be used. (<I>Remark:</I> Mathematical analysis of zero dynamics is quite time-consuming and therefore, from practical point of view, it is often easier to analyze it by means of simulation and evaluation of time responses of system state variables).</P>
+</DL>
+
+<A NAME="TextRozhr"></A>
+<H3>Text-based user interface</H3>
+<P ALIGN="JUSTIFY">Text-based version of the <I>ExaktSiso</I> application can be found in <I>\TextRozhr</I> subdirectory. It is run from MATLAB Command Window by typing <I>exakt</I>. From the operational point of view, this version allows user to do everything that is possible to do with GUI version, besides, unlike the GUI version, it is able to cope with non-numeric parameters (symbols other than <I>x</I>) in the expressions <I>f(x)</I>, <I>g(x)</I>, <I>h(x)</I>. Usage example:</P>
+<PRE>
+Exact linearization for SISO systems
+------------------------------------
+                       .
+State-space equations: x = f(x) + g(x) u
+                       y = h(x)
+
+System order: 2
+
+Specify parameters' identifiers (separated by spaces), if there are any: b1 b2 b3 S1
+
+System matrix: f(x) = [-b1*sqrt(x1); b2*sqrt(x1)-b3*sqrt(x2)]
+Input matrix: g(x) = [1/S1; 0]
+Output matrix: h(x) = x2
+
+Controllability: system is controllable if the following expression is nonzero:
+
+                                         b2
+                                - 1/2 ---------
+                                        2   1/2
+                                      S1  x1
+Transformation equations:
+
+ q1 = x2
+ q2 = b2*x1^(1/2)-b3*x2^(1/2)
+ 
+Relative degree of the system: 2
+
+Nonlinear feedback: u =
+                                                   2        1/2
+                x1 S1 b3     S1 (1/2 b2 b1 - 1/2 b3  + v) x1
+                -------- + 2 ----------------------------------
+                   1/2                       b2
+                 x2
+</PRE>
+
+<A NAME="Simul"></A>
+<H3>Simulation of designed closed-loop system</H3>
+<P ALIGN="JUSTIFY">The <I>ExaktSiso</I> application lets user evaluate the performance of designed control loop (by means of simulation) immediately after the control law is calculated. The simulation scheme employed requires only very little user intervention before it is able to be run - parameters of the blocks <I>Controlled system</I> (except for initial values of state variables), <I>State-Coordinates transformation</I> and <I>Compensation of nonlinearities</I> are taken from the <I>ExaktSiso</I> application via symbolic variables <I>F</I>, <I>G</I>, <I>H</I>, <I>u</I>, <I>qx</I>, <I>n</I> and <I>r</I>.</P>
+<CENTER><IMG SRC="exaktsiso_simulacia.jpg" ALT="Simulation of designed control loop"></CENTER>
+<P ALIGN="JUSTIFY">The simulation scheme contains a linear pole-placement state-space controller whose parameters are desired poles of the closed-loop system (number of these poles has to be equal to system relative degree), however, the use of this controller is not compulsory, it can be replaced with arbitrary linear controller. Similarly, the <I>Desired value</I> block can be replaced with any other type of input signal.</P>
+
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">See demo <A HREF="demo_exakt.html#siso"><I>Exact linearization of a SISO system</I></A></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="exaktmimo.html"><I>Exact linearization for MIMO systems</I></A>
+<LI><A HREF="progzos.html"><I>Gain-Scheduling control for SISO systems</I></A>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

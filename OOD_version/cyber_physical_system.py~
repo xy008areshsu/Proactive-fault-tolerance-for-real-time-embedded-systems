@@ -1,0 +1,57 @@
+import numpy
+
+
+class CPS:
+
+    def __init__(self, initX, initU):
+        self.x = initX
+        self.u = initU
+
+    def updateStates(self, Ts):
+        raise NotImplementedError()
+
+    def updateControlActuator(self, Ts):
+        raise NotImplementedError()
+
+    def evolveSystem(self, time, Ts):
+        for t in numpy.arange(0.0, time, Ts):
+            self.updateStates(Ts)
+            self.updateControlActuator(Ts)
+
+
+class LinearCPS(CPS):
+
+    def __init__(self, A, B, K, initX = None, initU = None):
+        if initX is None:
+            initX = numpy.mat(numpy.zeros((A.shape[0], 1)))
+        if initU is None:
+            initU = -K * initX
+        super().__init__(initX, initU)
+        self.A = A
+        self.B = B
+        self.K = K
+
+    """
+    The update squence is first to call updateStates(Ts), then to call updateControlActuator(Ts)
+    """
+    def updateStates(self, Ts):
+        newX = self.x[:, -1] + Ts * (self.A * self.x[:, -1] + self.B * self.u[:, -1])
+        self.x = numpy.append(self.x, newX, 1)
+        
+
+    """
+    The update squence is first to call updateStates(Ts), then to call updateControlActuator(Ts)
+    """
+    def updateControlActuator(self, Ts):
+        newU = -self.K * self.x[:, -1]
+        self.u = numpy.append(self.u, newU, 1)
+   
+
+class NonLinearCPS(CPS):
+    
+    def __init__(self, initX, initU = None):
+        if initU is None:
+            initU = 0
+        super().__init__(initX, initU)
+
+    

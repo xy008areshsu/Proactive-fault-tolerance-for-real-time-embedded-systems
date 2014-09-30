@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+	<TITLE>Linearizing control law for MIMO systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>Linearizing control law for MIMO systems</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">Block performs feedback compensation of system nonlinearities according to the exact linearization procedure. It is used together with the <A HREF="transf_mimo.html"><I>Coordinates transformation</I></A> block in order to ensure a transformation of the nonlinear state-space equations of a MIMO system<BR><BR>
+<CENTER><IMG SRC="stavp_siso_vzorec.gif" ALT="State-space description of a nonlinear system"></CENTER>
+to the linear and controllable form:<BR>
+<CENTER><IMG SRC="linear_siso_vzorec.gif" ALT="State-space description of a linear system"></CENTER>
+<P ALIGN="JUSTIFY">Following notations are used: <I>x&nbsp;=&nbsp;(x1,x2,...,xN)<SUP>T</SUP></I> denotes the states vector of the nonlinear system, <I>u&nbsp;=&nbsp;(u1,u2,...,uP)<SUP>T</SUP></I> and <I>y&nbsp;=&nbsp;(y1,y2,...,yP)<SUP>T</SUP></I> denote the system inputs and outputs, respectively. Vector <I>q&nbsp;=&nbsp;(q1,q2,...,qNr)<SUP>T</SUP></I> is the states vector and <I>v&nbsp;=&nbsp;(v1,v2,...,vP)<SUP>T</SUP></I> the input of the linear system resulting from the transformation. The linearizing control law can be specified either by a symbolic expression or by an identifier of a symbolic variable defined in MATLAB workspace - see detailed description of block parameters below. The law can be computed by the <A HREF="exaktmimo.html"><I>ExaktMimo</I></A> program application included in the <I>NelinSys</I> tool.</P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="lineariz_mimo_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>System order (number of states, N)</I><DD><P ALIGN="JUSTIFY">Positive integer specifying the number of state variables of the nonlinear system i.e. the length of the states vector <I>x</I>.</P>
+	<DT><I>Number of system outputs</I><DD><P ALIGN="JUSTIFY">Number of outputs of the nonlinear system (length of the <I>y</I> vector); this number is the same as the number of inputs of the linear system resulting from the coordinates transformation (i.e. as the length of the <I>v</I> vector).</P>
+	<DT><I>Linearizing law - symbolic expression</I><DD><P ALIGN="JUSTIFY">Symbolic expression defining the linearizing control law <I>u = U(x,v)</I>; the convention for writing mathematical operations is the same as the one used by MATLAB's Symbolic Math Toolbox. State variables <U>have to be</U> denoted as <I>x1</I>, <I>x2</I>, ..., <I>xN</I> and the inputs of the linear system as  <I>v1</I>, <I>v2</I>, ..., <I>vP</I>. If the linearizing law is not specified by a symbolic expression but by an identifier of a variable (see below), it is necessary to leave this field blank.</P>
+	<DT><I>Linearizing law - variable identifier</I><DD><P ALIGN="JUSTIFY">Identifier of a symbolic variable (a <I>class sym</I> object) containing the expression for <I>u = U(x,v)</I>. If the linearizing law is not specified by an identifier of a variable but by a symbolic expression (see previous parameter), it is necessary to set this field to 0 (zero).</P>
+</DL>
+
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">See demo <A HREF="demo_exakt.html#mimo"><I>Exact linearization of a MIMO system</I></A></P>
+
+<H3>See also</H3>
+<UL>
+<LI><A HREF="lineariz_vztah.html"><I>Linearizing control law for SISO systems</I></A>
+<LI><A HREF="transf_mimo.html"><I>Coordinates transformation for MIMO systems</I></A>
+<LI><A HREF="transf_surad.html"><I>Coordinates transformation for SISO systems</I></A>
+</UL>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>

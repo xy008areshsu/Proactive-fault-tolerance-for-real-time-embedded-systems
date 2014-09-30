@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+	<TITLE>NelinSys - a program tool for analysis and synthesis of nonlinear control systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<CENTER><FONT SIZE="+3"><B><I>NelinSys</I></B></FONT><BR><BR><I>A program tool for analysis and synthesis of nonlinear control systems based on MATLAB/Simulink 5.2<BR><BR>Created by <A HREF="mailto:Martin.Ondera@gmail.com">Martin Ondera</A> (during his studies at KKUI FEI TU Kosice and KAR FEI STU Bratislava)</I><BR><I>The tool is available via <A HREF="http://www.mathworks.com/matlabcentral/" TARGET="_top"><FONT COLOR="Black">MATLAB Central</FONT></A> under the terms of <A HREF="http://www.opensource.org/licenses/bsd-license.php" TARGET="_top"><FONT COLOR="Black">BSD License</FONT></A></I>.</CENTER>
+<BR>
+<P ALIGN="JUSTIFY">The <I>NelinSys</I> library for MATLAB/Simulink 5.2 was initially created as a part of author's master thesis at the Department of Cybernetics and Artificial Intelligence, Faculty of Electrical Engineering and Informatics, Technical University of Kosice.
+Its main objective was to provide better program support for design and simulation of nonlinear control systems in MATLAB/Simulink environment. Afterwards, when the author began his studies at the Department of Automation and Control, Faculty of Electrical Engineering and Informatics, Slovak University of Technology in Bratislava, the library has been translated into English and supplemented with a few new functions. A few bugs have been fixed, too. The library is still being developed and new versions are being released from time to time.</P>
+<P ALIGN="JUSTIFY">The library consists of two relatively independent parts - <A HREF="#Analyza"><I>Nonlinear Systems Analysis</I></A> and <A HREF="#Synteza"><I>Nonlinear Systems Synthesis</I></A>. Besides function blocks designed for Simulink it also contains some applications designed directly for MATLAB and ready-made demo-simulations composed of the function blocks. This document serves as a help-base for the <I>NelinSys</I> library, it contains its detailed description as well as usage examples. <A HREF="#SysReq">System requirements</A> necessary to work with the <I>NelinSys</I> library are mentioned at the end of this page.</P>
+<MAP NAME="map1">
+	<AREA COORDS="52 126 220 225" HREF="#Analyza">
+	<AREA COORDS="258 126 425 225" HREF="#Synteza">
+</MAP>
+<P><CENTER><IMG SRC="NelinSys.jpg" ALT="NelinSys - a program tool for analysis and synthesis of nonlinear control systems" USEMAP="#map1" BORDER="0" ISMAP></CENTER></P>
+
+<A NAME="Analyza"></A>
+<H3>Nonlinear Systems Analysis</H3>
+<P ALIGN="JUSTIFY">This part of the <I>NelinSys</I> library gives support to two different methods from nonlinear systems theory, namely the <I>Phase Plane Analysis Method</I> and the <I>Two-Characteristics Method</I> (also called the <I>Describing Function Method</I>). The first one is supported by four Simulink function blocks - <I>Phase portraits...</I> and the block <A HREF="sfunvxy.html"><I>Vector XY Graph for Phase Portraits</I></A>, whereas the second is a Simulink-independent program application for MATLAB (for a more detailed description of either, click the corresponding icon in the following picture).</P>
+<MAP NAME="map2">
+	<AREA COORDS="39 73 205 152" HREF="fazrov_auton1.html">
+	<AREA COORDS="39 193 205 272" HREF="fazrov_auton2.html">
+	<AREA COORDS="274 73 440 152" HREF="fazrov_typ1.html">
+	<AREA COORDS="274 193 440 272" HREF="fazrov_typnl.html">
+	<AREA COORDS="534 57 605 138" HREF="sfunvxy.html">
+	<AREA COORDS="520 189 620 233" HREF="fazrov_demos.html">
+	<AREA COORDS="520 269 620 310" HREF="met2char.html">
+</MAP>
+<P><CENTER><IMG SRC="NelinSys_Analyza.jpg" ALT="Nonlinear Systems Analysis" USEMAP="#map2" BORDER="0" ISMAP></CENTER></P>
+
+<A NAME="Synteza"></A>
+<H3>Nonlinear Systems Synthesis</H3>
+<P ALIGN="JUSTIFY">This part of the library supports two popular methods of nonlinear control, the <A HREF="#Exakt"><I>Exact Linearization</I></A> and <A HREF="#GS"><I>Gain Scheduling</I></A>. Besides blocks directly connected with the methods, there are also others that serves as general-purpose Simulink blocks for nonlinear SISO and MIMO systems. For a more detailed description of individual blocks, click the corresponding icon in the following picture.</P>
+<MAP NAME="map3">
+	<AREA COORDS="49 62 180 138" HREF="stavp_siso.html">
+	<AREA COORDS="49 177 180 253" HREF="stavp_sisoz.html">
+	<AREA COORDS="259 62 390 138" HREF="stavp_mimo.html">
+	<AREA COORDS="259 177 390 253" HREF="stavp_mimoz.html">
+	<AREA COORDS="459 62 590 138" HREF="#Exakt">
+	<AREA COORDS="459 177 590 253" HREF="#GS">
+</MAP>
+<P><CENTER><IMG SRC="NelinSys_Synteza.jpg" ALT="Nonlinear Systems Synthesis" USEMAP="#map3" BORDER="0" ISMAP></CENTER></P>
+
+<A NAME="Exakt"></A>
+<H4>Exact Linearization</H4>
+<MAP NAME="map4">
+	<AREA COORDS="49 56 125 99" HREF="lineariz_vztah.html">
+	<AREA COORDS="49 146 125 189" HREF="lineariz_mimo.html">
+	<AREA COORDS="199 62 260 93" HREF="transf_surad.html">
+	<AREA COORDS="199 152 260 183" HREF="transf_mimo.html">
+	<AREA COORDS="334 56 420 104" HREF="ppreg_siso.html">
+	<AREA COORDS="334 146 420 194" HREF="ppreg_mimo.html">
+	<AREA COORDS="468 57 555 97" HREF="exaktsiso.html">
+	<AREA COORDS="468 147 555 187" HREF="exaktmimo.html">
+	<AREA COORDS="592 85 695 160" HREF="demo_exakt.html">
+</MAP>
+<P><CENTER><IMG SRC="NelinSys_Synteza_Exakt.jpg" ALT="Exact linearization" USEMAP="#map4" BORDER="0" ISMAP></CENTER></P>
+
+<A NAME="GS"></A>
+<H4>Gain Scheduling</H4>
+<MAP NAME="map5">
+	<AREA COORDS="49 61 130 109" HREF="gs_siso.html">
+	<AREA COORDS="183 62 270 102" HREF="progzos.html">
+	<AREA COORDS="88 152 224 197" HREF="demo_gs.html">
+</MAP>
+<P><CENTER><IMG SRC="NelinSys_Synteza_GS.jpg" ALT="Gain scheduling" USEMAP="#map5" BORDER="0" ISMAP></CENTER></P>
+
+<A NAME="SysReq"></A>
+<H3>System Requirements</H3>
+<P ALIGN="JUSTIFY">As the <I>NelinSys</I> library was created for use with MATLAB/Simulink 5.2, its system requirements are almost the same as those of MATLAB. However, considering the large amount of symbolic operation, it is recommended for the computing power of the system to be slightly higher - it will shorten the time necessary for simulations to run. From the additional toolboxes of MATLAB, <I>Symbolic Math Toolbox</I> is required i.e. it must be properly installed before you start working with the library (<I>Control System Toolbox</I> is recommended, too).</P>
+<P ALIGN="JUSTIFY">As for the MATLAB version, the library is optimized for MATLAB 5.2 / Simulink 2.2 and <B>was NOT TESTED with a different version</B>. Nevertheless, it is possible that most functions will work fine also in combination with a higher version of the MATLAB software, or that only slight modifications of the program code are necessary in order to use it with e.g. MATLAB 5.3 or MATLAB 6. It is not recommended to use the library with a version of MATLAB or Simulink that is lower than 5.2 and 2.2, respectively.</P>
+<HR>
+<I>Last modified: 9.10.2005</I>
+
+</FONT>
+</BODY>
+</HTML>

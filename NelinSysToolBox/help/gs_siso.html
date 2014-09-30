@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+	<TITLE>State-space gain-scheduling controller for SISO systems</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="White" TEXT="Black" LINK="Blue" VLINK="Purple" ALINK="Red">
+<FONT FACE="Arial CE,Arial,sans-serif">
+
+<I><A HREF="index.html">NelinSys - a program tool for analysis and synthesis of nonlinear control systems</A></I><HR>
+<H2>State-space gain-scheduling controller for SISO systems</H2>
+
+<H3>Block description</H3>
+<P ALIGN="JUSTIFY">Block performs the control action of a state-space controller designed for a nonlinear SISO system. The control law <I>u&nbsp;=&nbsp;u(w,x)</I> can be specified either as a symbolic expression or as an identifier of a <I>class sym</I> variable (see a more detailed description of block parameters below).</P>
+<P ALIGN="JUSTIFY">Block is typically used as a state-space controller designed via gain scheduling - then the <A HREF="progzos.html"><I>ProgZos</I></A> application can be used for the calculation of the control law - however, it can perform arbitrary control law given in the form <I>u&nbsp;=&nbsp;u(w,x)</I> where <I>w</I> is the desired value and <I>x</I> is the vector of system states i.e. there is no restriction as to the controller synthesis method.</P>
+
+<H3>Block parameters</H3>
+<CENTER><IMG SRC="gs_siso_dialog.jpg" ALT="Block parameters setup"></CENTER>
+<DL>
+	<DT><I>System order (number of states)</I><DD><P ALIGN="JUSTIFY">Positive integer specifying the number of state variables of the system i.e. the length of the states vector <I>x</I>.</P>
+	<DT><I>Control action - symbolic expression</I><DD><P ALIGN="JUSTIFY">Symbolic equation determining the control law <I>u = u(w,x)</I>; the convention for writing mathematical operations is the same as the one used by MATLAB's Symbolic Math Toolbox. State variables <U>have to be</U> denoted as <I>x1</I>, <I>x2</I>, ..., <I>xN</I> and the desired value as <I>w</I>. If the control law is not specified by a symbolic expression but by an identifier of a variable (see below), it is necessary to leave this field blank.</P>
+	<DT><I>Control action - variable identifier</I><DD><P ALIGN="JUSTIFY">Identifier of a symbolic variable (a <I>class sym</I> object) containing the expression for <I>u = u(w,x)</I>. If the control law is not specified by an identifier of a variable but by a symbolic expression (see previous parameter), it is necessary to set this field to 0 (zero).</P>
+</DL>
+
+<H3>Usage example</H3>
+<P ALIGN="JUSTIFY">See demo <A HREF="demo_gs.html"><I>Gain scheduling for SISO systems</I></A></P>
+
+<HR>
+
+</FONT>
+</BODY>
+</HTML>
