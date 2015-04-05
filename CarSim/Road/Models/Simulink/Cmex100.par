@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Models: Simulink`No Data`Empty (You should edit or delete this)
+#RingCtrl0 1
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#RingCtrl2 0
+*X64SOLVER 0
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox2 0    
+OPT_IO_UPDATE 0
+#CheckBox3 0    
+
+
+LOG_ENTRY Used Dataset: Models: Simulink; { Empty (You should edit or delete this) } No Data
+#Library : Models: Simulink
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Cmex100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode 
+
+END

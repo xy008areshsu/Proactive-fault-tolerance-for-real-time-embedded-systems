@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Vehicle Shadow Shape`Vehicle Shadow
+#MiscYellow3
+add_obj Animator\3D_shape_files_CS\vehicles\vehicle_shadows\shadow.obj
+#ENDMYellow
+
+SET_COLOR 0.125 0.125 0.125
+X_REF_LENGTH 2690
+Y_REF_LENGTH 1900
+Z_REF_LENGTH 1220
+*TRANSPARENCY 0.8
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+set_transparency 0.8
+show_front on
+show_back off
+#MiscYellow0
+tranclucent_fix on
+#ENDMYellow
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\AniSTL106.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Vehicle Shadow } Vehicle Shadow Shape
+#Library : Animator: Shape File Link
+#DataSet : Vehicle Shadow Shape
+#Category: Vehicle Shadow
+#FileID  : AniSTL106
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Shape File
+
+END

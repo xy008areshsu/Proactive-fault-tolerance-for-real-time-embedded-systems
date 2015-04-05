@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Vehicle: Sprung Mass (from Whole Vehicle)`No Data`Empty (You should edit or delete this)
+#VehCode Sprung mass (whole)
+*M_TU 0.00
+*LX_CG_TU NaN
+*Y_CG_TU NaN
+M_SU 0.00
+LX_CG_SU NaN
+Y_CG_SU NaN
+H_CG_SU 0.00
+IXX_SU NaN
+IYY_SU NaN
+IZZ_SU NaN
+IXY_SU NaN
+IXZ_SU NaN
+IYZ_SU NaN
+
+#RingCtrl0 0
+#RingCtrl1 0
+symbol_set <<hitch_x>> 0
+symbol_set <<hitch_y>> 0
+symbol_set <<hitch_z>> 0
+iaxle 1
+iside 1
+iside 2
+iaxle 2
+iside 1
+iside 2
+
+LOG_ENTRY Used Dataset: Vehicle: Sprung Mass (from Whole Vehicle); { Empty (You should edit or delete this) } No Data
+#Library : Vehicle: Sprung Mass (from Whole Vehicle)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TotMass100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Sprung mass (whole)
+
+END

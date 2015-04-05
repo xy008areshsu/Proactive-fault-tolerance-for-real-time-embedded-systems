@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Control: Clutch Shifting Timelines (Closed Loop)`No Data`Empty (You should edit or delete this)
+
+opt_clutch_mode 1
+
+T_GEAR_LAG 0
+T_TH_ZERO_TOTAL 0
+T_TH_ZERO_HOLD 0
+T_TH_RETURN 0
+T_CL_PRESS_TOTAL 0
+T_CL_PRESS_HOLD 0
+T_CL_HALF_TOTAL 0
+T_CL_HALF_HOLD 0
+
+LOG_ENTRY Used Dataset: Control: Clutch Shifting Timelines (Closed Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Clutch Shifting Timelines (Closed Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : IntShft100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Shifting Times (Alt)
+
+END

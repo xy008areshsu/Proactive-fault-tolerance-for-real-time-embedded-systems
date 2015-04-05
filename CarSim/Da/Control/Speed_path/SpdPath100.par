@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Control: Speed (Closed Loop) Using Path Preview`No Data`Empty (You should edit or delete this)
+#RingCtrl0 2
+OPT_SC_SKILL 2
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_CONSTANT 0
+OPT_SC 4
+#CheckBox0 0    
+OPT_SC_ENGINE_BRAKING 0
+#CheckBox1 0    
+#CheckBox2 0    
+OPT_SC_3D 0
+
+
+#EMBEDDED_NOTES
+#NGEARS is the internal symbol for the number of gears in a transmission. By setting the Mode to NGEARS, CarSim is told to use all of the transmission gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Speed (Closed Loop) Using Path Preview; { Empty (You should edit or delete this) } No Data
+#Library : Control: Speed (Closed Loop) Using Path Preview
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : SpdPath100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Speed using path preview
+
+END

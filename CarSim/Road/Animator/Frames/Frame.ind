@@ -1,0 +1,9 @@
+FRAME.IND v1.0
+5    2
+105  Animator: Reference Frame
+102  , Fixed` ` 02-11-2015` 18:36` 1
+103  , Camera Tracking X-Y-Z` Cameras` 02-11-2015` 18:36` 1
+105  , Camera Front Point w/o Yaw` Road Tracking` 02-11-2015` 18:37` 1
+104  , Camera Rear Point w/ Yaw` Road Tracking` 02-11-2015` 18:37` 1
+101  , Yaw for Shape Preview` Shape Preview` 02-11-2015` 18:36` 1
+END

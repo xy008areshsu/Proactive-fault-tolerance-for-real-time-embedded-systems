@@ -1,0 +1,38 @@
+PARSFILE
+#FullDataName Animator: Group`Environment City and Offroad`Off-Road/City Loop
+PARSFILE Animator\STL\AniSTL114.par
+#BlueLink0 Animator: Shape File Link`Roads and Terrain` Off-Road/City Loop` , Animator data
+
+PARSFILE Animator\STL\AniSTL115.par
+#BlueLink1 Animator: Shape File Link`PalmTrees` Off-Road/City Loop` , Animator data
+
+PARSFILE Animator\STL\AniSTL116.par
+#BlueLink2 Animator: Shape File Link`Buildings and Walls` Off-Road/City Loop` , Animator data
+
+PARSFILE Animator\STL\AniSTL117.par
+#BlueLink3 Animator: Shape File Link`City Off-Road Shadow Objects` Off-Road/City Loop` , Animator data
+
+PARSFILE Animator\STL\AniSTL118.par
+#BlueLink4 Animator: Shape File Link`Poles and Barriers` Off-Road/City Loop` , Animator data
+
+PARSFILE Animator\STL\AniSTL119.par
+#BlueLink5 Animator: Shape File Link`Barrels` Off-Road/City Loop` , Animator data
+
+
+#CheckBox0 0    
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink20 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Off-Road/City Loop } Environment City and Offroad
+#Library : Animator: Group
+#DataSet : Environment City and Offroad
+#Category: Off-Road/City Loop
+#FileID  : Group102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Animator Group
+
+END

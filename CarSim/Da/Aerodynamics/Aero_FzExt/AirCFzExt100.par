@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+FZ_AERO_SHAPING_2_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#Nearly all passenger cars develop a small positive lift force at highway speeeds.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch; { Empty (You should edit or delete this) } No Data
+#Library : Aerodynamics: Fz (Lift) Coef. vs. Bounce and Pitch
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : AirCFzExt100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Lift vs. bounce and pitch
+
+END

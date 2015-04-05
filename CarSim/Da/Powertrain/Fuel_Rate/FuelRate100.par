@@ -1,0 +1,19 @@
+PARSFILE
+#FullDataName Powertrain: Fuel Consumption Rate`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Powertrain: Fuel Consumption Rate; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Fuel Consumption Rate
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : FuelRate100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Fuel rate
+
+END

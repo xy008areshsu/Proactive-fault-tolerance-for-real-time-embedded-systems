@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Reference Points and External Forces`No Data`Empty (You should edit or delete this)
+#RingCtrl0 0
+
+
+IREFPT 1
+
+IREFPT 2
+
+IREFPT 3
+
+IREFPT 4
+
+IREFPT 5
+
+IREFPT 6
+
+IREFPT 7
+
+IREFPT 8
+
+IREFPT 9
+
+IREFPT 10
+
+LOG_ENTRY Used Dataset: Reference Points and External Forces; { Empty (You should edit or delete this) } No Data
+#Library : Reference Points and External Forces
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RefPts100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Reference Points
+
+END

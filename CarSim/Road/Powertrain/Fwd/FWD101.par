@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Powertrain: Front-Wheel Drive`125 kW, 6-spd., 4.1 Ratio w/ Visc. Diff.`
+
+OPT_PT 1
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+
+#RingCtrl0 1
+OPT_ENGINE_INTERNAL 1
+#RingCtrl1 1
+#RingCtrl2 2
+#RingCtrl3 1
+#RingCtrl4 1
+R_MDRIVE 1
+DRIVELINE_FREQ 9
+DRIVELINE_ZETA 0.9
+
+#CheckBox0 0    
+
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+
+PARSFILE Powertrain\Engine\Engine101.par
+#BlueLink0 Powertrain: Engine`125 kW  Engine` CS Engine Torque Curves` , Engine
+
+PARSFILE Powertrain\TConv\TC101.par
+#BlueLink1 Powertrain: Torque Converter`Torque Converter for 125 kW Engine` CS Torque Converters` , Torque Conv.
+
+PARSFILE Powertrain\TransExt\Trans101.par
+#BlueLink8 Powertrain: Transmission (18 Gears or CVT)`6-Speed Transmission` ` , Transmission (Extended)
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\F_Diff101.par
+#BlueLink3 Powertrain: Front Differential`Viscous - Gear Ratio 4.1` CS Front Differentials` , Differential
+
+
+IDIFF 1
+PARSFILE Powertrain\Frontdiff\F_Diff101.par
+#BlueLink4 Powertrain: Front Differential`Viscous - Gear Ratio 4.1` CS Front Differentials` , Differential
+
+
+#EMBEDDED_NOTES
+#Generic 125 kW powertrain with an automatic transmission. The torque converter data has been tuned to work with the 125 kW engine to give reasonable performance.  It also uses a viscous type differential.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Front-Wheel Drive; 125 kW, 6-spd., 4.1 Ratio w/ Visc. Diff.
+#Library : Powertrain: Front-Wheel Drive
+#DataSet : 125 kW, 6-spd., 4.1 Ratio w/ Visc. Diff.
+#Category: 
+#FileID  : FWD101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode FWD
+
+END

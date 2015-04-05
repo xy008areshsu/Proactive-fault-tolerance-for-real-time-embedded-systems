@@ -1,0 +1,5 @@
+SIMFILE
+INPUT Roads\3D_Road\Road103.par
+ECHO Roads\3D_Road\Road103_echo.par
+ERDFILE Roads\3D_Road\Road103.erd
+END

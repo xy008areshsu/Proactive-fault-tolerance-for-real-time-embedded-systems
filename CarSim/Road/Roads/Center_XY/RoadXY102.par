@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Road: X-Y Coordinates of Centerline`East-West Road (152.4 meter offset) #1`Highway Network
+SPATH -500
+
+#CheckBox0 0    
+OPT_ROAD_LOOP 0
+
+#RadioCtrl0 0    
+
+OPT_ROAD 1
+
+#DiagramOne0
+YIN_TABLE
+-500, 400, -500
+0, 400, 0
+500, 400, 500
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Road: X-Y Coordinates of Centerline; { Highway Network } East-West Road (152.4 meter offset) #1
+#Library : Road: X-Y Coordinates of Centerline
+#DataSet : East-West Road (152.4 meter offset) #1
+#Category: Highway Network
+#FileID  : RoadXY102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-23-2015 10:44
+#VehCode Horizontal (X-Y) table
+
+END

@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+FX_AERO_SHAPING_2_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#A nominal drag coefficent of 0.3 is typical of contemporary mid-size sedans, such as Honda Accord, Toyota Camry, and Ford Fusion.
+#
+#The drag coefficient typically increases a few percent as the vehicle develops an aerodynamic sidelsip angle, peaking around 20 degrees. Drag reduces as sidelip increases because the component of the airspeed in the vehicle X direction reduces.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch; { Empty (You should edit or delete this) } No Data
+#Library : Aerodynamics: Fx (Drag) Coef. vs. Bounce and Pitch
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : AirCFxExt100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Drag vs. bounce and pitch
+
+END

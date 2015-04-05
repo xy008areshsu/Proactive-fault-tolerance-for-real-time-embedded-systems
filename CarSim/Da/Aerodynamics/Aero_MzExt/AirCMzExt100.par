@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Aerodynamics: Mz (Yaw Moment) Coef. vs. Bounce and Pitch`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MZ_AERO_SHAPING_2_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#The aerodynamic moments relate the location of the aerodynamic center of pressure to the location of the aerodynamic reference point.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Mz (Yaw Moment) Coef. vs. Bounce and Pitch; { Empty (You should edit or delete this) } No Data
+#Library : Aerodynamics: Mz (Yaw Moment) Coef. vs. Bounce and Pitch
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : AirCMzExt100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Aero Mz vs. bounce and pitch
+
+END

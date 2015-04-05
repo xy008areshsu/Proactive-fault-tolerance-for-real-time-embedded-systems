@@ -1,0 +1,13 @@
+SIMFILE
+INPUT D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\Runs\Run101_all.par
+ECHO D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\Runs\Run101_echo.par
+FINAL D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\Runs\Run101_end.par
+LOGFILE D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\Runs\Run101_log.txt
+ERDFILE D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\Runs\Run101.erd
+ANIFILE D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\runs\animator.par
+PROGDIR C:\Program Files (x86)\CarSim822_Prog\
+RESOURCEDIR C:\Program Files (x86)\CarSim822_Prog\Resources\
+DATADIR D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\
+GUI_REFRESH_V CarSim_RefreshEvent_1368
+DLLFILE C:\Program Files (x86)\CarSim822_Prog\Programs\Solvers\Default\i_i.dll
+END

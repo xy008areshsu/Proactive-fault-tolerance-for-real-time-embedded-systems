@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Sensor Range Sensitivity`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the CarSim Quick Start Guide. Since the test duration is short (10 seconds or 210 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change (Quick Start)" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 120 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensor Range Sensitivity; { Empty (You should edit or delete this) } No Data
+#Library : Sensor Range Sensitivity
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Range100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Sensor range sensitivity
+
+END

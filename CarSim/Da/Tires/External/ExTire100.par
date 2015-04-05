@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Tire (External)`No Data`Empty (You should edit or delete this)
+add_wheel tire data
+set_radial_line on
+#CheckBox1 0    
+#CheckBox3 0    
+#CheckBox4 0    
+
+#RingCtrl0 11
+OPT_TIRE_MODEL 10
+
+WRITE_WHEEL_OFFSET
+OPT_TIRE_INERTIA_EXTERNAL 0
+
+
+#EMBEDDED_NOTES
+#650 kg rated load
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire (External); { Empty (You should edit or delete this) } No Data
+#Library : Tire (External)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : ExTire100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Tire (External)
+
+END

@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Engine Mounts: Engine Mass and Geometry`No Data`Empty (You should edit or delete this)
+OPT_SUSP_ENGINE 1
+N_ENGINE_MOUNTS 4
+OPT_ENGINE_TORQUE_ROD 0
+
+#RingCtrl0 4
+#CheckBox0 0    
+#CheckBox1 0    
+
+
+IENGINE_MOUNT 1
+
+IENGINE_MOUNT 2
+
+IENGINE_MOUNT 3
+
+IENGINE_MOUNT 4
+
+LOG_ENTRY Used Dataset: Engine Mounts: Engine Mass and Geometry; { Empty (You should edit or delete this) } No Data
+#Library : Engine Mounts: Engine Mass and Geometry
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : EngMass100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Engine Mass
+
+END

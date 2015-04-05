@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Suspension: Twist Beam Compliance, Springs, and Dampers`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 0
+*OPT_SPR 0
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+#RingCtrl13 1
+
+iside 1
+OPT_EXT_SP 0
+FS_OFFSET 0
+CMP_OFFSET 0
+
+iside 2
+OPT_EXT_SP 0
+FS_OFFSET 0
+CMP_OFFSET 0
+
+LOG_ENTRY Used Dataset: Suspension: Twist Beam Compliance, Springs, and Dampers; { Empty (You should edit or delete this) } No Data
+#Library : Suspension: Twist Beam Compliance, Springs, and Dampers
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : SuspCmpT100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Twist beam
+
+END

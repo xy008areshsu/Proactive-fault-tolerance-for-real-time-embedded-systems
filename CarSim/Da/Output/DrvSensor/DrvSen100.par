@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Preview Points for External Driver Control`No Data`Empty (You should edit or delete this)
+
+OPT_SENSOR 1
+#RingCtrl0 0
+
+
+LOG_ENTRY Used Dataset: Preview Points for External Driver Control; { Empty (You should edit or delete this) } No Data
+#Library : Preview Points for External Driver Control
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : DrvSen100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Driver Preview
+
+END

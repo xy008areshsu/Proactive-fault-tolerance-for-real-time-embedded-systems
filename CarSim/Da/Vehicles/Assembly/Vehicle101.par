@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Assembly`C-Class, Hatchback 2012`CS C-Class
+#VehCode Ind_Ind
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+OPT_PT 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 0
+
+* Front components
+iaxle 1
+symbol_push <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\IndKin101.par
+#BlueLink19 Suspension: Independent System Kinematics`C-Class, Hatchback - Front Susp. Kinematics` CS C-Class` , Kinematics
+
+PARSFILE Suspensions\Compliance\SuspCmp101.par
+#BlueLink16 Suspension: Independent Compliance, Springs, and Dampers`C-Class, Hatchback - Front Comp` CS C-Class` , Compliance
+
+
+OPT_ALL_FOUR_TIRES_ALIKE 1
+
+* LF tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire101.par
+#BlueLink999 Tire`215/55 R17` CS Touring Tires` , Tire
+
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire101.par
+#BlueLink10 Tire`215/55 R17` CS Touring Tires` , Tire
+
+* Rear components
+iaxle 2
+symbol_add <<axle>> 1
+PARSFILE Suspensions\Kin_Indy\IndKin102.par
+#BlueLink20 Suspension: Independent System Kinematics`C-Class, Hatchback - Rear Susp. Kinematics` CS C-Class` , Kinematics
+
+PARSFILE Suspensions\Compliance\SuspCmp102.par
+#BlueLink17 Suspension: Independent Compliance, Springs, and Dampers`C-Class, Hatchback - Rear Comp.` CS C-Class` , Compliance
+
+
+* LR tire
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> L<<axle>>
+PARSFILE Tires\Tire\Tire101.par
+#BlueLink999 Tire`215/55 R17` CS Touring Tires` , Tire
+
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> R<<axle>>
+PARSFILE Tires\Tire\Tire101.par
+#BlueLink999 Tire`215/55 R17` CS Touring Tires` , Tire
+
+WRITE_ADD_REFERENCE_FRAME_BODY
+PARSFILE Vehicles\Sprung_Mass\SprMass101.par
+#BlueLink0 Vehicle: Sprung Mass`C-Class, Hatchback Sprung Mass 2012` CS C-Class` , Sprung mass
+
+PARSFILE Aerodynamics\Aero_Main\Aero101.par
+#BlueLink1 Aerodynamics: Basic`C-Class, Hatchback Aero` CS C-Class` , Aerodynamics
+
+PARSFILE Animator\Vehicles\AniVeh101.par
+#BlueLink2 Animator: Vehicles and Sensor Targets`C-Class, Hatchback 2012` C-Class Vehicles` , Vehicle animator data
+
+PARSFILE Powertrain\Fwd\FWD101.par
+#BlueLink3 Powertrain: Front-Wheel Drive`125 kW, 6-spd., 4.1 Ratio w/ Visc. Diff.` ` , Powertrain
+
+PARSFILE Brakes\4W_System\Brk4W101.par
+#BlueLink6 Brakes: Four-Wheel System`C-Class, Hatchback w/o ABS` CS C-Class` , Brake system
+
+PARSFILE Steering\System2\StrSys2101.par
+#BlueLink7 Steering`C-Class, Hatchback: Power, R&P` CS C-Class` , Steering system
+
+*IMAGE_FIT_MODE 1
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Vehicles\Assembly\Vehicle101.png
+
+#EMBEDDED_NOTES
+#Generic C-Class hatchback with Strut front and 5-Link rear suspension.
+#
+#C-Class vehicles include the Audi A3, Chevrolet Cruze, Ford Focus, and Opel Astra.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { CS C-Class } C-Class, Hatchback 2012
+#Library : Vehicle: Assembly
+#DataSet : C-Class, Hatchback 2012
+#Category: CS C-Class
+#FileID  : Vehicle101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Ind_Ind
+
+END

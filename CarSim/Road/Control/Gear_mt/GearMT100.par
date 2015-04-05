@@ -1,0 +1,18 @@
+PARSFILE
+#FullDataName Control: Shifting (Open Loop)`No Data`Empty (You should edit or delete this)
+
+MODE_TRANS_CONSTANT 1
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Control: Shifting (Open Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Shifting (Open Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : GearMT100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Open-loop shift control
+
+END

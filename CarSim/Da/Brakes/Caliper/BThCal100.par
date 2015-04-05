@@ -1,0 +1,19 @@
+PARSFILE
+#FullDataName Brakes: Caliper and Rotor Properties`No Data`Empty (You should edit or delete this)
+#RingCtrl0 2
+#RingCtrl1 2
+
+#EMBEDDED_NOTES
+#The Animator: Vehicles and Other Moving Objects screen is used to define animation shapes to be used with the animator.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Caliper and Rotor Properties; { Empty (You should edit or delete this) } No Data
+#Library : Brakes: Caliper and Rotor Properties
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : BThCal100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Caliper and Rotor
+
+END

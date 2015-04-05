@@ -1,0 +1,135 @@
+PARSFILE
+#FullDataName Generic VS Commands`VS Visualizer HUD Text Display, Upper Left`HUD Gauges
+#VehCode 
+
+#MiscYellow0
+!Add Target Speed Display
+ANI_VxTarget
+WRT_VxTarget
+ADD_OBJECT hud_text Text Output - Target Speed
+  location 0.05 0.1 0.05 0.035
+  prefix Target Speed (km/h)
+  min_width_prefix 20
+  value VxTarget
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - Target Speed
+
+!Add Actual Speed Display
+ANI_Vx
+WRT_Vx
+ADD_OBJECT hud_text Text Output - Speed
+  location 0.05 0.15 0.05 0.035
+  prefix Actual Speed (km/h)
+  min_width_prefix 20
+  value Vx
+  precision 0
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_OBJECT hud_text Text Output - Speed
+!
+!Add Speed Error Display
+ANI_Vx_Err
+WRT_Vx_Err
+ADD_OBJECT hud_text Text Output - Speed Error
+  location 0.05 0.2 0.05 0.035
+  prefix Speed Error (km/h)
+  min_width_prefix 20
+  value Vx_ERR
+  precision 0
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_OBJECT hud_text Text Output - Speed Error
+!
+!Add Throttle Position Display
+ANI_Throttle
+WRT_Throttle
+ADD_OBJECT hud_text Text Output - Throttle
+  min_width_prefix 20
+  location 0.05 0.3 0.05 0.035
+  prefix Throttle
+  value Throttle
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - Throttle
+!
+!Add Brake Pressure Display
+ANI_Pbk_Con
+WRT_Pbk_Con
+ADD_OBJECT hud_text Text Output - Brake Pressure
+  location 0.05 0.35 0.05 0.035
+  prefix Brake Press. (MPa)
+  min_width_prefix 20
+  value Pbk_Con
+  precision 2
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - Brake Pressure
+!
+!Add Gear Position Display
+ANI_GearStat
+WRT_GearStat
+ADD_OBJECT hud_text Text Output - GearStat
+  location 0.05 0.4 0.05 0.035
+  prefix Gear
+  min_width_prefix 20
+  value GearStat
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - GearStat
+!
+!Add RPM Display
+ANI_AV_Eng
+WRT_AV_Eng
+ADD_OBJECT hud_text Text Output - RPM
+  location 0.05 0.45 0.05 0.035
+  prefix RPM
+  min_width_prefix 20
+  value AV_Eng
+  precision 0
+  color 1 1 1 1
+  outline_color 0 0 0 0.5
+END_OBJECT hud_text Text Output - RPM
+!
+!Add Ax Display
+ANI_Ax
+WRT_Ax
+ADD_OBJECT hud_text Text Output - Ax
+  location 0.05 0.5 0.05 0.035
+  prefix Ax (g's)
+  min_width_prefix 20
+  value Ax
+  precision 3
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_OBJECT hud_text Text Output - Ax
+!
+!Add Ay Display
+ANI_Ay
+WRT_Ay
+ADD_OBJECT hud_text Text Output - Ay
+  location 0.05 0.55 0.05 0.035
+  prefix Ay (g's)
+  min_width_prefix 20
+  value Ay
+  precision 3
+  color 1 1 .5 1
+  outline_color 0 0 0 1
+END_OBJECT hud_text Text Output - Ay
+!
+#ENDMYellow
+
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { HUD Gauges } VS Visualizer HUD Text Display, Upper Left
+#Library : Generic VS Commands
+#DataSet : VS Visualizer HUD Text Display, Upper Left
+#Category: HUD Gauges
+#FileID  : GVS101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode 
+
+END

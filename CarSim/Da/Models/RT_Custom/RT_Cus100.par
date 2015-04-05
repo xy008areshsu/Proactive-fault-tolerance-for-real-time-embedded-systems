@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Models: Transfer to Target by FTP`No Data`Empty (You should edit or delete this)
+
+*TARGET_ID 
+
+#CheckBox0 0    
+*LEAVE_FILES 0
+#CheckBox1 0    
+OPT_IO_UPDATE 0
+#CheckBox2 0    
+
+#RingCtrl0 2
+OPT_INT_METHOD 2
+*USE_DIFF_SOLVERS 0
+
+LOG_ENTRY Used Dataset: Models: Transfer to Target by FTP; { Empty (You should edit or delete this) } No Data
+#Library : Models: Transfer to Target by FTP
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RT_Cus100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode 
+
+END

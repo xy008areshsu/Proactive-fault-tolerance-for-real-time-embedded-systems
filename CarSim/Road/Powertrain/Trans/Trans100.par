@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (7 Gears)`No Data`Empty (You should edit or delete this)
+NGEARS 7
+#RingCtrl0 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl1 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (7 Gears); { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Transmission (7 Gears)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Trans100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Transmission (7 gears)
+
+END

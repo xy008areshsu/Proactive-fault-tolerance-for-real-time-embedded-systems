@@ -1,0 +1,15 @@
+PARSFILE
+#FullDataName Control: Clutch Shifting Parameters (Closed Loop)`No Data`Empty (You should edit or delete this)
+opt_clutch_mode 1
+
+
+LOG_ENTRY Used Dataset: Control: Clutch Shifting Parameters (Closed Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Clutch Shifting Parameters (Closed Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : ShftCl100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Shifting Times
+
+END

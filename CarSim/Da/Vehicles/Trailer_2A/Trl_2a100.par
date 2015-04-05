@@ -1,0 +1,103 @@
+PARSFILE
+#FullDataName Vehicle: Trailer with 2 Axles`No Data`Empty (You should edit or delete this)
+#CheckBox2 0    
+#CheckBox3 0    
+#RingCtrl0 -1
+#RingCtrl1 -1
+
+* Trailer front suspension
+iaxle 1
+ADD_REFERENCE_FRAME Axle 3
+SET_EULER_ANGLES yaw_roll_pitch
+SET_X_NAME X_A3
+WRT_X_A3
+ANI_X_A3
+SET_Y_NAME Y_A3
+WRT_Y_A3
+ANI_Y_A3
+SET_Z_NAME Z_A3
+WRT_Z_A3
+ANI_Z_A3
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_A3
+WRT_Pitch_A3
+ANI_Pitch_A3
+SET_ROLL_NAME Roll_A3
+WRT_Roll_A3
+ANI_Roll_A3
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+
+* Trailer rear suspension
+iaxle 2
+ADD_REFERENCE_FRAME Axle 4
+SET_EULER_ANGLES yaw_roll_pitch
+SET_X_NAME X_A4
+WRT_X_A4
+ANI_X_A4
+SET_Y_NAME Y_A4
+WRT_Y_A4
+ANI_Y_A4
+SET_Z_NAME Z_A4
+WRT_Z_A4
+ANI_Z_A4
+SET_YAW_NAME Yaw_2
+WRT_Yaw_2
+ANI_Yaw_2
+SET_PITCH_NAME Pitch_A4
+WRT_Pitch_A4
+ANI_Pitch_A4
+SET_ROLL_NAME Roll_A4
+WRT_Roll_A4
+ANI_Roll_A4
+X_REF_LENGTH 1
+Y_REF_LENGTH 1
+Z_REF_LENGTH 1
+X_LENGTH 1
+Y_LENGTH 1
+Z_LENGTH 1
+symbol_push <<axle>> 3
+
+* LF tire
+iaxle 1
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> L<<axle>>
+
+* RF tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> R<<axle>>
+symbol_add <<axle>> 1
+
+* LR tire
+iaxle 2
+iside 1
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> L<<axle>>
+
+* RR tire
+iside 2
+WRITE_ADD_REFERENCE_FRAME_WHEEL
+symbol_push <<tire>> R<<axle>>
+
+* sprung mass data
+WRITE_ADD_REFERENCE_FRAME_BODY
+*IMAGE_TYPE DEFAULT
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer with 2 Axles; { Empty (You should edit or delete this) } No Data
+#Library : Vehicle: Trailer with 2 Axles
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Trl_2a100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode SA_SA
+
+END

@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Powertrain: Clutch Torque`No Data`Empty (You should edit or delete this)
+
+OPT_CLUTCH 1
+#RadioCtrl0 0    
+
+#CheckBox0 0    
+OPT_CLUTCH_DELAY 0
+
+
+
+LOG_ENTRY Used Dataset: Powertrain: Clutch Torque; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Clutch Torque
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TrqCltch100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Clutch
+
+END

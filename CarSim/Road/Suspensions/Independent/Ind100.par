@@ -1,0 +1,35 @@
+PARSFILE
+#FullDataName Suspension: Independent System (Simple)`No Data`Empty (You should edit or delete this)
+#RingCtrl0 0
+OPT_JNC_DESIGN 0
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+
+iside 1
+
+
+SUSP_X_COEFFICIENT 0
+
+SUSP_DIVE_COEFFICIENT 0
+
+iside 2
+
+
+SUSP_X_COEFFICIENT 0
+
+SUSP_DIVE_COEFFICIENT 0
+
+LOG_ENTRY Used Dataset: Suspension: Independent System (Simple); { Empty (You should edit or delete this) } No Data
+#Library : Suspension: Independent System (Simple)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Ind100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Independent
+
+END

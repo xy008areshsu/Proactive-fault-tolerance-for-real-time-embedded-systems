@@ -1,0 +1,18 @@
+PARSFILE
+#FullDataName Tire: Vertical Load vs. Deflection`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RadioCtrl0 0    
+
+
+LOG_ENTRY Used Dataset: Tire: Vertical Load vs. Deflection; { Empty (You should edit or delete this) } No Data
+#Library : Tire: Vertical Load vs. Deflection
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TireFz100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Tire: Fz vs Deflection
+
+END

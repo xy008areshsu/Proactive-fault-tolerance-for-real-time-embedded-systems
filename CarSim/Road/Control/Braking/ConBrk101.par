@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName Control: Braking (Open Loop)`No Open-Loop Braking Pressure`
+#RingCtrl0 CONSTANT
+#RadioCtrl0 0    
+
+OPT_VMIN -1
+*SCALAR 0
+
+PBK_CON_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Control: Braking (Open Loop); No Open-Loop Braking Pressure
+#Library : Control: Braking (Open Loop)
+#DataSet : No Open-Loop Braking Pressure
+#Category: 
+#FileID  : ConBrk101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Brake control
+
+END

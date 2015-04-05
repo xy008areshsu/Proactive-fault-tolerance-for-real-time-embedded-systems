@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Control: Clutch (Open Loop)`No Data`Empty (You should edit or delete this)
+opt_clutch_mode 0
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Control: Clutch (Open Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Clutch (Open Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Clutch100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Open-loop (vs. time)
+
+END

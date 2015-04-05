@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Ground: Elevation Map, X-Y Grid`No Data`Empty (You should edit or delete this)
+OPT_ROAD 0
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+Z_GROUND_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#Normalized dataset. The function gain is scaled to the tire radius and the reference Fz.
+#
+#This dataset requires that the tire reference Fz (FZ_REF) have a reasonable value; otherwise the relaxation length will be huge.
+#
+#The units for relaxation length were changed to meters, to simplify the automatic scaling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Ground: Elevation Map, X-Y Grid; { Empty (You should edit or delete this) } No Data
+#Library : Ground: Elevation Map, X-Y Grid
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Z_gnd100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Ground 3D elevation
+
+END

@@ -1,0 +1,47 @@
+PARSFILE
+#FullDataName Plot: Setup`Lateral Tracking vs. Station`Tracking
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Transform\PlotTfm101.par
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform (optional)
+
+
+PARSFILE Plot\Format\PlotFmt101.par
+
+#MiscYellow0
+PLOTCHANNELS Lat_Targ, Station
+PLOTCHANNELS Lat_Veh, Station
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+
+PTITLE Lateral Tracking vs. Station
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Tracking } Lateral Tracking vs. Station
+#Library : Plot: Setup
+#DataSet : Lateral Tracking vs. Station
+#Category: Tracking
+#FileID  : Plot101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Plot setup
+
+END

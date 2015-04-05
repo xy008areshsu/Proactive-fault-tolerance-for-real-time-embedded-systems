@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Suspension: Auxiliary Roll Moment`344 N-m/deg (Non-linear)`
+#RingCtrl0 SPLINE
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MX_AUX_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 344
+*SCALAR2 1
+
+#DiagramOne0
+MX_AUX_TABLE SPLINE
+-10, -4490.6
+-9, -3826.9
+-8, -3245.1
+-7, -2727.2
+-6, -2259.3
+-5, -1830.4
+-4, -1431.5
+-3, -1055.1
+-2, -694.76
+-1, -344.84
+0, 0
+1, 344.84
+2, 694.76
+3, 1055.1
+4, 1431.5
+5, 1830.4
+6, 2259.3
+7, 2727.2
+8, 3245.1
+9, 3826.9
+10, 4490.6
+ENDTABLE
+MX_AUX_FSTATIC_CONSTANT 1
+
+LOG_ENTRY Used Dataset: Suspension: Auxiliary Roll Moment; 344 N-m/deg (Non-linear)
+#Library : Suspension: Auxiliary Roll Moment
+#DataSet : 344 N-m/deg (Non-linear)
+#Category: 
+#FileID  : AuxMx102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:36
+#VehCode Aux. Roll Moment
+
+END

@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Control: Shifting (Closed Loop)`AT All Gears`
+#RingCtrl0 CONSTANT
+#RadioCtrl0 0    
+
+*SCALAR NGEARS
+
+MODE_TRANS_CONSTANT NGEARS
+
+#EMBEDDED_NOTES
+#NGEARS is the internal symbol for the number of gears in a transmission. By setting the Mode to NGEARS, CarSim is told to use all of the transmission gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Control: Shifting (Closed Loop); AT All Gears
+#Library : Control: Shifting (Closed Loop)
+#DataSet : AT All Gears
+#Category: 
+#FileID  : GearAT101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Closed-loop shift control
+
+END

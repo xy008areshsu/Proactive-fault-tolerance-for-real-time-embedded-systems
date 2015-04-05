@@ -1,0 +1,43 @@
+PARSFILE
+#FullDataName Suspension: Compliance (Nonlinear)`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+#CheckBox1 0    
+
+#RingCtrl0 1
+#RingCtrl1 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 1
+#RingCtrl10 1
+#RingCtrl11 1
+#RingCtrl12 1
+#RingCtrl13 1
+#RingCtrl14 1
+#RingCtrl15 1
+#RingCtrl16 1
+#RingCtrl17 1
+#RingCtrl18 1
+#RingCtrl19 1
+#RingCtrl20 1
+#RingCtrl21 1
+#RingCtrl22 0
+
+iside 1
+
+iside 2
+
+LOG_ENTRY Used Dataset: Suspension: Compliance (Nonlinear); { Empty (You should edit or delete this) } No Data
+#Library : Suspension: Compliance (Nonlinear)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : SuspCmpAll100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Springs and dampers
+
+END

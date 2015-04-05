@@ -1,0 +1,9 @@
+EVENTS.IND v1.0
+5    1    
+105  Events
+103  , End Events` ` 02-11-2015` 18:38` 1
+105  , Follow Path` ` 02-25-2015` 18:22` 0
+101  , A. Approach Straight Road` Circle Road to Straight Road` 02-11-2015` 18:38` 0
+102  , B. Transition to Straight Road` Circle Road to Straight Road` 02-23-2015` 10:46` 0
+104  , C. Transition to Straight Road East-West` Circle Road to Straight Road` 02-23-2015` 10:41` 0
+END

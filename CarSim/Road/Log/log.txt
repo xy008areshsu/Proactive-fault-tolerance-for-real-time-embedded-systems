@@ -1,0 +1,15 @@
+2015-03-11T17:54:54 Logfile initialized.
+2015-03-11T17:54:54 (636): CarSim 8.2.2, October 2013
+2015-03-11T17:54:54 (637): -
+2015-03-11T17:54:54 (638): command-line: 
+2015-03-11T17:54:54 (639): -
+2015-03-11T17:54:54 (640): Working Dir: D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Road\
+2015-03-11T17:54:55 (641): Program Dir: C:\Program Files (x86)\CarSim822_Prog\
+2015-03-11T17:54:55 (642): -
+2015-03-11T17:54:55 (655): OS Version:        6.2 (build 9200)
+2015-03-11T17:54:55 (676): CPU Architecture:  x64
+2015-03-11T17:54:55 (677): CPU Count:         8
+2015-03-11T17:54:55 (678): CPU Level/Rev:     6/14857
+2015-03-11T17:54:55 (683): Start Mem Total:   16355 MB
+2015-03-11T17:54:55 (684): Start Mem Used:    52%
+2015-03-11T17:54:55 (686): -

@@ -1,0 +1,16 @@
+PARSFILE
+#FullDataName Control: Braking Pedal Force (Open Loop)`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Control: Braking Pedal Force (Open Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Braking Pedal Force (Open Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : ConBkPdl100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Pedal Force Control
+
+END

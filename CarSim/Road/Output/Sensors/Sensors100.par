@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Acceleration and Rate Sensors`No Data`Empty (You should edit or delete this)
+#RingCtrl0 0
+
+
+ISENSOR 1
+
+ISENSOR 2
+
+ISENSOR 3
+
+ISENSOR 4
+
+ISENSOR 5
+
+ISENSOR 6
+
+LOG_ENTRY Used Dataset: Acceleration and Rate Sensors; { Empty (You should edit or delete this) } No Data
+#Library : Acceleration and Rate Sensors
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Sensors100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Sensors
+
+END

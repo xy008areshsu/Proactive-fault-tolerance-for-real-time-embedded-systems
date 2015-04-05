@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Vehicle: Trailer Sprung Mass`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+#CheckBox1 0    
+
+RX_SGUI 0.000
+RY_SGUI 0.000
+RZ_SGUI 0.000
+iaxle 1
+iside 1
+iside 2
+iaxle 2
+iside 1
+iside 2
+
+LOG_ENTRY Used Dataset: Vehicle: Trailer Sprung Mass; { Empty (You should edit or delete this) } No Data
+#Library : Vehicle: Trailer Sprung Mass
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TrlSprM100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Sprung mass (trailer)
+
+END

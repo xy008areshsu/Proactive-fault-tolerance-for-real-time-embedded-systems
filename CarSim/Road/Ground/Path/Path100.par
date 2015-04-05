@@ -1,0 +1,22 @@
+PARSFILE
+#FullDataName Control: Target Path for Driver and Traffic`No Data`Empty (You should edit or delete this)
+OPT_DRIVER_MODEL 3
+
+#CheckBox0 0    
+OPT_DRIVER_LOOP 0
+
+#DiagramOne0
+DRIVER_REF_XY_TABLE
+0, 0, 0.000
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Control: Target Path for Driver and Traffic; { Empty (You should edit or delete this) } No Data
+#Library : Control: Target Path for Driver and Traffic
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Path100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Target path
+
+END

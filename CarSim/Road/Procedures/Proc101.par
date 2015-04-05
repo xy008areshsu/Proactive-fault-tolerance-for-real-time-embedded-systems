@@ -1,0 +1,93 @@
+PARSFILE
+#FullDataName Procedures`Circle Road to Straight Road`* Example Test Procedures
+#CheckBox3 0    
+
+#RingCtrl0 1
+#RingCtrl1 0
+#RingCtrl2 0
+OPT_SSTOP 0
+TSTART 0
+SSTART 0
+TSTART_WRITE = TSTART;
+TSTOP 30
+SSTOP =  SSTART + 1 ;
+OPT_DIRECTION 1
+*SPEED 65
+*TSTOP 30
+*TSTART 0
+*SSTART 0
+*SSTOP 210
+
+OPT_SC 3
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_CONSTANT 0
+SPEED_TARGET_S_CONSTANT 65
+PARSFILE Control\Driver\Driver101.par
+#BlueLink27 Control: Steering by the Closed-loop Driver Model`1.65 m to the Right` Constant Position` , Steering
+
+PARSFILE Control\Braking\ConBrk101.par
+#BlueLink28 Control: Braking (Open Loop)`No Open-Loop Braking Pressure` ` , Braking
+
+PARSFILE Control\Gear_at\GearAT101.par
+#BlueLink30 Control: Shifting (Closed Loop)`AT All Gears` ` , Shifting control
+
+PARSFILE Generic\Group\GData102.par
+#BlueLink0 Generic Data Group`Circle Road to Straight Road` Highway Network` , Misc.
+
+PARSFILE Events\Events105.par
+#BlueLink1 Events`Follow Path` ` , Misc.
+
+PARSFILE Generic\Group\GData103.par
+#BlueLink2 Generic Data Group`2 Axle - Fx, Fy, Fz` Tire Force Arrows` , Misc.
+
+PARSFILE Plot\Setup\Plot101.par
+#BlueLink8 Plot: Setup`Lateral Tracking vs. Station` Tracking` , Plot
+
+PARSFILE Plot\Setup\Plot102.par
+#BlueLink9 Plot: Setup`Steering: Handwheel Angle` Controls: Driver` , Plot
+
+PARSFILE Plot\Setup\Plot103.par
+#BlueLink10 Plot: Setup`Road Wheel Steer Angle - Front` Steering` , Plot
+
+PARSFILE Plot\Setup\Plot104.par
+#BlueLink11 Plot: Setup`Slip Angles` Tire Kinematics` , Plot
+
+PARSFILE Plot\Setup\Plot105.par
+#BlueLink12 Plot: Setup`Lateral Accel. of CG's` Vehicle Motion` , Plot
+
+PARSFILE Plot\Setup\Plot106.par
+#BlueLink13 Plot: Setup`Roll Angle of Sprung Masses` Vehicle Motion` , Plot
+
+PARSFILE Plot\Setup\Plot107.par
+#BlueLink14 Plot: Setup`Yaw Rate of Sprung Masses` Vehicle Motion` , Plot
+
+PARSFILE Plot\Setup\Plot108.par
+#BlueLink15 Plot: Setup`Vertical Forces` Tire Forces` , Plot
+
+PARSFILE Plot\Setup\Plot109.par
+#BlueLink16 Plot: Setup`Longitudinal Speed` Vehicle Motion` , Plot
+
+PARSFILE Plot\Setup\Plot110.par
+#BlueLink17 Plot: Setup`Y vs. X -- Trajectory` Tracking` , Plot
+
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the CarSim Quick Start Guide. Since the test duration is short (10 seconds or 210 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change (Quick Start)" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 120 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Procedures; { * Example Test Procedures } Circle Road to Straight Road
+#Library : Procedures
+#DataSet : Circle Road to Straight Road
+#Category: * Example Test Procedures
+#FileID  : Proc101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-25-2015 18:22
+#VehCode Procedure
+
+END

@@ -1,0 +1,16 @@
+PARSFILE
+#FullDataName Engine Mounts: Longitudinal Stiffness`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Engine Mounts: Longitudinal Stiffness; { Empty (You should edit or delete this) } No Data
+#Library : Engine Mounts: Longitudinal Stiffness
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : EMountFxs100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Engine Mount Long. Stiffness
+
+END

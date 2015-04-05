@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Tire: Pacejka 5.2 Parameters`No Data`Empty (You should edit or delete this)
+BEGIN_PACEJKA_52_DATA
+
+END_PACEJKA_52_DATA
+
+
+LOG_ENTRY Used Dataset: Tire: Pacejka 5.2 Parameters; { Empty (You should edit or delete this) } No Data
+#Library : Tire: Pacejka 5.2 Parameters
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Pac52_100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode 
+
+END

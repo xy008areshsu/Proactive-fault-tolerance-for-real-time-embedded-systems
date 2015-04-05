@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Brakes: Torque`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+
+#EMBEDDED_NOTES
+#Brake systems without ABS control typically have a propotioning valve that reduces pressure gains on the rear wheel when a moderate pressure is reached, to avoid locking the rear wheels with high braking and associated load transfer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Torque; { Empty (You should edit or delete this) } No Data
+#Library : Brakes: Torque
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : BrkTrq100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Brake torque
+
+END

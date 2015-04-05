@@ -1,0 +1,52 @@
+PARSFILE
+#FullDataName Suspension: Longitudinal Movement`Rear 5-Link - Longitudinal Movement`5-Link Rear
+#RingCtrl0 SPLINE
+
+#DiagramOne0
+SUSP_X_TABLE SPLINE
+-70, 2.6892
+-60, 1.76827
+-50, 1.01123
+-40, 0.426265
+-30, 0.022328
+-20, -0.190752
+-10, -0.202151
+0, 0
+10, 0.428603
+20, 1.09748
+30, 2.02114
+40, 3.21439
+50, 4.69179
+60, 6.46687
+70, 8.5513
+ENDTABLE
+#RadioCtrl0 0    
+
+SUSP_X_AXLE_TABLE SPLINE
+-70, 2.6892
+-60, 1.76827
+-50, 1.01123
+-40, 0.426265
+-30, 0.022328
+-20, -0.190752
+-10, -0.202151
+0, 0
+10, 0.428603
+20, 1.09748
+30, 2.02114
+40, 3.21439
+50, 4.69179
+60, 6.46687
+70, 8.5513
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Movement; { 5-Link Rear } Rear 5-Link - Longitudinal Movement
+#Library : Suspension: Longitudinal Movement
+#DataSet : Rear 5-Link - Longitudinal Movement
+#Category: 5-Link Rear
+#FileID  : SusX102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Longitudinal Movement
+
+END

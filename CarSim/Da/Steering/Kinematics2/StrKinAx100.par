@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Steering System: Kinematics for 2 Wheels (Recirc. Ball)`No Data`Empty (You should edit or delete this)
+
+iside 2
+
+iside 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Steering System: Kinematics for 2 Wheels (Recirc. Ball); { Empty (You should edit or delete this) } No Data
+#Library : Steering System: Kinematics for 2 Wheels (Recirc. Ball)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : StrKinAx100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Steer kinematics
+
+END

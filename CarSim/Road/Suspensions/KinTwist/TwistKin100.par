@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Suspension: Twist Beam Kinematics`No Data`Empty (You should edit or delete this)
+#RingCtrl0 0
+OPT_JNC_DESIGN 0
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+
+iside 1
+
+iside 2
+
+LOG_ENTRY Used Dataset: Suspension: Twist Beam Kinematics; { Empty (You should edit or delete this) } No Data
+#Library : Suspension: Twist Beam Kinematics
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TwistKin100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Twist beam
+
+END

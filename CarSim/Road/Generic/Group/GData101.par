@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic Data Group`C-Class Hatchback Camera Locations`Vehicle-Specific VSV Transforms
+#VehCode Generic group
+PARSFILE Generic\GroupMore\GDataM101.par
+#BlueLink0 Generic Data Group (More)`C-Class Rear-view Mirror Transform` VSV Transforms` , Link 1
+
+
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset is setup to provide an example of how to use some of the new Heads Up Display (HUD) features of the VS Visualizer.
+#
+#The features on display are the rear view widget (as well as a static frame image placed on top of the rear view render), a CarSim logo displayed with transparency, and a selection of data channels output as plain text in a fixed width font.
+#
+#Note that these display elements will not show up in our older animation package, SurfAnim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Vehicle-Specific VSV Transforms } C-Class Hatchback Camera Locations
+#Library : Generic Data Group
+#DataSet : C-Class Hatchback Camera Locations
+#Category: Vehicle-Specific VSV Transforms
+#FileID  : GData101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Generic group
+
+END

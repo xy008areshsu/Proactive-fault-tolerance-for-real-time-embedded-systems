@@ -1,0 +1,74 @@
+PARSFILE
+#FullDataName CarSim Run Control`Circle Road to Straight Road`* * * Examples
+#VEHICLECODE Ind_Ind
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 2
+PARSFILE Animator\Cameras\Camera104.par
+#BlueLink0 Animator: Camera Setup`3 deg. Azimuth, Veh. Ref.` Vehicle Reference` , Animator camera
+
+Title Circle Road to Straight Road <* * * Examples>
+CATEGORY * * * Examples 
+DATASET_TITLE Circle Road to Straight Road
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 1    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 4
+#RingCtrl1 3
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+*RUN_COLOR 0.8 0 0
+FLAG_10 101
+ID_RUN 101
+PARSFILE Vehicles\Assembly\Vehicle101.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback 2012` CS C-Class` , Vehicle configuration
+
+PARSFILE Procedures\Proc101.par
+#BlueLink28 Procedures`Circle Road to Straight Road` * Example Test Procedures` , Procedure
+
+PARSFILE Generic\Group\GData104.par
+#BlueLink9 Generic Data Group`VS Visualizer HUD Gauges` HUD Gauges` , Road/wind/misc.
+
+PARSFILE Generic\VS_commands\GVS101.par
+#BlueLink10 Generic VS Commands`VS Visualizer HUD Text Display, Upper Left` HUD Gauges` , Road/wind/misc.
+
+PARSFILE Animator\Sound\Set\SndSet102.par
+#BlueLink11 Animator: Sound Set`Gasoline Engine Vehicle` General Vehicle Sounds` , Road/wind/misc.
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_LINK Vehicle: Assembly`C-Class, Hatchback 2012` CS C-Class`
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle101.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+
+#EMBEDDED_NOTES
+#Example demonstrating how to start the vehicle on a circle road and transition to a straight road.
+#
+#
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * * Examples } Circle Road to Straight Road
+#Library : CarSim Run Control
+#DataSet : Circle Road to Straight Road
+#Category: * * * Examples
+#FileID  : Run101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-13-2015 18:41
+#VehCode Run
+
+END

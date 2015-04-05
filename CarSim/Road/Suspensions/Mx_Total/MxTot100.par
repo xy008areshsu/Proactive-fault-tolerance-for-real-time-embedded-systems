@@ -1,0 +1,16 @@
+PARSFILE
+#FullDataName Suspension: Measured Total Roll Stiffness`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Suspension: Measured Total Roll Stiffness; { Empty (You should edit or delete this) } No Data
+#Library : Suspension: Measured Total Roll Stiffness
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : MxTot100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Total Susp. (Meas.)
+
+END

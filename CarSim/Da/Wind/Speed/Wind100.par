@@ -1,0 +1,21 @@
+PARSFILE
+#FullDataName Wind Amplitude`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+WIND_SPEED_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Wind Amplitude; { Empty (You should edit or delete this) } No Data
+#Library : Wind Amplitude
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Wind100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Wind Speed
+
+END

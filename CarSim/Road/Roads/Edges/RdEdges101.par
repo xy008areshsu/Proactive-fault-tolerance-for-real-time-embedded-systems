@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Road: X-Y-Z Coordinates of Edges`off_ramp`Empty (You should edit or delete this)
+OPT_ROAD 1
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#CheckBox0 0    
+OPT_ROAD_LOOP 0
+
+
+*3D_XLabel Global Z coordinate (m)
+*3D_YLabel Global X coordinate (m)
+*3D_ZLabel Global Y coordinate (m)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+*Lane1_CARPET
+0, 1, 2, 3
+0, 0, 0, 0
+0, 0, 0, 0
+ENDTABLE
+
+*3D_XLabel Global Z coordinate (m)
+*3D_YLabel Global X coordinate (m)
+*3D_ZLabel Global Y coordinate (m)
+
+#DiagramTwo1
+*3D_DATA 3, 2 ! columns x rows
+*Lane2_CARPET
+0, 1, 2, 3
+0, 0, 0, 0
+0, 0, 0, 0
+ENDTABLE
+
+YIN_TABLE
+0, 0, 0
+0, 0, 0
+ENDTABLE
+
+ROAD_ZS_TABLE
+0, 0
+0, 0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Road: X-Y-Z Coordinates of Edges; { Empty (You should edit or delete this) } off_ramp
+#Library : Road: X-Y-Z Coordinates of Edges
+#DataSet : off_ramp
+#Category: Empty (You should edit or delete this)
+#FileID  : RdEdges101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-23-2015 16:11
+#VehCode X-Y-Z edges
+
+END

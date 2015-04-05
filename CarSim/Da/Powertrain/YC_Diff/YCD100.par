@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName Powertrain: Yaw Control Differential`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+oPT_CLUTCH_DIFF 2
+CLUTCH_CONTROL_DIFF 0
+
+LOG_ENTRY Used Dataset: Powertrain: Yaw Control Differential; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Yaw Control Differential
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : YCD100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Yaw Control Diff.
+
+END

@@ -1,0 +1,48 @@
+PARSFILE
+#FullDataName Road: Friction Map, Variable Width`No Data`Empty (You should edit or delete this)
+*3D_DATA 0, 1 ! columns x rows
+MU_ROAD_CARPET VAR_WIDTH
+0
+0
+ENDDATA
+0
+0
+ENDCOLS
+ENDTABLE
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient (-)
+
+#DiagramTwo0
+*3D_DATA 0, 1 ! columns x rows
+RdTb1_CARPET
+0
+0
+ENDTABLE
+
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Lateral coordinate of edge (m)
+
+#DiagramTwo1
+*3D_DATA 0, 1 ! columns x rows
+RdTb2_CARPET
+0
+0
+ENDTABLE
+
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map, Variable Width; { Empty (You should edit or delete this) } No Data
+#Library : Road: Friction Map, Variable Width
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RdFric100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Mu vs S-L, var width
+
+END

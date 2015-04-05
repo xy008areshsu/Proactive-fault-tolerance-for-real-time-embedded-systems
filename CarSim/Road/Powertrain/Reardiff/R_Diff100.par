@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Powertrain: Rear Differential`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+LOCKED_RD_OPT 0
+
+OPT_LOCKED_DIFF 0
+#RadioCtrl0 0    
+
+
+
+#EMBEDDED_NOTES
+#Generic 125 kW powertrain with an automatic transmission. The torque converter data has been tuned to work with the 125 kW engine to give reasonable performance.  It also uses a viscous type differential.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear Differential; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Rear Differential
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : R_Diff100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Rear differential
+
+END

@@ -1,0 +1,79 @@
+PARSFILE
+#FullDataName Suspension: Independent System Kinematics`C-Class, Hatchback - Front Susp. Kinematics`CS C-Class
+iside 1
+#RingCtrl0 1
+OPT_JNC_DESIGN 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+
+R_US_STR 0.8
+L_TRACK 1675
+Y_CL_SUSP 0
+M_US 71
+*IW_L 0.9
+*JNC_DESIGN_L 0
+*IW_R 0.9
+*TOE_L 0
+*CAMBER_L 0
+
+PARSFILE Suspensions\Dive\Dive101.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Front Strut - Front Dive Angle` Strut` , Left wheel dive (caster change)
+
+PARSFILE Suspensions\Longitudinal\SusX101.par
+#BlueLink1 Suspension: Longitudinal Movement`Front Strut -  Longitudinal Movement` Strut` , Left wheel X
+
+PARSFILE Suspensions\Camber\Camber101.par
+#BlueLink2 Suspension: Camber Angle`Front Strut - Camber` Strut` , Left wheel camber
+
+PARSFILE Suspensions\Lateral\SusLat101.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Front Strut - Lateral Movement` Strut` , Left wheel lateral (-Y)
+
+PARSFILE Suspensions\Toe\Toe101.par
+#BlueLink4 Suspension: Toe Angle`Front Strut - Toe Change` Strut` , Left wheel toe
+
+IW 0.9
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+iside 2
+PARSFILE Suspensions\Dive\Dive101.par
+#BlueLink0 Suspension: Dive Angle (Caster Change)`Front Strut - Front Dive Angle` Strut` , Left wheel dive (caster change)
+
+PARSFILE Suspensions\Longitudinal\SusX101.par
+#BlueLink1 Suspension: Longitudinal Movement`Front Strut -  Longitudinal Movement` Strut` , Left wheel X
+
+PARSFILE Suspensions\Camber\Camber101.par
+#BlueLink2 Suspension: Camber Angle`Front Strut - Camber` Strut` , Left wheel camber
+
+PARSFILE Suspensions\Lateral\SusLat101.par
+#BlueLink3 Suspension: Lateral Movement Due to Jounce`Front Strut - Lateral Movement` Strut` , Left wheel lateral (-Y)
+
+PARSFILE Suspensions\Toe\Toe101.par
+#BlueLink4 Suspension: Toe Angle`Front Strut - Toe Change` Strut` , Left wheel toe
+
+IW 0.9
+JNC_DESIGN 0
+A_TOE 0
+A_CAMBER 0
+
+#EMBEDDED_NOTES
+#Generic front strut type suspension geometry created with SuspensionSim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Suspension: Independent System Kinematics; { CS C-Class } C-Class, Hatchback - Front Susp. Kinematics
+#Library : Suspension: Independent System Kinematics
+#DataSet : C-Class, Hatchback - Front Susp. Kinematics
+#Category: CS C-Class
+#FileID  : IndKin101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:36
+#VehCode Independent
+
+END

@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName I/O Channels: Write`No Data`Empty (You should edit or delete this)
+#CheckBox1 0    
+OPT_FMT_CSV 0
+#CheckBox2 0    
+OPT_FMT_MAT 0
+
+
+#RingCtrl1 1
+
+LOG_ENTRY Used Dataset: I/O Channels: Write; { Empty (You should edit or delete this) } No Data
+#Library : I/O Channels: Write
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : W_Ch100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Write Channels
+
+END

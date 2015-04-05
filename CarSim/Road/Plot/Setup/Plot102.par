@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Plot: Setup`Steering: Handwheel Angle`Controls: Driver
+
+ADD_ENTITY Plot
+
+PARSFILE Plot\Transform\PlotTfm101.par
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform (optional)
+
+
+PARSFILE Plot\Format\PlotFmt101.par
+
+#MiscYellow0
+PLOTCHANNELS Steer_SW, Time
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+
+PTITLE Steering: Handwheel Angle
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Controls: Driver } Steering: Handwheel Angle
+#Library : Plot: Setup
+#DataSet : Steering: Handwheel Angle
+#Category: Controls: Driver
+#FileID  : Plot102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Plot setup
+
+END

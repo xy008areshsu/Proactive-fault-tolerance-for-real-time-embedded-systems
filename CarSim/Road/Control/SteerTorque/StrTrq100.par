@@ -1,0 +1,18 @@
+PARSFILE
+#FullDataName Control: Steering Torque (Open Loop)`No Data`Empty (You should edit or delete this)
+OPT_DRIVER_MODEL 0
+OPT_STEER 1
+
+#RadioCtrl0 0    
+
+
+LOG_ENTRY Used Dataset: Control: Steering Torque (Open Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Steering Torque (Open Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : StrTrq100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Open-loop torque control
+
+END

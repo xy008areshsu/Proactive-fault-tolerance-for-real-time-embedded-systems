@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`East-West Road (152.4 meter offset), No Curbs #1`Intersections
+OPT_ROAD 1
+iroad 1 ! obsolete March 2011
+idz_road 1
+RR_SURF 1.0
+DZ_SHADOW 0.005
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road104.png
+PARSFILE Roads\Builder\RdBuild103.par
+#BlueLink0 Road: Segment Builder`500 ft Radius Circle (Loop) #2` ` , Centerline geometry
+
+PARSFILE Roads\Center_Z\RoadZ101.par
+#BlueLink1 Road: Centerline Elevation`Flat` ` , Centerline elevation
+
+PARSFILE Roads\dZ_Map\RdElMap101.par
+#BlueLink2 Road: Off-Center Elevation Map, S-L Grid`Flat` ` , Off-center elevation 1
+
+PARSFILE Roads\Friction\RdFric101.par
+#BlueLink3 Road: Friction Map, S-L Grid`0.85` Constant Mu` , Friction
+
+PARSFILE Roads\Shapes\RdShp102.par
+#BlueLink4 Road: Animator Surface Shapes`Looped Road, No Grass or Road Transition` Roads` , Road shape definitions
+
+#CheckBox0 0    
+
+add_reference_frame road_stuff_1
+reference_frame_ghosts off
+add_reference_frame road_stuff_2
+reference_frame_ghosts off
+add_reference_frame road_stuff_3
+reference_frame_ghosts off
+add_reference_frame road_stuff_4
+reference_frame_ghosts off
+iroad 2 ! obsolete March 2011
+idz_road 2
+
+SPECIAL_PARSFILE Animator\Cameras\Camera105.par
+#BlueLink5 Animator: Camera Setup`Rear View, Road Ref. (Frt. Facing)` Road Reference` , Camera
+
+parsfile Roads\3D_Road\Road104.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Intersections } East-West Road (152.4 meter offset), No Curbs #1
+#Library : Road: 3D Surface (All Properties)
+#DataSet : East-West Road (152.4 meter offset), No Curbs #1
+#Category: Intersections
+#FileID  : Road104
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-23-2015 16:16
+#VehCode 3D road
+
+END

@@ -1,0 +1,58 @@
+PARSFILE
+#FullDataName Vehicle: Loaded Condition`No Data`Empty (You should edit or delete this)
+#VehCode 
+#CheckBox0 0    
+sShowTrailer
+#CheckBox1 0    
+#CheckBox2 0    
+
+symbol_push <<hitch_x>> 0
+symbol_push <<hitch_y>> 0
+symbol_push <<hitch_z>> 0
+iunit 1
+ADD_REFERENCE_FRAME LeadUnitPayloads
+SET_EULER_ANGLES YAW_PITCH_ROLL
+SET_X_NAME Xo
+WRT_Xo
+ANI_Xo
+SET_Y_NAME Yo
+WRT_Yo
+ANI_Yo
+SET_Z_NAME Zo
+WRT_Zo
+ANI_Zo
+SET_YAW_NAME Yaw
+WRT_Yaw
+ANI_Yaw
+SET_PITCH_NAME Pitch
+WRT_Pitch
+ANI_Pitch
+SET_ROLL_NAME Roll_E
+WRT_Roll_E
+ANI_Roll_E
+iload 1
+iload 2
+iload 3
+iload 4
+iload 1
+iload 2
+iload 3
+iload 4
+*IMAGE_TYPE DEFAULT
+
+#EMBEDDED_NOTES
+#Generic C-Class hatchback with Strut front and 5-Link rear suspension.
+#
+#C-Class vehicles include the Audi A3, Chevrolet Cruze, Ford Focus, and Opel Astra.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Vehicle: Loaded Condition; { Empty (You should edit or delete this) } No Data
+#Library : Vehicle: Loaded Condition
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : VehLoad100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode 
+
+END

@@ -1,0 +1,17 @@
+ERDFILEV2.00
+19, -1, -1, 76, 1, 0.025000
+TITLE   Circle Road to Straight Road <* * * Examples>
+CATEGORY* * * Examples
+DATASET Circle Road to Straight Road
+SHORTNAMStation X_CamF  X_CamR  Xo      Y_CamF  Y_CamR  Yo      Z_CamF  Z_CamR  Zo      Yaw_CamFYaw_CamRYaw     T_Stamp T_Event FullStepEvent   ID_Run  ID_Event
+UNITSNAMm       m       m       m       m       m       m       m       m       m       deg     deg     deg     sec     sec     -       -       -       -       
+LONGNAMEStation of vehicle sprung mass oX_CamF                          X_CamR                          Xo                              Y_CamF                          Y_CamR                          Yo                              Z_CamF                          Z_CamR                          Zo                              Yaw_CamF                        Yaw_CamR                        Yaw                             Simulation time stamp           Time since event clock reset    Integrator full-step status     Running count of events         ID number of run                ID number of event              
+GENNAME Translation                     Translation                     Translation                     Translation                     Translation                     Translation                     Translation                     Translation                     Translation                     Translation                     Angle                           Angle                           Angle                           Time                            Time                            Boolean                         Count                           ID number                       ID Number                       
+RIGIBODY?                               ?                               ?                               ?                               ?                               ?                               ?                               ?                               ?                               ?                               ?                               ?                               ?                               Simulation time stamp           Event                           Integrator full-step status     Event                           ID of run                       ID of event                     
+HISTORY Road shape generator v 8.1: Vehicle-suspension arrangement: i
+HISTORY Input parameter file was Runs\Run101_all.par
+XLABEL  Time
+XUNITS  sec
+XSTART  0.000000
+HISTORY Run made at 18:26 on February 25, 2015.
+END

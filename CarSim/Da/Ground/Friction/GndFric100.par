@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Ground: Friction Map, X-Y Grid`No Data`Empty (You should edit or delete this)
+OPT_ROAD 0
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MU_GROUND_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Ground: Friction Map, X-Y Grid; { Empty (You should edit or delete this) } No Data
+#Library : Ground: Friction Map, X-Y Grid
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : GndFric100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Ground friction
+
+END

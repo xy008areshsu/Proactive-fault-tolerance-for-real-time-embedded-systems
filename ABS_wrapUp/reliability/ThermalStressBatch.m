@@ -32,7 +32,7 @@ T_abs_adaptive3 = zeros(size(time, 2), size(watts,2));
 for w = watts
     [taaf_all_on(:, i), T_abs_all_on(:, i)] = ThermalStressAllOnFunc( R, C, initTabs, Tamb, Ea, w,  watt_idle, k, A_preFactor, step, time);
 %     [taaf_adaptive(:, i), T_abs_adaptive(:,i)] = ThermalStreeAdaptiveFunc(R, C, initTabs, Tamb, Ea, w, watt_idle, k, A, step, time);
-    [taaf_adaptive1(:, i), T_abs_adaptive1(:,i), taaf_adaptive2(:, i), T_abs_adaptive2(:, i), taaf_adaptive3(:, i), T_abs_adaptive3(:, i)] = ThermalStreeAdaptiveFuncWithRegions(R, C, initTabs, Tamb, Ea, w, watt_idle, k, A_preFactor, step, time, t_S_N, t_S_FS);
+%     [taaf_adaptive1(:, i), T_abs_adaptive1(:,i), taaf_adaptive2(:, i), T_abs_adaptive2(:, i), taaf_adaptive3(:, i), T_abs_adaptive3(:, i)] = ThermalStreeAdaptiveFuncWithRegions(R, C, initTabs, Tamb, Ea, w, watt_idle, k, A_preFactor, step, time, t_S_N, t_S_FS);
     i = i + 1;
 end
 

@@ -1,0 +1,49 @@
+PARSFILE
+#FullDataName Aerodynamics: Basic`C-Class, Hatchback Aero`CS C-Class
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+PARSFILE Aerodynamics\Aero_Fx\AirCFx101.par
+#BlueLink0 Aerodynamics: Fx (Drag) Coef. vs. Aero Slip`Drag Coefficient = 0.30` ` , CFx
+
+PARSFILE Aerodynamics\Aero_Fy\AirCFy101.par
+#BlueLink1 Aerodynamics: Fy (Side Force) Coef. vs. Aero Slip`Side Force Coefficient = 0.5 at 90 deg` ` , CFy
+
+PARSFILE Aerodynamics\Aero_Fz\AirCFz101.par
+#BlueLink2 Aerodynamics: Fz (Lift) Coef. vs. Aero Slip`Lift Coefficient = 0.18` ` , CFz
+
+PARSFILE Aerodynamics\Aero_Mx\AirCMx101.par
+#BlueLink3 Aerodynamics: Mx (Roll Moment) Coef. vs. Aero Slip`Roll Moment Coefficient = 0.3 at 90 deg` ` , CMx
+
+PARSFILE Aerodynamics\Aero_My\AirCMy101.par
+#BlueLink4 Aerodynamics: My (Pitch Moment) Coef. vs. Aero Slip`Pitch Moment Coefficient = -0.15` ` , CMy
+
+PARSFILE Aerodynamics\Aero_Mz\AirCMz101.par
+#BlueLink5 Aerodynamics: Mz (Yaw Moment) Coef. vs. Aero Slip`Yaw Moment Coefficent = 0.05 at 90 deg` ` , CMz
+
+X_REF_AERO -1290
+Y_REF_AERO 0
+H_REF_AERO 0
+L_REF_AERO 2580
+AREA_AERO 2.2
+D_AIR 1.206
+
+#EMBEDDED_NOTES
+#According to SAE convention, the reference point is located at the midpoint of the wheelbase, the midpoint of the track, at ground level., and the reference length is equal to the wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Basic; { CS C-Class } C-Class, Hatchback Aero
+#Library : Aerodynamics: Basic
+#DataSet : C-Class, Hatchback Aero
+#Category: CS C-Class
+#FileID  : Aero101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Aerodynamics
+
+END

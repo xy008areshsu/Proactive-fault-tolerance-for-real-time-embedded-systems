@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Events`Follow Path`
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 1    
+
+#RingCtrl10 0
+#RingCtrl11 4
+
+ID_EVENT 105
+
+PARSFILE Control\Gear_at\GearAT101.par
+#BlueLink10 Control: Shifting (Closed Loop)`AT All Gears` ` , Misc. Data
+
+PARSFILE Control\Braking\ConBrk101.par
+#BlueLink11 Control: Braking (Open Loop)`No Open-Loop Braking Pressure` ` , Misc. Data
+
+PARSFILE Control\Driver\Driver101.par
+#BlueLink12 Control: Steering by the Closed-loop Driver Model`1.65 m to the Right` Constant Position` , Misc. Data
+
+
+#EMBEDDED_NOTES
+#VS Command STOP_RUN_NOW is used to trigger the simulation to end. The keyword is typed and a user defined message may be displayed after the keyword.  The message may be seen in the Log file by using the View button on the Run screen.
+#
+#This dataset is usually used at the end of a series of events.
+#
+#Linking to an event like this, instead of simply linking to nothing (which will also end the run), serves as a reminder that the run is intentionally ended, and notice that a link wasn't broken or just forgotten.
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Events; Follow Path
+#Library : Events
+#DataSet : Follow Path
+#Category: 
+#FileID  : Events105
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-25-2015 18:22
+#VehCode Events
+
+END

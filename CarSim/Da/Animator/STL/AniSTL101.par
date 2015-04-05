@@ -1,0 +1,41 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Cube (Translucent)`Primitives
+#MiscYellow3
+add_obj Animator\3D_shape_files_CS\primitives\cube_1m_wide.obj
+#ENDMYellow
+
+SET_COLOR 0.376 0.376 0.376
+*SPECULAR 1
+*TRANSPARENCY 0.5
+SMOOTH_MAX_ANGLE 45
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+#CheckBox3 0    
+#CheckBox4 0    
+
+set_transparency 0.5
+show_front on
+show_back off
+SET_SPECULAR 1 1 1
+
+SPECIAL_PARSFILE Animator\Cameras\Camera102.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\AniSTL101.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Primitives } Cube (Translucent)
+#Library : Animator: Shape File Link
+#DataSet : Cube (Translucent)
+#Category: Primitives
+#FileID  : AniSTL101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:30
+#VehCode Shape File
+
+END

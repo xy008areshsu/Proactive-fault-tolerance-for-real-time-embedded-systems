@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Suspension: Shock Absorber`Big Car Damping`
+#RingCtrl0 SPLINE
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+FD_TABLE SPLINE
+-1410, -5008
+-720, -3436
+-390, -2324
+-210, -1792
+-90, -1008
+-20, -228
+20, 228
+90, 596
+200, 784
+390, 1100
+760, 1796
+1160, 2560
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Shock Absorber; Big Car Damping
+#Library : Suspension: Shock Absorber
+#DataSet : Big Car Damping
+#Category: 
+#FileID  : Shock101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:36
+#VehCode Shock absorber
+
+END

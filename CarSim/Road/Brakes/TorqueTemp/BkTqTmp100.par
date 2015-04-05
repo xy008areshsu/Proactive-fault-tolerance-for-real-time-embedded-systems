@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Brakes: Torque vs. Rotor Temperature`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MY_BRAKE_TEMP_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#Brake systems without ABS control typically have a propotioning valve that reduces pressure gains on the rear wheel when a moderate pressure is reached, to avoid locking the rear wheels with high braking and associated load transfer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Torque vs. Rotor Temperature; { Empty (You should edit or delete this) } No Data
+#Library : Brakes: Torque vs. Rotor Temperature
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : BkTqTmp100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Brake torque w/ Temp
+
+END

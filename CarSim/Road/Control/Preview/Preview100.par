@@ -1,0 +1,16 @@
+PARSFILE
+#FullDataName Control: Steering Preview Time for the Driver Model`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Control: Steering Preview Time for the Driver Model; { Empty (You should edit or delete this) } No Data
+#Library : Control: Steering Preview Time for the Driver Model
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Preview100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Preview time vs. vehicle speed
+
+END

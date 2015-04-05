@@ -1,0 +1,19 @@
+PARSFILE
+#FullDataName Steering System: Compliance`No Steer Compliance`
+#RingCtrl0 CONSTANT
+#RadioCtrl0 0    
+
+*SCALAR 0
+
+STEER_COMP_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Steering System: Compliance; No Steer Compliance
+#Library : Steering System: Compliance
+#DataSet : No Steer Compliance
+#Category: 
+#FileID  : StrCmp101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Steering compliance
+
+END

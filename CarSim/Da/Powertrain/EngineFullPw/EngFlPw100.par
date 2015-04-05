@@ -1,0 +1,16 @@
+PARSFILE
+#FullDataName Powertrain: Engine Full Load Power`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Powertrain: Engine Full Load Power; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Engine Full Load Power
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : EngFlPw100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Engine full load power
+
+END

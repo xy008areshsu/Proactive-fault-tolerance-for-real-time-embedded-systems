@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Generic Data Group`Circle Road to Straight Road`Highway Network
+#VehCode Generic group
+PARSFILE Roads\3D_Road\Road101.par
+#BlueLink0 Road: 3D Surface (All Properties)`North-South Road (152.4 meter offset), No Curbs` Intersections` , Link 1
+
+
+PARSFILE Roads\3D_Road\Road103.par
+#BlueLink1 Road: 3D Surface (All Properties)`500-ft Circle (flat), No Trees #1` Handling Roads` , Link 2
+
+
+
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset combines several 3D road datasets, each with its own set of automatically generate road shapes.
+#
+#The result is that this dataset has shape information for the animator that includes a set of roads.
+#
+#Depending on how this is linked in a run, the last road definition could be used by the vehicle model. However, if another road dataset is reference after this, then the last one sent to the math model is the one used by the vehicle.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Highway Network } Circle Road to Straight Road
+#Library : Generic Data Group
+#DataSet : Circle Road to Straight Road
+#Category: Highway Network
+#FileID  : GData102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-25-2015 18:23
+#VehCode Generic group
+
+END

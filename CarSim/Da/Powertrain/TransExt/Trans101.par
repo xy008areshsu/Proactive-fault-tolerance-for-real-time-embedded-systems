@@ -1,0 +1,78 @@
+PARSFILE
+#FullDataName Powertrain: Transmission (18 Gears or CVT)`6-Speed Transmission`
+#RingCtrl0 6
+NGEARS 6
+#RingCtrl1 1
+OPT_SHIFT_INTERNAL 1
+#RingCtrl2 1
+OPT_TR_GEAR_INTERNAL 1
+#CheckBox0 0    
+R_GEAR_TR_REVERSE -3.168
+R_GEAR_TR(1) 3.538
+R_GEAR_TR(2) 2.06
+R_GEAR_TR(3) 1.404
+R_GEAR_TR(4) 1.00
+R_GEAR_TR(5) 0.713
+R_GEAR_TR(6) 0.582
+ITR_REVERSE 0.034
+ITR_NEUTRAL 0.034
+ITR(1) 0.037
+ITR(2) 0.034
+ITR(3) 0.042
+ITR(4) 0.04
+ITR(5) 0.04
+ITR(6) 0.04
+R_EFF_TR_F_REVERSE 0.9
+R_EFF_TR_F(1) 0.92
+R_EFF_TR_F(2) 0.92
+R_EFF_TR_F(3) 0.95
+R_EFF_TR_F(4) 0.95
+R_EFF_TR_F(5) 0.98
+R_EFF_TR_F(6) 0.99
+R_EFF_TR_R_REVERSE 0.9
+R_EFF_TR_R(1) 0.92
+R_EFF_TR_R(2) 0.92
+R_EFF_TR_R(3) 0.95
+R_EFF_TR_R(4) 0.95
+R_EFF_TR_R(5) 0.98
+R_EFF_TR_R(6) 0.99
+T_SHIFT 0.25
+
+
+igear 1
+PARSFILE Powertrain\Shift\Shift101.par
+#BlueLink0 Powertrain: Shift Schedule`6-speed, 1-2 Shift` 6-speed` , Shift schedule
+
+
+igear 2
+PARSFILE Powertrain\Shift\Shift102.par
+#BlueLink1 Powertrain: Shift Schedule`6-speed, 2-3 Shift` 6-speed` , Shift schedule
+
+
+igear 3
+PARSFILE Powertrain\Shift\Shift103.par
+#BlueLink2 Powertrain: Shift Schedule`6-speed, 3-4 Shift` 6-speed` , Shift schedule
+
+
+igear 4
+PARSFILE Powertrain\Shift\Shift104.par
+#BlueLink3 Powertrain: Shift Schedule`6-speed, 4-5 Shift` 6-speed` , Shift schedule
+
+
+igear 5
+PARSFILE Powertrain\Shift\Shift105.par
+#BlueLink4 Powertrain: Shift Schedule`6-speed, 5-6 Shift` 6-speed` , Shift schedule
+
+
+igear 6
+
+LOG_ENTRY Used Dataset: Powertrain: Transmission (18 Gears or CVT); 6-Speed Transmission
+#Library : Powertrain: Transmission (18 Gears or CVT)
+#DataSet : 6-Speed Transmission
+#Category: 
+#FileID  : Trans101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Transmission
+
+END

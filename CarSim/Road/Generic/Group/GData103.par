@@ -1,0 +1,32 @@
+PARSFILE
+#FullDataName Generic Data Group`2 Axle - Fx, Fy, Fz`Tire Force Arrows
+#VehCode Generic group
+PARSFILE Animator\Arrows\Arrows101.par
+#BlueLink0 Animator: Wheel Arrows and Other Indicators`2A - Fx Tire Force Arrows` Tire Force Arrows (2 Axles)` , Link 1
+
+
+PARSFILE Animator\Arrows\Arrows102.par
+#BlueLink1 Animator: Wheel Arrows and Other Indicators`2A - Fy Tire Force Arrows` Tire Force Arrows (2 Axles)` , Link 2
+
+
+PARSFILE Animator\Arrows\Arrows103.par
+#BlueLink2 Animator: Wheel Arrows and Other Indicators`2A - Fz Tire Force Arrows` Tire Force Arrows (2 Axles)` , Link 3
+
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group; { Tire Force Arrows } 2 Axle - Fx, Fy, Fz
+#Library : Generic Data Group
+#DataSet : 2 Axle - Fx, Fy, Fz
+#Category: Tire Force Arrows
+#FileID  : GData103
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Generic group
+
+END

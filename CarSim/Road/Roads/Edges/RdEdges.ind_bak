@@ -1,0 +1,7 @@
+RDEDGES.IND v1.0
+3    2    
+102  Road: X-Y-Z Coordinates of Edges
+100  , No Data` Empty (You should edit or delete this)` 02-11-2015` 18:39` 1
+101  , off_ramp` Empty (You should edit or delete this)` 02-23-2015` 16:11` 0
+102  , off_ramp #1` Highway network` 02-23-2015` 16:13` 0
+END

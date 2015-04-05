@@ -1,0 +1,44 @@
+PARSFILE
+#FullDataName Powertrain: 4-Wheel Drive`No Data`Empty (You should edit or delete this)
+
+OPT_PT 3
+
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+OPT_ENGINE_INTERNAL 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+OPT_DIFF_INTERNAL(3) 1
+#RingCtrl5 1
+#RingCtrl6 1
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(1) 1
+OPT_DIFF_INTERNAL(2) 1
+
+
+IDIFF 3
+
+IDIFF 1
+
+IDIFF 2
+
+LOG_ENTRY Used Dataset: Powertrain: 4-Wheel Drive; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: 4-Wheel Drive
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : 4WD100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode 4WD
+
+END

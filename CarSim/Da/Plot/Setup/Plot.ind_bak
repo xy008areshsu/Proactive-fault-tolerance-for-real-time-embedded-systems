@@ -1,0 +1,13 @@
+PLOT.IND v1.0
+9    1    
+109  Plot: Setup
+102  , Steering: Handwheel Angle` Controls: Driver` 02-11-2015` 18:32` 0
+103  , Road Wheel Steer Angle - Front` Steering` 02-11-2015` 18:32` 0
+108  , Vertical Forces` Tire Forces` 02-11-2015` 18:32` 0
+104  , Slip Angles` Tire Kinematics` 02-11-2015` 18:32` 0
+101  , Lateral Tracking vs. Station` Tracking` 02-11-2015` 18:32` 0
+105  , Lateral Accel. of CG's` Vehicle Motion` 02-11-2015` 18:32` 0
+109  , Longitudinal Speed` Vehicle Motion` 02-11-2015` 18:32` 0
+106  , Roll Angle of Sprung Masses` Vehicle Motion` 02-11-2015` 18:32` 0
+107  , Yaw Rate of Sprung Masses` Vehicle Motion` 02-11-2015` 18:32` 0
+END

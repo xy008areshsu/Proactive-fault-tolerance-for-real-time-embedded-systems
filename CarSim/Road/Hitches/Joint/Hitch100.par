@@ -1,0 +1,22 @@
+PARSFILE
+#FullDataName Hitch: Joint Assembly`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+OPT_ROLL_HITCH 0
+
+iunit 1
+WRITE_ADD_REFERENCE_FRAME_HITCH
+iunit 2
+SET_OFFSET_X <<hitch_x>>
+SET_OFFSET_Y <<hitch_y>>
+SET_OFFSET_Z <<hitch_z>>
+
+LOG_ENTRY Used Dataset: Hitch: Joint Assembly; { Empty (You should edit or delete this) } No Data
+#Library : Hitch: Joint Assembly
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Hitch100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Hitch
+
+END

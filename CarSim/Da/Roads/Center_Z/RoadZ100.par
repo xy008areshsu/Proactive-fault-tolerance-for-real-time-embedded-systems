@@ -1,0 +1,18 @@
+PARSFILE
+#FullDataName Road: Centerline Elevation`No Data`Empty (You should edit or delete this)
+OPT_ROAD 1
+
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Road: Centerline Elevation; { Empty (You should edit or delete this) } No Data
+#Library : Road: Centerline Elevation
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RoadZ100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Centerline elevation: Z vs S
+
+END

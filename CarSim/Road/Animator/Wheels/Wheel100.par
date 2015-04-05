@@ -1,0 +1,24 @@
+PARSFILE
+#FullDataName Animator: Wheel`No Data`Empty (You should edit or delete this)
+ADD_WHEEL No Data
+
+#CheckBox0 0    
+SET_RADIAL_LINE OFF
+#CheckBox1 0    
+set_solid_shade on
+
+
+#EMBEDDED_NOTES
+#The Animator: Vehicles and Other Moving Objects screen is used to define animation shapes to be used with the animator.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Wheel; { Empty (You should edit or delete this) } No Data
+#Library : Animator: Wheel
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Wheel100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Wheel shape
+
+END

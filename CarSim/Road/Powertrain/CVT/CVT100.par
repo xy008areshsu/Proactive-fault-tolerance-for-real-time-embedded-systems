@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Powertrain: CVT Gear Ratio`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+
+
+*3D_XLabel Throttle (-)
+*3D_YLabel Trans. output speed (rpm)
+*3D_ZLabel Absolute transmission gear ratio (-)
+
+#DiagramTwo0
+*3D_DATA 0, 0 ! columns x rows
+R_GEAR_CVT_CARPET
+0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Powertrain: CVT Gear Ratio; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: CVT Gear Ratio
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : CVT100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode CVT gear ratio
+
+END

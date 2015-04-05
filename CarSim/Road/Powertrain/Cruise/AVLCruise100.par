@@ -1,0 +1,28 @@
+PARSFILE
+#FullDataName Powertrain: AVL Cruise`No Data`Empty (You should edit or delete this)
+OPT_ENGINE_PITCH_REACTION(1) 0
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+#RingCtrl1 1
+R_MDRIVE 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+
+OPT_SHIFT_INTERNAL 1
+OPT_SHIFT_AVL 0
+
+#AVL Cruise setting data
+
+LOG_ENTRY Used Dataset: Powertrain: AVL Cruise; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: AVL Cruise
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : AVLCruise100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode AVL Cruise Driveline model
+
+END

@@ -1,0 +1,54 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`C-Class, Hatchback 2012`CS C-Class
+*COLOR .36 .117 .117
+*OFFSET_X 0
+*OFFSET_Y 0
+*OFFSET_Z 0.0
+*X_REF_LENGTH 2893
+*Y_REF_LENGTH 1916
+*Z_REF_LENGTH 1610
+*IMAGE_FIT_MODE 1
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+
+#RingCtrl0 1
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\StlGroup102.png
+PARSFILE Animator\STL\AniSTL107.par
+#BlueLink0 Animator: Shape File Link`C Class Hatchback 2012: Body` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+PARSFILE Animator\STL\AniSTL108.par
+#BlueLink1 Animator: Shape File Link`C Class Hatchback 2012: Details` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+PARSFILE Animator\STL\AniSTL109.par
+#BlueLink14 Animator: Shape File Link`C Class, Hatchback: Driver 2012` CS Hatchback` , Shape File
+
+show_front on
+show_back off
+x_ref_length 2893
+y_ref_length 1916
+z_ref_length 1610
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { CS C-Class } C-Class, Hatchback 2012
+#Library : Animator: Shape Assembly
+#DataSet : C-Class, Hatchback 2012
+#Category: CS C-Class
+#FileID  : StlGroup102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Shape Group
+
+END

@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Nothing`
+NLANES 1
+#MiscYellow0
+# 1 1 1, , , , , 0.01, m, 0, m, , , 0, 0.01, 1, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+LIN(1) 0.01
+LINUNITS(1) m
+LOUT(1) 0
+LOUTUNITS(1) m
+SSTART(1) 0
+SSTOP(1) 0.01
+SINT(1) 1
+AUTODETAIL(1) Random
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; Nothing
+#Library : Road: Animator Surface Shapes
+#DataSet : Nothing
+#Category: 
+#FileID  : RdShp101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Road shapes
+
+END

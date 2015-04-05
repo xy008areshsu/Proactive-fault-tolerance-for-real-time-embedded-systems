@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Traffic Motion`No Data`Empty (You should edit or delete this)
+#RingCtrl0 1
+DEFINE_MOVING_OBJECTS 1
+#RingCtrl1 1
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 0    
+#CheckBox10 0    
+#CheckBox11 0    
+#CheckBox12 0    
+#CheckBox13 0    
+#CheckBox14 0    
+#CheckBox15 0    
+#CheckBox16 0    
+#CheckBox17 0    
+#CheckBox18 0    
+#CheckBox19 0    
+#CheckBox20 0    
+#CheckBox21 0    
+#CheckBox22 0    
+#CheckBox23 0    
+#CheckBox24 0    
+#CheckBox25 0    
+#CheckBox26 0    
+#CheckBox27 0    
+#CheckBox28 0    
+#CheckBox29 0    
+#CheckBox30 0    
+#CheckBox31 0    
+#CheckBox32 0    
+#CheckBox33 0    
+#CheckBox34 0    
+#CheckBox35 0    
+#CheckBox36 0    
+#CheckBox37 0    
+#CheckBox38 0    
+
+
+IOBJECT_INCREMENT
+
+WRITE_STRING_FOR_IOBJECT EQ_DIFFERENTIAL S_OBJ_? = -SPEED_STATION(0,S_OBJ_?,1)
+WRITE_STRING_FOR_IOBJECT EQ_INIT HEADO_? = PI
+OPT_RECYCLE_OBJ 0
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the CarSim Quick Start Guide. Since the test duration is short (10 seconds or 210 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change (Quick Start)" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 120 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Traffic Motion; { Empty (You should edit or delete this) } No Data
+#Library : Traffic Motion
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TMotion100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Traffic Motion
+
+END

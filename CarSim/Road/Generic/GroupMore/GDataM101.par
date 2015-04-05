@@ -1,0 +1,34 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`C-Class Rear-view Mirror Transform`VSV Transforms
+#VehCode Generic group
+#MiscYellow0
+ADD_OBJECT Transform Rear View Mirror
+  TRANSLATE_X -0.9590
+  TRANSLATE_Y 0.0
+  TRANSLATE_Z 1.3331
+  ROTATE_PITCH 2.2222
+  ROTATE_ROLL 0.0
+  ROTATE_YAW 180
+END_OBJECT Transform Rear View Mirror
+#ENDMYellow
+
+
+
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { VSV Transforms } C-Class Rear-view Mirror Transform
+#Library : Generic Data Group (More)
+#DataSet : C-Class Rear-view Mirror Transform
+#Category: VSV Transforms
+#FileID  : GDataM101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Generic group
+
+END

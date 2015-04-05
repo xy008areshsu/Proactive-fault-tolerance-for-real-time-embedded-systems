@@ -1,0 +1,57 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`Off-Road/City Loop`Off-Road/City Loop
+OPT_ROAD 1
+iroad 1 ! obsolete March 2011
+idz_road 1
+RR_SURF 1.5
+DZ_SHADOW 0.05
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road101.png
+PARSFILE Roads\Builder\RdBuild101.par
+#BlueLink0 Road: Segment Builder`City and Off-Road` DS Off-Road Course` , Centerline geometry
+
+PARSFILE Roads\Friction\RdFric101.par
+#BlueLink3 Road: Friction Map, S-L Grid`0.9` Constant Mu` , Friction
+
+PARSFILE Roads\Shapes\RdShp101.par
+#BlueLink4 Road: Animator Surface Shapes`Nothing` ` , Road shape definitions
+
+#CheckBox0 0    
+
+add_reference_frame road_stuff_1
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group101.par
+#BlueLink6 Animator: Group`Sky for Dark Grass` Off-Road/City Loop` , Misc. animator set
+
+add_reference_frame road_stuff_2
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group102.par
+#BlueLink7 Animator: Group`Environment City and Offroad` Off-Road/City Loop` , Misc. animator set
+
+add_reference_frame road_stuff_3
+reference_frame_ghosts off
+add_reference_frame road_stuff_4
+reference_frame_ghosts off
+iroad 2 ! obsolete March 2011
+idz_road 2
+PARSFILE Roads\dZ_Map\RdElMap101.par
+#BlueLink10 Road: Off-Center Elevation Map, S-L Grid`2D-Spline: Small Hills - Long` DS Off-Road Course` , Off-center elevation 2
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera105.par
+#BlueLink5 Animator: Camera Setup`Rear View (Road Ref.)` Road Reference` , Camera
+
+parsfile Roads\3D_Road\Road101.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Off-Road/City Loop } Off-Road/City Loop
+#Library : Road: 3D Surface (All Properties)
+#DataSet : Off-Road/City Loop
+#Category: Off-Road/City Loop
+#FileID  : Road101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode 3D road
+
+END

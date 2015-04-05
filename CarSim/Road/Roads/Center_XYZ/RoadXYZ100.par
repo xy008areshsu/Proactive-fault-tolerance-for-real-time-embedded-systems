@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: X-Y-Z Coordinates of Centerline`No Data`Empty (You should edit or delete this)
+
+#CheckBox0 0    
+OPT_ROAD_LOOP 0
+
+#RadioCtrl0 0    
+
+#RingCtrl0 0
+OPT_ROAD 1
+
+#DiagramTwo0
+*3D_DATA 3, 1 ! columns x rows
+*ALL_CARPET
+0, 1, 2, 3
+0, 0, 0, 0
+ENDTABLE
+
+YIN_TABLE
+0, 0, 0
+ENDTABLE
+
+ROAD_ZS_TABLE
+0, 0
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Road: X-Y-Z Coordinates of Centerline; { Empty (You should edit or delete this) } No Data
+#Library : Road: X-Y-Z Coordinates of Centerline
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RoadXYZ100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode X-Y-Z table
+
+END

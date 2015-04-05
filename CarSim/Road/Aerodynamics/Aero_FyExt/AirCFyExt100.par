@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Aerodynamics: Fy (Side Force) Coef. vs. Bounce and Pitch`No Data`Empty (You should edit or delete this)
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+FY_AERO_SHAPING_2_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+#EMBEDDED_NOTES
+#The side force coefficient is typically larger then the drag coefficent, because the width of the vehiicle is less than the length, contirbuting to drag in the lateral direction. Also, the calculation of the coefficient is based on the projected frontal area of the car, while the side force is developed against the larger side area.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Fy (Side Force) Coef. vs. Bounce and Pitch; { Empty (You should edit or delete this) } No Data
+#Library : Aerodynamics: Fy (Side Force) Coef. vs. Bounce and Pitch
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : AirCFyExt100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Side force vs. bounce and pitch
+
+END

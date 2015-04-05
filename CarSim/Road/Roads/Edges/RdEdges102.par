@@ -1,0 +1,67 @@
+PARSFILE
+#FullDataName Road: X-Y-Z Coordinates of Edges`off_ramp #1`Highway network
+OPT_ROAD 1
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+#CheckBox0 0    
+OPT_ROAD_LOOP 0
+
+
+*3D_XLabel Global Z coordinate (m)
+*3D_YLabel Global X coordinate (m)
+*3D_ZLabel Global Y coordinate (m)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+*Lane1_CARPET
+0, 1, 2, 3
+0, 400, 0, 0
+500, 400, 0, 400
+ENDTABLE
+
+*3D_XLabel Global Z coordinate (m)
+*3D_YLabel Global X coordinate (m)
+*3D_ZLabel Global Y coordinate (m)
+
+#DiagramTwo1
+*3D_DATA 3, 2 ! columns x rows
+*Lane2_CARPET
+0, 1, 2, 3
+0, 400, 0, 0
+500, 400, 0, 0
+ENDTABLE
+
+YIN_TABLE
+0, 400, 0
+500, 400, 400
+ENDTABLE
+
+ROAD_ZS_TABLE
+0, 0
+400, 0
+ENDTABLE
+
+*3D_DATA 2, 2 ! columns x rows
+ROAD_DZ_CARPET VAR_WIDTH
+0, 0, 1
+500.000000,0.0,0.0
+ENDDATA
+0, 0, 1
+500.000000,0.0,0.0
+ENDCOLS
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Road: X-Y-Z Coordinates of Edges; { Highway network } off_ramp #1
+#Library : Road: X-Y-Z Coordinates of Edges
+#DataSet : off_ramp #1
+#Category: Highway network
+#FileID  : RdEdges102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-23-2015 16:13
+#VehCode X-Y-Z edges
+
+END

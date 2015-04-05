@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Steering (Simple)`No Data`Empty (You should edit or delete this)
+OPT_STEER 0
+OPT_POWER 0
+OPT_M_SW_CALC 0
+
+OPT_STEER_DEF 1
+
+
+iside 1
+iaxle 2
+OPT_RACK 0
+
+iaxle 1
+OPT_RACK 0
+
+iside 2
+
+iaxle 2
+
+#EMBEDDED_NOTES
+#Steering for a vehicle with
+#Wheelbase = 2580 mm
+#Front Track =  1540 mm
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Steering (Simple); { Empty (You should edit or delete this) } No Data
+#Library : Steering (Simple)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : StrSys100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode 4-wheel steer (simple)
+
+END

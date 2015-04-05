@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Sensors for Range and Tracking`No Data`Empty (You should edit or delete this)
+DEFINE_SENSORS 1
+NSENSORS_INCREMENT
+#CheckBox0 0    
+#CheckBox1 0    
+OPT_BLOCK_SENSOR 0
+#CheckBox2 0    
+OPT_SORT_OUTPUTS_SENSOR 0
+#CheckBox3 0    
+#CheckBox5 0    
+OPT_EXPORT_SENSOR 0
+
+#RingCtrl0 0
+#RingCtrl1 1
+SENSOR_DETECT_TRANSLUCENCY 1
+#RingCtrl3 1
+TYPE_SENSOR 1
+
+#EMBEDDED_NOTES
+#This Procedure demonstrates a common Double Lane Change handling test.
+#
+#This example is used in the CarSim Quick Start Guide. Since the test duration is short (10 seconds or 210 m, whichever comes first) and the dynamic motions are easily visible in the animator, it is a test commonly used to evaluate different vehicle data.
+#
+#To see how the driver path was set up, click on the blue link "Double Lane Change (Quick Start)" for more information.
+#
+#The driver controls specify a closed-loop speed control with a constant target speed of 120 kph, no brake pressure, and automatic gear selection using all available gears.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Sensors for Range and Tracking; { Empty (You should edit or delete this) } No Data
+#Library : Sensors for Range and Tracking
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Radar100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Object sensor
+
+END

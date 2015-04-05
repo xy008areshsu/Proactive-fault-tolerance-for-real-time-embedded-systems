@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Powertrain: Rear Twin-Clutch Differential`No Data`Empty (You should edit or delete this)
+
+IDIFF 2
+opt_twin_clutch 1
+
+
+
+
+iside 1
+
+iside 2
+
+#EMBEDDED_NOTES
+#Generic 125 kW powertrain with an automatic transmission. The torque converter data has been tuned to work with the 125 kW engine to give reasonable performance.  It also uses a viscous type differential.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear Twin-Clutch Differential; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Rear Twin-Clutch Differential
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TwinR100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Twin clutches
+
+END

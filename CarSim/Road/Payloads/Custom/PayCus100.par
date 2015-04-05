@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Payload: Custom`No Data`Empty (You should edit or delete this)
+RX_SGUI 0.000
+RY_SGUI 0.000
+RZ_SGUI 0.000
+
+
+LOG_ENTRY Used Dataset: Payload: Custom; { Empty (You should edit or delete this) } No Data
+#Library : Payload: Custom
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : PayCus100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Payload: custom
+
+END

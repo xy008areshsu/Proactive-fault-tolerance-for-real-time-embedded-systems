@@ -1,0 +1,33 @@
+PARSFILE
+#FullDataName Brakes: Proportioning / Limiting Valve`Unity until 1.5MPa then 30%`
+#RingCtrl0 LINEAR
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+PBK_DL_COMBINE MULTIPLY
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR2 1
+
+#DiagramOne0
+PBK_DL_TABLE LINEAR
+0, 0
+1.5, 1.5
+2.5, 1.8
+ENDTABLE
+PBK_DL_FZ_CONSTANT 1
+
+#EMBEDDED_NOTES
+#Brake systems without ABS control typically have a propotioning valve that reduces pressure gains on the rear wheel when a moderate pressure is reached, to avoid locking the rear wheels with high braking and associated load transfer.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Brakes: Proportioning / Limiting Valve; Unity until 1.5MPa then 30%
+#Library : Brakes: Proportioning / Limiting Valve
+#DataSet : Unity until 1.5MPa then 30%
+#Category: 
+#FileID  : BrkProp101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Prop. / limit. valve
+
+END

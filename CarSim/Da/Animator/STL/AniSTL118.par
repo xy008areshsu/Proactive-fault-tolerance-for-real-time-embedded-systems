@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Poles and Barriers`Off-Road/City Loop
+#MiscYellow3
+add_obj Animator\3D_shape_files_CS\scenery\City_Offroad\CityOffroad_Details.OSG
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SMOOTH_MAX_ANGLE 30
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 1    
+set_fogging off
+#CheckBox2 1    
+mtl_ns_old on
+#CheckBox3 0    
+#CheckBox4 0    
+
+show_front on
+show_back off
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\AniSTL118.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Off-Road/City Loop } Poles and Barriers
+#Library : Animator: Shape File Link
+#DataSet : Poles and Barriers
+#Category: Off-Road/City Loop
+#FileID  : AniSTL118
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Shape File
+
+END

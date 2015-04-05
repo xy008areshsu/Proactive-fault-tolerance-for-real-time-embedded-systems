@@ -1,0 +1,97 @@
+PARSFILE
+#FullDataName Animator: Vehicles and Sensor Targets`C-Class, Hatchback 2012`C-Class Vehicles
+
+PARSFILE Generic\Group\GData101.par
+#BlueLink9 Generic Data Group`C-Class Hatchback Camera Locations` Vehicle-Specific VSV Transforms` , Misc
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox6 1    
+#CheckBox7 1    
+
+OBJ_X_LENGTH 2893
+OBJ_Y_LENGTH 1916
+OBJ_Z_LENGTH 1610
+*DZ_V 0
+*LAT_WC 1675
+*LAT_WC_2 1675
+*HWC 350
+*WHEEL_RATIO 1.2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\Vehicles\AniVeh101.png
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+TIRE_ANI_PARSFILE Animator\STL\AniSTL111.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_OFFSET_X 0
+SET_OFFSET_Y 0.8375
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\AniSTL111.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_ANGLE_X 180
+SET_OFFSET_X 0
+SET_OFFSET_Y -0.8375
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\AniSTL111.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_OFFSET_X -2.893
+SET_OFFSET_Y 0.8375
+SET_OFFSET_Z 0.3325
+TIRE_ANI_PARSFILE Animator\STL\AniSTL111.par
+SET_SCALE_X 1.2
+SET_SCALE_Y 1.2
+SET_SCALE_Z 1.2
+SET_ANGLE_X 180
+SET_OFFSET_X -2.893
+SET_OFFSET_Y -0.8375
+SET_OFFSET_Z 0.3325
+WRITE_ADD_REFERENCE_FRAME_SHADOW
+PARSFILE Animator\STL\AniSTL106.par
+#BlueLink0 Animator: Shape File Link`Vehicle Shadow Shape` Vehicle Shadow` , Shadow
+
+WRITE_REFERENCE_FRAME_SIZE
+DZ_OBJECT 0
+WRITE_ADD_REFERENCE_FRAME_OBJECT
+PARSFILE Animator\STL_Groups\StlGroup102.par
+#BlueLink1 Animator: Shape Assembly`C-Class, Hatchback 2012` CS C-Class` , Vehicle body
+
+PARSFILE Animator\Sound\Set\SndSet102.par
+#BlueLink6 Animator: Sound Set`Gasoline Engine Vehicle` General Vehicle Sounds` , Sound Set
+
+WRITE_REFERENCE_FRAME_SIZE
+WRITE_ADD_REFERENCE_FRAME_BRAKES
+PARSFILE Animator\STL\AniSTL110.par
+#BlueLink3 Animator: Shape File Link`C-Class, Hatchback: Brake Lights 2012` CS Hatchback` , Brake lights
+
+WRITE_REFERENCE_FRAME_SIZE
+
+SPECIAL_PARSFILE Animator\Cameras\Camera101.par
+#BlueLink5 Animator: Camera Setup`Vehicle Pictures` Shape Preview` , Animator camera
+
+EXPORT_PARSFILE Animator\STL\AniSTL111.par
+#BlueLink2 Animator: Shape File Link`Blurred Tire` Tires` , Tire for traffic vehicle
+
+
+#EMBEDDED_NOTES
+#The Animator: Vehicles and Other Moving Objects screen is used to define animation shapes to be used with the animator.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Animator: Vehicles and Sensor Targets; { C-Class Vehicles } C-Class, Hatchback 2012
+#Library : Animator: Vehicles and Sensor Targets
+#DataSet : C-Class, Hatchback 2012
+#Category: C-Class Vehicles
+#FileID  : AniVeh101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Vehicle Shape
+
+END

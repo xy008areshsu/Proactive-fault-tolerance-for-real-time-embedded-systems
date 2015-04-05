@@ -1,0 +1,36 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`Looped Road, No Grass or Road Transition`Roads
+NLANES 1
+#MiscYellow0
+# 1 1 1, Road (One Lane), 0.2, 20, 1, -4.1, m, 4.1, m, , , -10, 2000, 1, , , Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (One Lane)
+SPECULAR(1) 0.2
+SCALE(1) 20
+LTILES(1) 1
+LIN(1) -4.1
+LINUNITS(1) m
+LOUT(1) 4.1
+LOUTUNITS(1) m
+SSTART(1) -10
+SSTOP(1) 2000
+SINT(1) 1
+AUTODETAIL(1) Random
+MTL_FILE Roads\materials\road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roads } Looped Road, No Grass or Road Transition
+#Library : Road: Animator Surface Shapes
+#DataSet : Looped Road, No Grass or Road Transition
+#Category: Roads
+#FileID  : RdShp102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Road shapes
+
+END

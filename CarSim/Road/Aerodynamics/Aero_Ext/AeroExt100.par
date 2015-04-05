@@ -1,0 +1,31 @@
+PARSFILE
+#FullDataName Aerodynamics: Pitch, Bounce, Yaw`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+
+#RingCtrl0 2
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+#RingCtrl5 2
+#RingCtrl6 2
+#RingCtrl7 2
+#RingCtrl8 2
+#RingCtrl9 2
+#RingCtrl10 2
+#RingCtrl11 2
+
+#EMBEDDED_NOTES
+#According to SAE convention, the reference point is located at the midpoint of the wheelbase, the midpoint of the track, at ground level., and the reference length is equal to the wheelbase.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Aerodynamics: Pitch, Bounce, Yaw; { Empty (You should edit or delete this) } No Data
+#Library : Aerodynamics: Pitch, Bounce, Yaw
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : AeroExt100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Aerodynamics Pitch, Bounce, Yaw
+
+END

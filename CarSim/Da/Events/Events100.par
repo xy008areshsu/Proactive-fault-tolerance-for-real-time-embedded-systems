@@ -1,0 +1,22 @@
+PARSFILE
+#FullDataName Events`No Data`Empty (You should edit or delete this)
+#CheckBox1 0    
+#CheckBox6 0    
+#CheckBox7 0    
+
+#RingCtrl10 5
+#RingCtrl11 4
+
+ID_EVENT 100
+
+
+LOG_ENTRY Used Dataset: Events; { Empty (You should edit or delete this) } No Data
+#Library : Events
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Events100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Events
+
+END

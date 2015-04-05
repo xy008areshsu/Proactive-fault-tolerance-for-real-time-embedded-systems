@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Animator: Shape File Link`Land Bowl for Desert`Off-Road/City Loop
+#MiscYellow3
+add_obj Animator\3D_shape_files_CS\scenery\City_Offroad\DesertLandbowl.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 15
+SET_SCALE_Y 15
+SET_SCALE_Z 1
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox3 0    
+#CheckBox4 0    
+
+show_front on
+show_back off
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL\AniSTL113.png
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Off-Road/City Loop } Land Bowl for Desert
+#Library : Animator: Shape File Link
+#DataSet : Land Bowl for Desert
+#Category: Off-Road/City Loop
+#FileID  : AniSTL113
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Shape File
+
+END

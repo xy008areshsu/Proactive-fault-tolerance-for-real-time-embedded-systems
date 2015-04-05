@@ -1,0 +1,59 @@
+PARSFILE
+#FullDataName Animator: Shape Assembly`Fz 3D, Offset (Tail Origin)`Arrows
+*COLOR 1 1 0
+*OFFSET_X 0
+*OFFSET_Y 0.5
+*OFFSET_Z 0
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 1    
+#CheckBox5 0    
+
+#RingCtrl0 0
+#RingCtrl1 2
+#RingCtrl2 2
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Animator\STL_Groups\StlGroup105.png
+PARSFILE Animator\STL\AniSTL120.par
+#BlueLink0 Animator: Shape File Link`3D Arrow for Z (Tail Origin) - OSG` Arrows` , Shape File
+
+show_front on
+show_back on
+set_transparency 1
+set_offset_x 0
+set_offset_y 0.5
+set_offset_z 0
+PARSFILE Animator\STL\AniSTL121.par
+#BlueLink1 Animator: Shape File Link`Flat Arrow for Z (Tail Origin, Front View)` Arrows` , Shape File
+
+show_front on
+show_back on
+set_transparency 1
+set_offset_x 0
+set_offset_y 0.5
+set_offset_z 0
+PARSFILE Animator\STL\AniSTL122.par
+#BlueLink2 Animator: Shape File Link`Flat Arrow for Z (Tail Origin, Side View)` Arrows` , Shape File
+
+show_front on
+show_back on
+set_transparency 1
+set_offset_x 0
+set_offset_y 0.5
+set_offset_z 0
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Arrows } Fz 3D, Offset (Tail Origin)
+#Library : Animator: Shape Assembly
+#DataSet : Fz 3D, Offset (Tail Origin)
+#Category: Arrows
+#FileID  : StlGroup105
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Shape Group
+
+END

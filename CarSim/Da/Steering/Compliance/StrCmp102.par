@@ -1,0 +1,19 @@
+PARSFILE
+#FullDataName Steering System: Compliance`0.001 deg/N-m`
+#RingCtrl0 COEFFICIENT
+#RadioCtrl0 0    
+
+*SCALAR 0.001
+
+STEER_COMP_COEFFICIENT 0.001
+
+LOG_ENTRY Used Dataset: Steering System: Compliance; 0.001 deg/N-m
+#Library : Steering System: Compliance
+#DataSet : 0.001 deg/N-m
+#Category: 
+#FileID  : StrCmp102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode Steering compliance
+
+END

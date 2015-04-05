@@ -1,0 +1,13 @@
+PARSFILE
+#FullDataName Engine Mounts: Mount Characteristics`No Data`Empty (You should edit or delete this)
+
+LOG_ENTRY Used Dataset: Engine Mounts: Mount Characteristics; { Empty (You should edit or delete this) } No Data
+#Library : Engine Mounts: Mount Characteristics
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : EngMount100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Engine Mount Assembly
+
+END

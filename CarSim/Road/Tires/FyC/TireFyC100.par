@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Tire: Lateral Force vs. Inclination`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+*3D_XLabel Vertical load (N)
+*3D_YLabel Inclination [Gamma] (deg)
+*3D_ZLabel Lateral force (N)
+
+#DiagramTwo0
+*3D_DATA 0, 0 ! columns x rows
+FYG_TIRE_CARPET
+0
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Tire: Lateral Force vs. Inclination; { Empty (You should edit or delete this) } No Data
+#Library : Tire: Lateral Force vs. Inclination
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : TireFyC100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Tire: Fy
+
+END

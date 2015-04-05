@@ -1,0 +1,73 @@
+PARSFILE
+#FullDataName Events`C. Transition to Straight Road East-West`Circle Road to Straight Road
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+#CheckBox6 1    
+#CheckBox7 1    
+
+#RingCtrl0 >
+#RingCtrl10 1
+#RingCtrl11 1
+
+ID_EVENT 104
+*NAME1 station
+*VALUE1 600
+*SPEED 80
+
+
+! Reset all open-loop control clocks by setting parameters to current time
+T_EVENT_START = T ;
+TSTART_BRAKES = T ;
+TSTART_F_BRAKE_PEDAL = T ;
+TSTART_PBK_CON = T ;
+TSTART_CLUTCH = T ;
+TSTART_GEAR = T ;
+TSTART_SPEED_CTRL = T ;
+TSTART_STEER = T ;
+TSTART_THROTTLE = T ;
+TSTART_TRANS = T ;
+TSTART_WIND = T ;
+OPT_INIT_CONFIG 0
+OPT_INIT_ROAD 0
+OPT_INIT_SPEED 0
+Opt_SC 3
+OPT_SC 3
+SPEED_TARGET_COMBINE ADD
+SPEED_TARGET_CONSTANT 0
+SPEED_TARGET_S_CONSTANT 80
+#MiscYellow0
+! Tells the driver model the vehicle
+! is traveling in the forward direction on the
+! road.
+OPT_DIRECTION 2
+#ENDMYellow
+
+PARSFILE Roads\3D_Road\Road104.par
+#BlueLink10 Road: 3D Surface (All Properties)`East-West Road (152.4 meter offset), No Curbs #1` Intersections` , Misc. Data
+
+PARSFILE Control\Braking\ConBrk101.par
+#BlueLink11 Control: Braking (Open Loop)`No Open-Loop Braking Pressure` ` , Misc. Data
+
+PARSFILE Control\Gear_at\GearAT101.par
+#BlueLink12 Control: Shifting (Closed Loop)`AT All Gears` ` , Misc. Data
+
+PARSFILE Control\Driver\Driver101.par
+#BlueLink13 Control: Steering by the Closed-loop Driver Model`1.65 m to the Right` Constant Position` , Misc. Data
+
+DEFINE_EVENT station > 600 ; Events\Events103.par
+#BlueLink0 Events`End Events` ` , Events
+
+
+LOG_ENTRY Used Dataset: Events; { Circle Road to Straight Road } C. Transition to Straight Road East-West
+#Library : Events
+#DataSet : C. Transition to Straight Road East-West
+#Category: Circle Road to Straight Road
+#FileID  : Events104
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-23-2015 10:41
+#VehCode Events
+
+END

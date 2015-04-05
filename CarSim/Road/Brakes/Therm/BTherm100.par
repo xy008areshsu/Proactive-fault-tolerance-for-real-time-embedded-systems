@@ -1,0 +1,25 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System with Boost and Thermal Effects`No Data`Empty (You should edit or delete this)
+
+#RingCtrl0 0
+
+iaxle 1
+iside 1
+
+iside 2
+
+iaxle 2
+iside 1
+
+iside 2
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System with Boost and Thermal Effects; { Empty (You should edit or delete this) } No Data
+#Library : Brakes: Four-Wheel System with Boost and Thermal Effects
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : BTherm100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Boost and Thermal
+
+END

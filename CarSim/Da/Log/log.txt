@@ -1,0 +1,86 @@
+2015-02-11T18:30:19 Logfile initialized.
+2015-02-11T18:30:19 (636): CarSim 8.2.2, October 2013
+2015-02-11T18:30:20 (637): -
+2015-02-11T18:30:20 (638): command-line: -unpackcpar_dir "C:\Users\Public\Documents\CarSim822_Data\..\" -unpackcpar d "C:\Users\Ye\AppData\Local\Temp\\_tempCreateCpar.cpar" -skipsplash -delaystartup -p "D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Da"
+2015-02-11T18:30:20 (639): -
+2015-02-11T18:30:20 (640): Working Dir: D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Da\
+2015-02-11T18:30:20 (641): Program Dir: C:\Program Files (x86)\CarSim822_Prog\
+2015-02-11T18:30:20 (642): -
+2015-02-11T18:30:20 (655): OS Version:        6.2 (build 9200)
+2015-02-11T18:30:20 (676): CPU Architecture:  x64
+2015-02-11T18:30:20 (677): CPU Count:         8
+2015-02-11T18:30:20 (678): CPU Level/Rev:     6/14857
+2015-02-11T18:30:20 (683): Start Mem Total:   16355 MB
+2015-02-11T18:30:20 (684): Start Mem Used:    39%
+2015-02-11T18:30:20 (686): -
+2015-02-11T18:30:41 (2695): ==== Import Initiated ====
+2015-02-11T18:30:41 (2709): Import Mode: Skip duplicates.
+2015-02-11T18:30:41 (2710): CPar Mode:   Off.
+2015-02-11T18:30:41 (2747): Starting import of Parsfile "D:\Dropbox\Phd\AutomaticScriptForSubRegions\CarSim\Da\temp.par"...
+2015-02-11T18:32:30 (2815): 128 new datasets were added to your database;
+At least 6 datasets were skipped. Took 109 sec.
+2015-02-11T18:32:30 (2816): ==== Import Completed ====
+2015-02-11T18:32:30 (5592): Dataset deleted: Runs\Run100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:31 (5592): Dataset deleted: Aerodynamics\Aero_Main\Aero100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:31 (5592): Dataset deleted: Aerodynamics\Aero_Fx\AirCFx100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:32 (5592): Dataset deleted: Aerodynamics\Aero_Fy\AirCFy100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:33 (5592): Dataset deleted: Aerodynamics\Aero_Fz\AirCFz100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:33 (5592): Dataset deleted: Aerodynamics\Aero_Mx\AirCMx100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:34 (5592): Dataset deleted: Aerodynamics\Aero_My\AirCMy100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:35 (5592): Dataset deleted: Aerodynamics\Aero_Mz\AirCMz100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:35 (5592): Dataset deleted: Animator\Cameras\Camera100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:36 (5592): Dataset deleted: Animator\Groups\Group100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:37 (5592): Dataset deleted: Animator\Frames\Frame100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:37 (5592): Dataset deleted: Animator\STL\AniSTL100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:37 (5592): Dataset deleted: Animator\STL_Groups\StlGroup100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:38 (5592): Dataset deleted: Animator\Sound\Modifier\SndMod100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:38 (5592): Dataset deleted: Animator\Sound\Sample\SndSmp100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:38 (5592): Dataset deleted: Animator\Sound\Set\SndSet100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:39 (5592): Dataset deleted: Animator\Vehicles\AniVeh100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:41 (5592): Dataset deleted: Brakes\4W_System\Brk4W100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:44 (5592): Dataset deleted: Brakes\Proportioning\BrkProp100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:45 (5592): Dataset deleted: Control\Braking\ConBrk100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:48 (5592): Dataset deleted: Control\Gear_at\GearAT100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:49 (5592): Dataset deleted: Control\Driver\Driver100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:57 (5592): Dataset deleted: Generic\Group\GData100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:57 (5592): Dataset deleted: Generic\GroupMore\GDataM100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:58 (5592): Dataset deleted: Generic\tables\GenTab100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:32:59 (5592): Dataset deleted: Roads\3D_Road\Road100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:00 (5592): Dataset deleted: Roads\Shapes\RdShp100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:02 (5592): Dataset deleted: Roads\Friction\RdFric100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:03 (5592): Dataset deleted: Roads\dZ_Map\RdElMap100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:03 (5592): Dataset deleted: Roads\Builder\RdBuild100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:12 (5592): Dataset deleted: Plot\Transform\PlotTfm100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:12 (5592): Dataset deleted: Plot\Format\PlotFmt100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:13 (5592): Dataset deleted: Plot\Setup\Plot100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:15 (5592): Dataset deleted: Powertrain\Engine\Engine100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:15 (5592): Dataset deleted: Powertrain\Frontdiff\F_Diff100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:16 (5592): Dataset deleted: Powertrain\Fwd\FWD100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:17 (5592): Dataset deleted: Powertrain\TConv\TC100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:18 (5592): Dataset deleted: Powertrain\TransExt\Trans100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:22 (5592): Dataset deleted: Powertrain\Shift\Shift100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:24 (5592): Dataset deleted: Procedures\Proc100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:28 (5592): Dataset deleted: Steering\System2\StrSys2100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:29 (5592): Dataset deleted: Steering\Compliance\StrCmp100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:30 (5592): Dataset deleted: Steering\KinematicsRack2\RkKinAx100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:31 (5592): Dataset deleted: Steering\Str_Park_Trq2\TqPkAx100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:32 (5592): Dataset deleted: Steering\Str_FBoost\FBoost100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:33 (5592): Dataset deleted: Suspensions\Kin_Indy\IndKin100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:33 (5592): Dataset deleted: Suspensions\Compliance\SuspCmp100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:36 (5592): Dataset deleted: Suspensions\Aux_Roll\AuxMx100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:37 (5592): Dataset deleted: Suspensions\Camber\Camber100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:37 (5592): Dataset deleted: Suspensions\Dive\Dive100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:37 (5592): Dataset deleted: Suspensions\Jounce_Rebound\JncRb100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:37 (5592): Dataset deleted: Suspensions\Lateral\SusLat100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:38 (5592): Dataset deleted: Suspensions\Longitudinal\SusX100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:40 (5592): Dataset deleted: Suspensions\Shocks\Shock100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:40 (5592): Dataset deleted: Suspensions\Springs\Spring100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:40 (5592): Dataset deleted: Suspensions\Toe\Toe100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:41 (5592): Dataset deleted: Tires\Tire\Tire100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:41 (5592): Dataset deleted: Tires\Mz\TireMz100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:42 (5592): Dataset deleted: Tires\Camber_Thrust\CamStiff100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:42 (5592): Dataset deleted: Tires\Fy\TireFy100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:43 (5592): Dataset deleted: Tires\Fx\TireFx100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:45 (5592): Dataset deleted: Vehicles\Assembly\Vehicle100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:46 (5592): Dataset deleted: Vehicles\Sprung_Mass\SprMass100.par { Empty (You should edit or delete this) } No Data.
+2015-02-11T18:33:49 (5592): Dataset deleted: Preferences\pref100.par { Empty (You should edit or delete this) } No Data.

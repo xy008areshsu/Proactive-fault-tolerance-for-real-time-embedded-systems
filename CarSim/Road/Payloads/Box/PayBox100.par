@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Payload: Box Shape`No Data`Empty (You should edit or delete this)
+H_CG_PL 0.00
+IXX_PL 0.00
+IYY_PL 0.00
+IZZ_PL 0.00
+IXY_PL 0
+IXZ_PL 0
+IYZ_PL 0
+
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Payload: Box Shape; { Empty (You should edit or delete this) } No Data
+#Library : Payload: Box Shape
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : PayBox100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Payload: box
+
+END

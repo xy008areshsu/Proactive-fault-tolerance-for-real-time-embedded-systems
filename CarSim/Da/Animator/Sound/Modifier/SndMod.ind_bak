@@ -1,0 +1,15 @@
+SNDMOD.IND v1.0
+11   0    
+111  Animator: Sound Modifier
+107  , Frequency with RPM` Gas Engine Sound Modifiers` 02-11-2015` 18:31` 0
+105  , Power Off Loudness: Load Effect` Gas Engine Sound Modifiers` 02-11-2015` 18:31` 0
+106  , Power Off Loudness: Speed Effect` Gas Engine Sound Modifiers` 02-11-2015` 18:31` 0
+108  , Power On Loudness: Load Effect` Gas Engine Sound Modifiers` 02-11-2015` 18:31` 0
+109  , Power On Loudness: Speed Effect` Gas Engine Sound Modifiers` 02-11-2015` 18:31` 0
+101  , Loudness: Lateral Force Effects` Tire Lateral Slip Sound Modifiers` 02-11-2015` 18:31` 0
+102  , Loudness: Lateral Speed Effects` Tire Speed Sound Modifiers` 02-11-2015` 18:31` 0
+104  , Loudness: Longitudinal Speed Effects` Tire Speed Sound Modifiers` 02-11-2015` 18:31` 0
+103  , Loudness: Longitudinal Force Effects` Wheelspin / Lockup Sound Modifiers` 02-11-2015` 18:31` 0
+111  , Frequency: Speed Effect` Wind Sound Modifiers` 02-11-2015` 18:31` 0
+110  , Loudness: Speed Effect` Wind Sound Modifiers` 02-11-2015` 18:31` 0
+END

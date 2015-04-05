@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName CarSim Run Control`Baseline`* * Quick Start Guide Example
+#VEHICLECODE Ind_Ind
+
+OPT_ALL_WRITE 0
+IOBJECT 0
+OPT_INT_METHOD 2
+PARSFILE Animator\Cameras\Camera104.par
+#BlueLink0 Animator: Camera Setup`13 deg. Azimuth, Veh. Ref.` Vehicle Reference` , Animator camera
+
+Title Baseline <* * Quick Start Guide Example>
+CATEGORY * * Quick Start Guide Example 
+DATASET_TITLE Baseline
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 0    
+#CheckBox6 0    
+#CheckBox7 0    
+#CheckBox8 0    
+#CheckBox9 1    
+#CheckBox10 0    
+
+#RingCtrl0 4
+#RingCtrl1 0
+#RingCtrl2 3
+#RingCtrl3 0
+#RingCtrl6 0
+*RUN_COLOR 0.8 0 0
+FLAG_10 101
+ID_RUN 101
+PARSFILE Vehicles\Assembly\Vehicle101.par
+#BlueLink2 Vehicle: Assembly`C-Class, Hatchback 2012` CS C-Class` , Vehicle configuration
+
+PARSFILE Procedures\Proc101.par
+#BlueLink28 Procedures`DLC @ 120 km/h (Quick Start)` Handling Testing` , Procedure
+
+
+*IMAGE_TYPE PASS_THROUGH
+*IMAGE_LINK Vehicle: Assembly`C-Class, Hatchback 2012` CS C-Class`
+*IMAGE_PASS_THROUGH Vehicles\Assembly\Vehicle101.png
+
+OPT_ALL_WRITE 1
+WRITE_SENSOR_DETECT
+
+#EMBEDDED_NOTES
+#ATTENTION *ALL* CarSim USERS:  Please take the time to follow the Quick Start Guide to learn the basics of using CarSim 8.2 and the new features introduced in this version of the software.
+#
+#Use this example when you follow the steps in the Quick Start Guide.
+#
+#The Quick Start Guide will show you how to make new databases, create and change vehicle data, make runs, and view results using the Animator and Plotter. It takes about an hour to cover the basics and another hour to cover additional features
+#
+#Open the Quick Start Guide from the Help menu; it's near the bottom with the name "Quick Start Guide".
+#
+#
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: CarSim Run Control; { * * Quick Start Guide Example } Baseline
+#Library : CarSim Run Control
+#DataSet : Baseline
+#Category: * * Quick Start Guide Example
+#FileID  : Run101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Run
+
+END

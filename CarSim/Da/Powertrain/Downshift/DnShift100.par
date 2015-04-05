@@ -1,0 +1,20 @@
+PARSFILE
+#FullDataName Powertrain: Downshift Schedule`No Data`Empty (You should edit or delete this)
+IGEAR 1
+IGEAR 2
+IGEAR 3
+IGEAR 4
+IGEAR 5
+IGEAR 6
+
+
+LOG_ENTRY Used Dataset: Powertrain: Downshift Schedule; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Downshift Schedule
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : DnShift100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Downshift schedule
+
+END

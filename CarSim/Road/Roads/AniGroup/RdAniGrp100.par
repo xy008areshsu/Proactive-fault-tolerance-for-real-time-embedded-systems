@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Road: Animator Repeated Object`No Data`Empty (You should edit or delete this)
+#RingCtrl0 0
+#RingCtrl1 0
+#RadioCtrl0 0    
+
+
+LOG_ENTRY Used Dataset: Road: Animator Repeated Object; { Empty (You should edit or delete this) } No Data
+#Library : Road: Animator Repeated Object
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RdAniGrp100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Road Animator Group
+
+END

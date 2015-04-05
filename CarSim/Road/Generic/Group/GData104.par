@@ -1,0 +1,46 @@
+PARSFILE
+#FullDataName Generic Data Group`VS Visualizer HUD Gauges`HUD Gauges
+#VehCode Generic group
+PARSFILE Generic\GroupMore\GDataM102.par
+#BlueLink0 Generic Data Group (More)`Tachometer` HUD Gauges` , Link 1
+
+
+PARSFILE Generic\GroupMore\GDataM103.par
+#BlueLink1 Generic Data Group (More)`Speedometer` HUD Gauges` , Link 2
+
+
+PARSFILE Generic\GroupMore\GDataM104.par
+#BlueLink2 Generic Data Group (More)`Throttle Fill` HUD Gauges` , Link 3
+
+
+PARSFILE Generic\GroupMore\GDataM105.par
+#BlueLink3 Generic Data Group (More)`Brake Indicator Light` HUD Gauges` , Link 4
+
+
+PARSFILE Generic\GroupMore\GDataM106.par
+#BlueLink4 Generic Data Group (More)`G-G Diagram` HUD Gauges` , Link 5
+
+
+
+
+
+
+
+#EMBEDDED_NOTES
+#This dataset is setup to provide an example of how to use some of the new Heads Up Display (HUD) features of the VS Visualizer.
+#
+#The features on display are the rear view widget (as well as a static frame image placed on top of the rear view render), a CarSim logo displayed with transparency, and a selection of data channels output as plain text in a fixed width font.
+#
+#Note that these display elements will not show up in our older animation package, SurfAnim.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic Data Group; { HUD Gauges } VS Visualizer HUD Gauges
+#Library : Generic Data Group
+#DataSet : VS Visualizer HUD Gauges
+#Category: HUD Gauges
+#FileID  : GData104
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Generic group
+
+END

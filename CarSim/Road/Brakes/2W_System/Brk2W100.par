@@ -1,0 +1,26 @@
+PARSFILE
+#FullDataName Brakes: Two-Wheel System`No Data`Empty (You should edit or delete this)
+#CheckBox1 0    
+#RingCtrl0 1
+#RingCtrl1 2
+#RingCtrl2 2
+#RingCtrl3 2
+#RingCtrl4 2
+
+
+iside 1
+
+OPT_ABS_CTRL 1
+
+iside 2
+
+LOG_ENTRY Used Dataset: Brakes: Two-Wheel System; { Empty (You should edit or delete this) } No Data
+#Library : Brakes: Two-Wheel System
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Brk2W100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Brakes
+
+END

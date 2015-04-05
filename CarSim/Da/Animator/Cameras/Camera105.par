@@ -1,0 +1,42 @@
+PARSFILE
+#FullDataName Animator: Camera Setup`Rear View (Road Ref.)`Road Reference
+#RingCtrl1 0
+
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox3 1    
+
+GHOST_COUNT 0
+SET_CAMERA_Reference_Frame Road Tracking Camera Rear Point w/ Yaw
+PARSFILE Animator\Frames\Frame105.par
+#BlueLink0 Animator: Reference Frame`Camera Rear Point w/ Yaw` Road Tracking` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Road Tracking Camera Rear Point w/ Yaw
+SET_LOOKPOINT_X 5
+SET_LOOKPOINT_Y -1.5
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 180
+SET_ELEVATION 5
+SET_DISTANCE 39
+*SET_LOOKPOINT_X 5
+*SET_LOOKPOINT_Y -1.5
+*SET_LOOKPOINT_Z 1
+*SET_AZIMUTH 180
+*SET_ELEVATION 5
+*SET_DISTANCE 39
+GHOST_COUNT 0
+FOG_SCALE .2
+SET_FIELD_OF_VIEW 23.5
+SUN_POSITION -1000 -1000 1000
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Road Reference } Rear View (Road Ref.)
+#Library : Animator: Camera Setup
+#DataSet : Rear View (Road Ref.)
+#Category: Road Reference
+#FileID  : Camera105
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Camera
+
+END

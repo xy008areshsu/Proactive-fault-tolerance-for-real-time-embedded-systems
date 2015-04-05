@@ -1,0 +1,72 @@
+PARSFILE
+#FullDataName Tire`215/55 R17`Touring Tires
+X_LENGTH 334
+Z_LENGTH 334
+Y_LENGTH 215
+#CheckBox1 1    
+#CheckBox2 0    
+#CheckBox4 1    
+#CheckBox5 0    
+#CheckBox6 0    
+
+#RingCtrl0 1
+#RingCtrl5 1
+#RingCtrl6 1
+#RingCtrl7 1
+#RingCtrl8 1
+#RingCtrl9 2
+OPT_TIRE_LAG_KAPPA 2
+#RingCtrl10 1
+OPT_TIRE_LAG_ALPHA 1
+OPT_TIRE_MODEL 1
+
+PARSFILE Animator\STL_Groups\StlGroup101.par
+#BlueLink4 Animator: Shape Assembly`Euro Sedan Tire` Tires` , Animator
+
+WRITE_WHEEL_OFFSET
+SET_THICKNESS_SGUI 215
+PARSFILE Animator\Sound\Set\SndSet101.par
+#BlueLink13 Animator: Sound Set`Tire Sounds - 650 kg Rated Load` Tire Sounds` , Animator
+
+RRE 325
+R0 334
+FZ_TIRE_COEFFICIENT 268
+FZ_MAX 100000
+IT 0
+L_RELAX_X_CONSTANT 32
+L_RELAX_Y_CONSTANT 665
+VLOW_ALPHA 5
+RR_C 0.0038
+RR_V 0.000026
+L_CONTACT_X_CONSTANT 90
+L_CONTACT_Y_CONSTANT 215
+RR_FX 1
+OPT_TIRE_COMB 0
+PARSFILE Tires\Mz\TireMz101.par
+#BlueLink0 Tire: Aligning Moment`215/55 R17` Touring Tires` , Aligning moment
+
+PARSFILE Tires\Fy\TireFy101.par
+#BlueLink1 Tire: Lateral Force`215/55 R17` Touring Tires` , Lateral force
+
+PARSFILE Tires\Fx\TireFx101.par
+#BlueLink2 Tire: Longitudinal Force`215/55 R17` Touring Tires` , Longitudinal force
+
+PARSFILE Tires\Camber_Thrust\CamStiff101.par
+#BlueLink3 Tire: Camber Thrust Coefficient`215/55 R17` Touring Tires` , Camber thrust
+
+
+
+#EMBEDDED_NOTES
+#650 kg rated load
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Tire; { Touring Tires } 215/55 R17
+#Library : Tire
+#DataSet : 215/55 R17
+#Category: Touring Tires
+#FileID  : Tire101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:36
+#VehCode Tire
+
+END

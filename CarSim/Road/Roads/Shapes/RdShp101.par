@@ -1,0 +1,37 @@
+PARSFILE
+#FullDataName Road: Animator Surface Shapes`North-South Road (road only)`Highway Network
+NLANES 1
+OPTTHRESHOLD 1
+#MiscYellow0
+# 1 1 1, Road (Medium), , 60, 1, -4.1, m, 4.1, m, , , -500, 500, 10, , -0.01, Random
+#ENDMYellow
+
+#CheckBox0 0    
+MIRROR 0
+
+COLOR(1) 1 1 1
+MATERIAL(1) Road (Medium)
+SCALE(1) 60
+LTILES(1) 1
+LIN(1) -4.1
+LINUNITS(1) m
+LOUT(1) 4.1
+LOUTUNITS(1) m
+SSTART(1) -500
+SSTOP(1) 500
+SINT(1) 10
+DZ(1) -0.01
+AUTODETAIL(1) Random
+MTL_FILE Roads/materials/road.mtl
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Highway Network } North-South Road (road only)
+#Library : Road: Animator Surface Shapes
+#DataSet : North-South Road (road only)
+#Category: Highway Network
+#FileID  : RdShp101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:37
+#VehCode Road shapes
+
+END

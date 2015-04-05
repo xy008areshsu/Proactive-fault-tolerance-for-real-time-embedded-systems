@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Suspension: Ride Rate (Spring + Tire)`No Data`Empty (You should edit or delete this)
+#CheckBox0 0    
+
+#RadioCtrl0 0    
+
+
+LOG_ENTRY Used Dataset: Suspension: Ride Rate (Spring + Tire); { Empty (You should edit or delete this) } No Data
+#Library : Suspension: Ride Rate (Spring + Tire)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : SprRide100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:39
+#VehCode Ride Measurement
+
+END

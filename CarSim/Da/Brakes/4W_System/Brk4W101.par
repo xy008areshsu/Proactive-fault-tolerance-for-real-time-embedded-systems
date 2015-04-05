@@ -1,0 +1,66 @@
+PARSFILE
+#FullDataName Brakes: Four-Wheel System`C-Class, Hatchback w/o ABS`CS C-Class
+#CheckBox1 0    
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 1
+#RingCtrl4 1
+#RingCtrl6 1
+#RingCtrl8 2
+*TQ_L1 250
+*TQ_L2 150
+*P_L1 1
+TC_L1 0.06
+TC_L2 0.06
+TL_L1 0
+TL_L2 0
+
+
+iaxle 1
+iside 1
+MY_BRAKE_COEFFICIENT 250
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_BK 0.06
+TLAG_BK 0
+
+OPT_ABS_CTRL 0
+
+iside 2
+MY_BRAKE_COEFFICIENT 250
+PBK_DL_COEFFICIENT 1
+PBK_DL_COMBINE MULTIPLY
+PBK_DL_FZ_CONSTANT 1
+TC_BK 0.06
+TLAG_BK 0
+
+iaxle 2
+iside 1
+MY_BRAKE_COEFFICIENT 150
+PARSFILE Brakes\Proportioning\BrkProp101.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 1.5MPa then 30%` ` , Torque
+
+TC_BK 0.06
+TLAG_BK 0
+
+OPT_ABS_CTRL 0
+
+iside 2
+MY_BRAKE_COEFFICIENT 150
+PARSFILE Brakes\Proportioning\BrkProp101.par
+#BlueLink6 Brakes: Proportioning / Limiting Valve`Unity until 1.5MPa then 30%` ` , Torque
+
+TC_BK 0.06
+TLAG_BK 0
+
+LOG_ENTRY Used Dataset: Brakes: Four-Wheel System; { CS C-Class } C-Class, Hatchback w/o ABS
+#Library : Brakes: Four-Wheel System
+#DataSet : C-Class, Hatchback w/o ABS
+#Category: CS C-Class
+#FileID  : Brk4W101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:31
+#VehCode 4-wheel system
+
+END

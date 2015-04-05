@@ -1,0 +1,69 @@
+PARSFILE
+#FullDataName Generic Data Group (More)`G-G Diagram`HUD Gauges
+#VehCode Generic group
+#MiscYellow0
+ADD_OBJECT hud_text G-G
+  prefix G-G
+  location 260 160 100 18
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  color 1 1 1 1
+  align 10
+  outline_color .3 .3 .3 0.5
+  font VeraMono.ttf
+END_OBJECT hud_text G-G
+#ENDMYellow
+
+
+#MiscYellow1
+ADD_OBJECT hud_image GGDiagram (BG)
+  location 200 10 150 150
+  align_x left
+  align_y bottom
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\Hud\GGDiagram.png
+END_OBJECT hud_image GGDiagram (BG)
+#ENDMYellow
+
+
+#MiscYellow2
+ANI_Ax
+WRT_Ax
+ANI_Ay
+WRT_Ay
+ADD_OBJECT hud_image OrangeDOT (BG)
+  location 200 10 150 150
+  align_x left
+  align_y bottom
+  center_location 0.0 0.0
+  scale_x 0.075
+  scale_y 0.075
+  place_x Ay * (75.0 / 4)
+  place_y Ax * (75.0 / 4)
+  size_mode absolute
+  place_mode absolute
+  image_file Animator\Hud\OrangeDOT.dds
+END_OBJECT hud_image OrangeDOT (BG)
+#ENDMYellow
+
+
+
+
+
+
+
+
+
+LOG_ENTRY Used Dataset: Generic Data Group (More); { HUD Gauges } G-G Diagram
+#Library : Generic Data Group (More)
+#DataSet : G-G Diagram
+#Category: HUD Gauges
+#FileID  : GDataM106
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Generic group
+
+END

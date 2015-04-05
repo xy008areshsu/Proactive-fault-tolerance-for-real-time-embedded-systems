@@ -1,0 +1,22 @@
+PARSFILE
+#FullDataName Brakes: Trailer Two-Wheel System with Boost and Thermal Effects`No Data`Empty (You should edit or delete this)
+
+#RingCtrl0 2
+
+OPT_BRAKE_MODEL 2
+
+iaxle 1
+iside 1
+
+iside 2
+
+LOG_ENTRY Used Dataset: Brakes: Trailer Two-Wheel System with Boost and Thermal Effects; { Empty (You should edit or delete this) } No Data
+#Library : Brakes: Trailer Two-Wheel System with Boost and Thermal Effects
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : BTrl2wTh100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Boost and Thermal
+
+END

@@ -1,0 +1,6 @@
+import numpy as np
+
+class LinearRegression:
+
+    def __init__(self, filename):
+        self.data = np.loadtxt(open(filename), delimiter=',')

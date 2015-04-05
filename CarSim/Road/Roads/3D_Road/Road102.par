@@ -1,0 +1,55 @@
+PARSFILE
+#FullDataName Road: 3D Surface (All Properties)`500-ft Circle (flat), No Trees`Handling Roads
+OPT_ROAD 1
+iroad 1 ! obsolete March 2011
+idz_road 1
+RR_SURF 1
+DZ_SHADOW 0.02
+L_CAMERA_FRONT 0.5
+L_CAMERA_REAR 0.5
+*IMAGE_TYPE PASTED
+*IMAGE_PASTED Roads\3D_Road\Road102.png
+PARSFILE Roads\Builder\RdBuild101.par
+#BlueLink0 Road: Segment Builder`500 ft Radius Circle (Loop)` ` , Centerline geometry
+
+PARSFILE Roads\Friction\RdFric101.par
+#BlueLink3 Road: Friction Map, S-L Grid`0.85` Constant Mu` , Friction
+
+PARSFILE Roads\Shapes\RdShp102.par
+#BlueLink4 Road: Animator Surface Shapes`Looped Road, No Grass or Road Transition` Roads` , Road shape definitions
+
+#CheckBox0 1    
+
+#MiscYellow0
+DEFINE_PARAMETER R = 152.4; units m
+#ENDMYellow
+
+add_reference_frame road_stuff_1
+reference_frame_ghosts off
+PARSFILE Animator\Groups\Group101.par
+#BlueLink6 Animator: Group`Sky for Light Grass` Skies` , Misc. animator set
+
+add_reference_frame road_stuff_2
+reference_frame_ghosts off
+add_reference_frame road_stuff_3
+reference_frame_ghosts off
+add_reference_frame road_stuff_4
+reference_frame_ghosts off
+iroad 2 ! obsolete March 2011
+idz_road 2
+
+SPECIAL_PARSFILE Animator\Cameras\Camera106.par
+#BlueLink5 Animator: Camera Setup`Rear View , Road Ref. (Frt. Facing)` Road Reference` , Camera
+
+parsfile Roads\3D_Road\Road102.ani
+
+LOG_ENTRY Used Dataset: Road: 3D Surface (All Properties); { Handling Roads } 500-ft Circle (flat), No Trees
+#Library : Road: 3D Surface (All Properties)
+#DataSet : 500-ft Circle (flat), No Trees
+#Category: Handling Roads
+#FileID  : Road102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-13-2015 18:54
+#VehCode 3D road
+
+END

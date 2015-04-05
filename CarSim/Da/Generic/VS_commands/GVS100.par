@@ -1,0 +1,23 @@
+PARSFILE
+#FullDataName Generic VS Commands`No Data`Empty (You should edit or delete this)
+#VehCode 
+
+
+#EMBEDDED_NOTES
+#Normalized dataset. The function gain is scaled to the tire radius and the reference Fz.
+#
+#This dataset requires that the tire reference Fz (FZ_REF) have a reasonable value; otherwise the relaxation length will be huge.
+#
+#The units for relaxation length were changed to meters, to simplify the automatic scaling.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Generic VS Commands; { Empty (You should edit or delete this) } No Data
+#Library : Generic VS Commands
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : GVS100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode 
+
+END

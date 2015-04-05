@@ -1,0 +1,16 @@
+PARSFILE
+#FullDataName Control: Throttle (Open Loop)`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Control: Throttle (Open Loop); { Empty (You should edit or delete this) } No Data
+#Library : Control: Throttle (Open Loop)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : Throttle100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:38
+#VehCode Open-loop throttle control
+
+END

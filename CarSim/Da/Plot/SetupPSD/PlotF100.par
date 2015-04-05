@@ -1,0 +1,39 @@
+PARSFILE
+#FullDataName Plot: Setup (Frequency Domain)`No Data`Empty (You should edit or delete this)
+
+ADD_ENTITY Plot
+
+
+PARSFILE Plot\Format\PlotFmt101.par
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 X Axis scaling option (manual or auto).
+XMaxmin X Axis scaling option (manual or auto).
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+XAXIS , 
+
+PTITLE No Data
+
+END_ENTITY Plot
+
+
+LOG_ENTRY Used Dataset: Plot: Setup (Frequency Domain); { Empty (You should edit or delete this) } No Data
+#Library : Plot: Setup (Frequency Domain)
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : PlotF100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Plot setup (freq)
+
+END

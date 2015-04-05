@@ -1,0 +1,29 @@
+PARSFILE
+#FullDataName Animator: Group`Sky for Dark Grass`Off-Road/City Loop
+PARSFILE Animator\Frames\Frame104.par
+#BlueLink0 Animator: Reference Frame`Camera Front Point w/o Yaw` Road Tracking` , Animator data
+
+PARSFILE Animator\STL\AniSTL112.par
+#BlueLink1 Animator: Shape File Link`Clear Sky` Off-Road/City Loop` , Animator data
+
+PARSFILE Animator\STL\AniSTL113.par
+#BlueLink2 Animator: Shape File Link`Land Bowl for Desert` Off-Road/City Loop` , Animator data
+
+
+#CheckBox0 0    
+
+
+SPECIAL_PARSFILE Animator\Cameras\Camera103.par
+#BlueLink20 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Off-Road/City Loop } Sky for Dark Grass
+#Library : Animator: Group
+#DataSet : Sky for Dark Grass
+#Category: Off-Road/City Loop
+#FileID  : Group101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Animator Group
+
+END

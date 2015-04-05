@@ -1,0 +1,40 @@
+PARSFILE
+#FullDataName Powertrain: Rear-Wheel Drive`No Data`Empty (You should edit or delete this)
+
+OPT_PT 2
+
+OPT_ENGINE_PITCH_REACTION(2) 0
+
+#RingCtrl0 1
+R_MDRIVE 1
+#RingCtrl1 1
+OPT_ENGINE_INTERNAL 1
+#RingCtrl2 1
+#RingCtrl3 1
+#RingCtrl4 1
+
+#CheckBox0 0    
+
+OPT_PWR_CPL_INTERNAL 1
+OPT_TRANS_INTERNAL 1
+OPT_DIFF_INTERNAL(2) 1
+
+
+IDIFF 2
+
+IDIFF 2
+
+#EMBEDDED_NOTES
+#Generic 125 kW powertrain with an automatic transmission. The torque converter data has been tuned to work with the 125 kW engine to give reasonable performance.  It also uses a viscous type differential.
+#END_EMBEDDED_NOTES
+
+LOG_ENTRY Used Dataset: Powertrain: Rear-Wheel Drive; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Rear-Wheel Drive
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : RWD100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode RWD
+
+END

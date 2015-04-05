@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Powertrain: Differential Clutch`No Data`Empty (You should edit or delete this)
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+
+
+LOG_ENTRY Used Dataset: Powertrain: Differential Clutch; { Empty (You should edit or delete this) } No Data
+#Library : Powertrain: Differential Clutch
+#DataSet : No Data
+#Category: Empty (You should edit or delete this)
+#FileID  : DC100
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:33
+#VehCode Differential Clutch
+
+END

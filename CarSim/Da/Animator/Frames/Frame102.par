@@ -1,0 +1,17 @@
+PARSFILE
+#FullDataName Animator: Reference Frame`Fixed`
+ADD_REFERENCE_FRAME  Fixed
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; Fixed
+#Library : Animator: Reference Frame
+#DataSet : Fixed
+#Category: 
+#FileID  : Frame102
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:30
+#VehCode Reference frame
+
+END

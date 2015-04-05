@@ -1,0 +1,27 @@
+PARSFILE
+#FullDataName Road: Friction Map, S-L Grid`0.9`Constant Mu
+OPT_ROAD 1
+
+#RingCtrl0 CONSTANT
+#RingCtrl1 CONSTANT
+#RingCtrl2 MULTIPLY
+MU_ROAD_COMBINE MULTIPLY
+MU_ROAD_CONSTANT 0.9
+MU_ROAD_L_CONSTANT 1
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+*SCALAR 0.9
+*SCALAR2 1
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map, S-L Grid; { Constant Mu } 0.9
+#Library : Road: Friction Map, S-L Grid
+#DataSet : 0.9
+#Category: Constant Mu
+#FileID  : RdFric101
+#Product : CarSim 8.2.2, October 2013
+#Last update: 02-11-2015 18:32
+#VehCode Mu via S-L grid
+
+END
