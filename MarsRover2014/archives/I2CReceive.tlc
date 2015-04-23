@@ -1,0 +1,103 @@
+%% File : I2CReceive.tlc
+
+%implements I2CReceive "C"
+
+%% Function: BlockTypeSetup ===============================================
+%%
+%function BlockTypeSetup(block, system) Output
+      
+  %assign hdrFile = LibGetModelDotHFile()
+  %assign srcFile = LibGetModelDotCFile()
+
+  %openfile tmpBuf
+  #include <Arduino.h>
+  #include <math.h>
+  #include <Wire.h>
+  #include <Wire.cpp>
+  %closefile tmpBuf
+
+  %<LibSetSourceFileSection(hdrFile,"Includes",tmpBuf)>
+  
+  %openfile tmpBuf
+  #define SLAVE_ADDR 0x12
+  %closefile tmpBuf
+
+  %<LibSetSourceFileSection(srcFile,"Defines",tmpBuf)>   
+  
+  %%
+%endfunction
+
+%% Function: BlockInstanceSetup ===========================================
+%%
+%function BlockInstanceSetup(block, system) void
+  %%
+  %<LibBlockSetIsExpressionCompliant(block)>
+
+  %assign srcFile = LibGetModelDotCFile()
+  %assign name = LibGetBlockName(block)
+  %assign blockName = FEVAL("regexprep", name, "[^A-z0-9]", "")
+
+  %openfile tmpBuf
+  uint8_t rbuf_%<blockName>[12];
+  %closefile tmpBuf
+
+  %<LibSetSourceFileSection(srcFile,"Declarations",tmpBuf)>
+
+  %openfile tmpBuf
+  extern "C" void receiveData_%<blockName>(int bytes){
+   int i;
+   if(bytes==12)
+   {
+      for(i=0;i<12;i++) {
+         if(Wire.available()) {
+            rbuf_%<blockName>[i] = Wire.read();
+         }
+      }
+   }
+  }
+  %closefile tmpBuf
+  %<LibSetSourceFileSection(srcFile,"Functions",tmpBuf)>
+
+  %openfile tmpBuf  
+  void assignOutput_%<blockName>(uint8_T *Receive){
+    int i;
+    for(i=0;i<12;i++){
+        Receive[i] = rbuf_%<blockName>[i];
+    }
+  }  
+  %closefile tmpBuf
+
+  %<LibSetSourceFileSection(srcFile,"Functions",tmpBuf)>
+
+  %%
+%endfunction
+
+%% Function: Start ========================================================
+%%
+%function Start(block, system) Output
+  
+  %assign name = LibGetBlockName(block)
+  %assign blockName = FEVAL("regexprep", name, "[^A-z0-9]", "")
+
+  Wire.begin(SLAVE_ADDR); 
+  Wire.onReceive(receiveData_%<blockName>);
+
+  %%
+%endfunction
+
+%% Function: Outputs ======================================================
+%%
+%function Outputs(block, system) Output
+  %%
+
+    %assign name = LibGetBlockName(block)
+    %assign blockName = FEVAL("regexprep", name, "[^A-z0-9]", "")
+
+    %assign py0 = LibBlockOutputSignalAddr(0, "", "", 0)
+        
+    assignOutput_%<blockName>(%<py0>);
+  
+  %%
+%endfunction
+
+%% [EOF]

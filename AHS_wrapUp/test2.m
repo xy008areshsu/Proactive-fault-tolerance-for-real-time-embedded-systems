@@ -195,9 +195,9 @@ load('S_3.csv');
 
 figure
 hold on
-plot3(S_3(:, 1), S_3(:, 2), S_3(:, 3), 'ko', 'MarkerFaceColor', 'r', 'MarkerSize', 20);
-plot3(S_2(:, 1), S_2(:, 2), S_2(:, 3), 'ko', 'MarkerFaceColor', 'b', 'MarkerSize', 20)
-plot3(S_1(:, 1), S_1(:, 2), S_1(:, 3), 'ko', 'MarkerFaceColor', 'g', 'MarkerSize', 20)
+plot3(S_3(:, 1), S_3(:, 2), S_3(:, 3), 'ko', 'MarkerFaceColor', 'r', 'MarkerSize', 15);
+plot3(S_2(:, 1), S_2(:, 2), S_2(:, 3), 'ko', 'MarkerFaceColor', 'b', 'MarkerSize', 15)
+plot3(S_1(:, 1), S_1(:, 2), S_1(:, 3), 'ko', 'MarkerFaceColor', 'g', 'MarkerSize', 15)
 xlabel('Leading Car Speed (m/s)')
 ylabel('Following Car Speed (m/s)')
 zlabel('Distance (m)')

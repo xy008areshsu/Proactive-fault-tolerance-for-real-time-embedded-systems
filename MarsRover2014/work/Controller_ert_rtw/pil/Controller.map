@@ -1,0 +1,653 @@
+Archive member included because of file (symbol)
+
+c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                              ../instrumented/Controller.o (__aeabi_fsub)
+c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                              ../instrumented/Controller.o (__aeabi_fmul)
+c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_cmpsf2.o)
+                              ../instrumented/Controller.o (__aeabi_fcmplt)
+c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcpy.o)
+                              xil_interface_lib.o (memcpy)
+c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                              ../instrumented/Controller.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+Controller_M_       0x4               ../instrumented/Controller.o
+Controller_U        0x8               ../instrumented/Controller.o
+Controller_Y        0x8               ../instrumented/Controller.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 xil_interface_lib.o
+ .data          0x00000000        0x0 xil_interface_lib.o
+ .bss           0x00000000        0x0 xil_interface_lib.o
+ .rodata.XILSERVICE_ERROR
+                0x00000000        0x1 xil_interface_lib.o
+ .rodata.XILSERVICE_SUCCESS
+                0x00000000        0x1 xil_interface_lib.o
+ .rodata.COMMS_ERROR
+                0x00000000        0x1 xil_interface_lib.o
+ .rodata.COMMS_SUCCESS
+                0x00000000        0x1 xil_interface_lib.o
+ .bss.sc        0x00000000        0xc xil_interface_lib.o
+ .text.saveProcessMsgContext
+                0x00000000       0x3c xil_interface_lib.o
+ .text.restoreProcessMsgContext
+                0x00000000       0x34 xil_interface_lib.o
+ .text.xilCommandDispatchAndResponse
+                0x00000000       0x88 xil_interface_lib.o
+ .text          0x00000000        0x0 xil_data_stream.o
+ .data          0x00000000        0x0 xil_data_stream.o
+ .bss           0x00000000        0x0 xil_data_stream.o
+ .rodata.XILSERVICE_ERROR
+                0x00000000        0x1 xil_data_stream.o
+ .rodata.XILSERVICE_SUCCESS
+                0x00000000        0x1 xil_data_stream.o
+ .rodata.COMMS_ERROR
+                0x00000000        0x1 xil_data_stream.o
+ .rodata.COMMS_SUCCESS
+                0x00000000        0x1 xil_data_stream.o
+ .text          0x00000000        0x0 xil_interface.o
+ .data          0x00000000        0x0 xil_interface.o
+ .bss           0x00000000        0x0 xil_interface.o
+ .text          0x00000000        0x0 xilcomms_rtiostream.o
+ .data          0x00000000        0x0 xilcomms_rtiostream.o
+ .bss           0x00000000        0x0 xilcomms_rtiostream.o
+ .rodata.XILSERVICE_ERROR
+                0x00000000        0x1 xilcomms_rtiostream.o
+ .rodata.XILSERVICE_SUCCESS
+                0x00000000        0x1 xilcomms_rtiostream.o
+ .rodata.COMMS_ERROR
+                0x00000000        0x1 xilcomms_rtiostream.o
+ .rodata.COMMS_SUCCESS
+                0x00000000        0x1 xilcomms_rtiostream.o
+ .rodata.CODEINSTR_SERVICE_ERROR
+                0x00000000        0x1 xilcomms_rtiostream.o
+ .rodata.CODEINSTR_SERVICE_SUCCESS
+                0x00000000        0x1 xilcomms_rtiostream.o
+ .text          0x00000000        0x0 rtiostream_utils.o
+ .data          0x00000000        0x0 rtiostream_utils.o
+ .bss           0x00000000        0x0 rtiostream_utils.o
+ .text          0x00000000        0x0 rtiostream_serial.o
+ .data          0x00000000        0x0 rtiostream_serial.o
+ .bss           0x00000000        0x0 rtiostream_serial.o
+ .text          0x00000000        0x0 pil_main.o
+ .data          0x00000000        0x0 pil_main.o
+ .bss           0x00000000        0x0 pil_main.o
+ .text          0x00000000        0x0 startup_gcc.o
+ .data          0x00000000        0x0 startup_gcc.o
+ .bss           0x00000000        0x0 startup_gcc.o
+ .text          0x00000000        0x0 system_LM3S.o
+ .data          0x00000000        0x0 system_LM3S.o
+ .bss           0x00000000        0x0 system_LM3S.o
+ .data.SystemCoreClock
+                0x00000000        0x4 system_LM3S.o
+ .text.getOscClk
+                0x00000000      0x198 system_LM3S.o
+ .text.SystemCoreClockUpdate
+                0x00000000      0x114 system_LM3S.o
+ .text.SystemInit
+                0x00000000        0xc system_LM3S.o
+ .comment       0x00000000       0x71 system_LM3S.o
+ .ARM.attributes
+                0x00000000       0x33 system_LM3S.o
+ .text          0x00000000        0x0 syscalls.o
+ .data          0x00000000        0x0 syscalls.o
+ .bss           0x00000000        0x0 syscalls.o
+ .text._close   0x00000000       0x18 syscalls.o
+ .text._fstat   0x00000000       0x20 syscalls.o
+ .text._isatty  0x00000000       0x18 syscalls.o
+ .text._lseek   0x00000000       0x1c syscalls.o
+ .text._open    0x00000000       0x1c syscalls.o
+ .text._read    0x00000000       0x4c syscalls.o
+ .text._exit    0x00000000        0xc syscalls.o
+ .text._fini    0x00000000       0x14 syscalls.o
+ .bss.heap_end  0x00000000        0x4 syscalls.o
+ .text._sbrk    0x00000000       0x5c syscalls.o
+ .text._write   0x00000000       0x40 syscalls.o
+ .comment       0x00000000       0x71 syscalls.o
+ .ARM.attributes
+                0x00000000       0x33 syscalls.o
+ .text          0x00000000        0x0 xil_instrumentation.o
+ .data          0x00000000        0x0 xil_instrumentation.o
+ .bss           0x00000000        0x0 xil_instrumentation.o
+ .text          0x00000000        0x0 codeinstr_data_stream.o
+ .data          0x00000000        0x0 codeinstr_data_stream.o
+ .bss           0x00000000        0x0 codeinstr_data_stream.o
+ .rodata.XILSERVICE_ERROR
+                0x00000000        0x1 codeinstr_data_stream.o
+ .rodata.XILSERVICE_SUCCESS
+                0x00000000        0x1 codeinstr_data_stream.o
+ .rodata.COMMS_ERROR
+                0x00000000        0x1 codeinstr_data_stream.o
+ .rodata.COMMS_SUCCESS
+                0x00000000        0x1 codeinstr_data_stream.o
+ .rodata.CODEINSTR_SERVICE_ERROR
+                0x00000000        0x1 codeinstr_data_stream.o
+ .rodata.CODEINSTR_SERVICE_SUCCESS
+                0x00000000        0x1 codeinstr_data_stream.o
+ .text          0x00000000        0x0 profiler_timer.o
+ .data          0x00000000        0x0 profiler_timer.o
+ .bss           0x00000000        0x0 profiler_timer.o
+ .text          0x00000000        0x0 ../instrumented/Controller.o
+ .data          0x00000000        0x0 ../instrumented/Controller.o
+ .bss           0x00000000        0x0 ../instrumented/Controller.o
+ .rodata.Controller_M
+                0x00000000        0x4 ../instrumented/Controller.o
+ .text          0x00000000        0x0 ../instrumented/Controller_data.o
+ .data          0x00000000        0x0 ../instrumented/Controller_data.o
+ .bss           0x00000000        0x0 ../instrumented/Controller_data.o
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_cmpsf2.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_cmpsf2.o)
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00040000         xr
+SRAM             0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD xil_interface_lib.o
+LOAD xil_data_stream.o
+LOAD xil_interface.o
+LOAD xilcomms_rtiostream.o
+LOAD rtiostream_utils.o
+LOAD rtiostream_serial.o
+LOAD pil_main.o
+LOAD startup_gcc.o
+LOAD system_LM3S.o
+LOAD syscalls.o
+LOAD xil_instrumentation.o
+LOAD codeinstr_data_stream.o
+LOAD profiler_timer.o
+LOAD ../instrumented/Controller.o
+LOAD ../instrumented/Controller_data.o
+LOAD C:/CMSIS/CMSIS/Lib/GCC/libarm_cortexM3l_math.a
+LOAD c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libm.a
+LOAD c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libstdc++.a
+LOAD c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libm.a
+START GROUP
+LOAD c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a
+LOAD c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+                0x20020000                _eram = 0x20020000
+
+.text           0x00000000     0x1ff0
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xb8 startup_gcc.o
+                0x00000000                g_pfnVectors
+ *(.text*)
+ .text.getNextXILIOData
+                0x000000b8       0x28 xil_interface_lib.o
+ .text.processHostToTargetData
+                0x000000e0      0x110 xil_interface_lib.o
+ .text.processTargetToHostData
+                0x000001f0       0xa8 xil_interface_lib.o
+ .text.finalizeCommandResponse
+                0x00000298       0x74 xil_interface_lib.o
+ .text.computeNextState
+                0x0000030c      0x190 xil_interface_lib.o
+ .text.xilProcessMsg
+                0x0000049c      0x490 xil_interface_lib.o
+                0x0000049c                xilProcessMsg
+ .text.xilRun   0x0000092c       0x58 xil_interface_lib.o
+                0x0000092c                xilRun
+ .text.resetXILWriteBuffer
+                0x00000984       0x60 xil_data_stream.o
+ .text.xilInit  0x000009e4       0x54 xil_data_stream.o
+                0x000009e4                xilInit
+ .text.xilTerminateComms
+                0x00000a38       0x14 xil_data_stream.o
+                0x00000a38                xilTerminateComms
+ .text.sendWriteBuffer
+                0x00000a4c       0x44 xil_data_stream.o
+ .text.xilWriteData
+                0x00000a90       0x9c xil_data_stream.o
+                0x00000a90                xilWriteData
+ .text.xilDataFlush
+                0x00000b2c       0x40 xil_data_stream.o
+                0x00000b2c                xilDataFlush
+ .text.xilProcessParams
+                0x00000b6c       0x20 xil_interface.o
+                0x00000b6c                xilProcessParams
+ .text.xilUploadCodeInstrData
+                0x00000b8c       0x4c xil_interface.o
+                0x00000b8c                xilUploadCodeInstrData
+ .text.xilGetDataTypeInfo
+                0x00000bd8       0x5c xil_interface.o
+                0x00000bd8                xilGetDataTypeInfo
+ .text.xilInitialize
+                0x00000c34       0x34 xil_interface.o
+                0x00000c34                xilInitialize
+ .text.xilInitializeConditions
+                0x00000c68       0x24 xil_interface.o
+                0x00000c68                xilInitializeConditions
+ .text.xilGetHostToTargetData
+                0x00000c8c       0xc4 xil_interface.o
+                0x00000c8c                xilGetHostToTargetData
+ .text.xilOutput
+                0x00000d50       0x3c xil_interface.o
+                0x00000d50                xilOutput
+ .text.xilUpdate
+                0x00000d8c       0x24 xil_interface.o
+                0x00000d8c                xilUpdate
+ .text.xilGetTargetToHostData
+                0x00000db0      0x1c8 xil_interface.o
+                0x00000db0                xilGetTargetToHostData
+ .text.xilTerminate
+                0x00000f78       0x2c xil_interface.o
+                0x00000f78                xilTerminate
+ .text.xilEnable
+                0x00000fa4       0x24 xil_interface.o
+                0x00000fa4                xilEnable
+ .text.xilDisable
+                0x00000fc8       0x24 xil_interface.o
+                0x00000fc8                xilDisable
+ .text.getApplicationBufferPtr
+                0x00000fec       0x34 xilcomms_rtiostream.o
+ .text.commsAllocXILBuffer
+                0x00001020       0x20 xilcomms_rtiostream.o
+                0x00001020                commsAllocXILBuffer
+ .text.commsGetXILBufferDataPtr
+                0x00001040       0x1c xilcomms_rtiostream.o
+                0x00001040                commsGetXILBufferDataPtr
+ .text.commsAllocCodeInstrBuffer
+                0x0000105c       0x20 xilcomms_rtiostream.o
+                0x0000105c                commsAllocCodeInstrBuffer
+ .text.commsGetCodeInstrBufferDataPtr
+                0x0000107c       0x1c xilcomms_rtiostream.o
+                0x0000107c                commsGetCodeInstrBufferDataPtr
+ .text.commsCreate
+                0x00001098       0x34 xilcomms_rtiostream.o
+                0x00001098                commsCreate
+ .text.commsDestroy
+                0x000010cc       0x24 xilcomms_rtiostream.o
+                0x000010cc                commsDestroy
+ .text.commsEnqueueBuffer
+                0x000010f0       0x78 xilcomms_rtiostream.o
+                0x000010f0                commsEnqueueBuffer
+ .text.commsRun
+                0x00001168       0x8c xilcomms_rtiostream.o
+                0x00001168                commsRun
+ .text.rtIOStreamBlockingSend
+                0x000011f4       0x64 rtiostream_utils.o
+                0x000011f4                rtIOStreamBlockingSend
+ .text.rtIOStreamBlockingRecv
+                0x00001258       0x64 rtiostream_utils.o
+                0x00001258                rtIOStreamBlockingRecv
+ .text.rtIOStreamOpen
+                0x000012bc       0x28 rtiostream_serial.o
+                0x000012bc                rtIOStreamOpen
+ .text.rtIOStreamSend
+                0x000012e4       0x4c rtiostream_serial.o
+                0x000012e4                rtIOStreamSend
+ .text.rtIOStreamRecv
+                0x00001330       0x5c rtiostream_serial.o
+                0x00001330                rtIOStreamRecv
+ .text.rtIOStreamClose
+                0x0000138c       0x18 rtiostream_serial.o
+                0x0000138c                rtIOStreamClose
+ .text.main     0x000013a4       0x88 pil_main.o
+                0x000013a4                main
+ .text.ResetISR
+                0x0000142c       0x5c startup_gcc.o
+                0x0000142c                ResetISR
+ .text.IntDefaultHandler
+                0x00001488        0x8 startup_gcc.o
+                0x00001488                NmiISR
+                0x00001488                PendSV_Handler
+                0x00001488                SVC_Handler
+                0x00001488                DebugMon_Handler
+ .text.FaultISR
+                0x00001490        0x8 startup_gcc.o
+                0x00001490                FaultISR
+ .text.MPUFaultISR
+                0x00001498        0x8 startup_gcc.o
+                0x00001498                MPUFaultISR
+ .text.BusFaultISR
+                0x000014a0        0x8 startup_gcc.o
+                0x000014a0                BusFaultISR
+ .text.xilUploadProfilingData
+                0x000014a8       0x20 xil_instrumentation.o
+                0x000014a8                xilUploadProfilingData
+ .text.xilProfilingUpdateCorrectedTimer
+                0x000014c8       0x2c xil_instrumentation.o
+                0x000014c8                xilProfilingUpdateCorrectedTimer
+ .text.xilProfilingTimerFreeze
+                0x000014f4       0x14 xil_instrumentation.o
+                0x000014f4                xilProfilingTimerFreeze
+ .text.xilProfilingTimerUnFreeze
+                0x00001508       0x14 xil_instrumentation.o
+                0x00001508                xilProfilingTimerUnFreeze
+ .text.taskTimeStart
+                0x0000151c       0x18 xil_instrumentation.o
+                0x0000151c                taskTimeStart
+ .text.taskTimeEnd
+                0x00001534       0x20 xil_instrumentation.o
+                0x00001534                taskTimeEnd
+ .text.taskTimeStart_Controller
+                0x00001554       0x14 xil_instrumentation.o
+                0x00001554                taskTimeStart_Controller
+ .text.taskTimeEnd_Controller
+                0x00001568       0x14 xil_instrumentation.o
+                0x00001568                taskTimeEnd_Controller
+ .text.resetCodeInstrWriteBuffer
+                0x0000157c       0x60 codeinstr_data_stream.o
+ .text.codeInstrInit
+                0x000015dc       0x18 codeinstr_data_stream.o
+                0x000015dc                codeInstrInit
+ .text.codeInstrTerminate
+                0x000015f4        0xc codeinstr_data_stream.o
+                0x000015f4                codeInstrTerminate
+ .text.sendWriteBuffer
+                0x00001600       0x44 codeinstr_data_stream.o
+ .text.codeInstrWriteData
+                0x00001644       0x9c codeinstr_data_stream.o
+                0x00001644                codeInstrWriteData
+ .text.codeInstrDataFlush
+                0x000016e0       0x24 codeinstr_data_stream.o
+                0x000016e0                codeInstrDataFlush
+ .text.profileTimerRead
+                0x00001704       0x74 profiler_timer.o
+                0x00001704                profileTimerRead
+ .text.SysTick_Handler
+                0x00001778       0x1c profiler_timer.o
+                0x00001778                SysTick_Handler
+ .text.Controller_step
+                0x00001794       0xfc ../instrumented/Controller.o
+                0x00001794                Controller_step
+ .text.Controller_initialize
+                0x00001890       0x2c ../instrumented/Controller.o
+                0x00001890                Controller_initialize
+ .text.Controller_terminate
+                0x000018bc        0xc ../instrumented/Controller.o
+                0x000018bc                Controller_terminate
+ .text          0x000018c8      0x21c c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x000018c8                __aeabi_frsub
+                0x000018d0                __subsf3
+                0x000018d0                __aeabi_fsub
+                0x000018d4                __aeabi_fadd
+                0x000018d4                __addsf3
+                0x00001a34                __aeabi_ui2f
+                0x00001a34                __floatunsisf
+                0x00001a3c                __aeabi_i2f
+                0x00001a3c                __floatsisf
+                0x00001a58                __aeabi_ul2f
+                0x00001a58                __floatundisf
+                0x00001a68                __aeabi_l2f
+                0x00001a68                __floatdisf
+ .text          0x00001ae4      0x2a0 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00001ae4                __mulsf3
+                0x00001ae4                __aeabi_fmul
+                0x00001c4c                __aeabi_fdiv
+                0x00001c4c                __divsf3
+ .text          0x00001d84       0xec c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_cmpsf2.o)
+                0x00001d84                __gesf2
+                0x00001d84                __gtsf2
+                0x00001d8c                __lesf2
+                0x00001d8c                __ltsf2
+                0x00001d94                __nesf2
+                0x00001d94                __eqsf2
+                0x00001d94                __cmpsf2
+                0x00001df4                __aeabi_cfrcmple
+                0x00001dfc                __aeabi_cfcmpeq
+                0x00001dfc                __aeabi_cfcmple
+                0x00001e0c                __aeabi_fcmpeq
+                0x00001e20                __aeabi_fcmplt
+                0x00001e34                __aeabi_fcmple
+                0x00001e48                __aeabi_fcmpge
+                0x00001e5c                __aeabi_fcmpgt
+ .text          0x00001e70       0xec c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcpy.o)
+                0x00001e70                memcpy
+ .text.memset   0x00001f5c       0x94 c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x00001f5c                memset
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ *(.eh_fram e*)
+
+.glue_7         0x00001ff0        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00001ff0        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00001ff0        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00001ff0        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00001ff0        0x0
+ .iplt          0x00000000        0x0 xil_interface_lib.o
+
+.rel.dyn        0x00001ff0        0x0
+ .rel.iplt      0x00000000        0x0 xil_interface_lib.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00001ff0                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00001ff0                __exidx_end = .
+                0x00001ff0                . = ALIGN (0x4)
+                0x00001ff0                _etext = .
+                0x00001ff0                _sidata = .
+
+.data           0x20000000       0x34 load address 0x00001ff0
+                0x20000000                __data_start__ = .
+                0x20000000                _sdata = __data_start__
+ *(vtable)
+ *(.data*)
+ .data.processMsgSuccess
+                0x20000000        0x4 xil_interface_lib.o
+ .data.SYSTICK_RELOAD
+                0x20000004        0x4 profiler_timer.o
+                0x20000004                SYSTICK_RELOAD
+ .data.SYSTICK_CURRENT
+                0x20000008        0x4 profiler_timer.o
+                0x20000008                SYSTICK_CURRENT
+ .data.SYSTICK_CTRL
+                0x2000000c        0x4 profiler_timer.o
+                0x2000000c                SYSTICK_CTRL
+ .data.Controller_P
+                0x20000010       0x24 ../instrumented/Controller_data.o
+                0x20000010                Controller_P
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x20000034                PROVIDE (__preinit_array_end, .)
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x20000034                PROVIDE (__init_array_end, .)
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x20000034                PROVIDE (__fini_array_end, .)
+ *(.jcr*)
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                __data_end__ = .
+                0x20000034                _edata = __data_end__
+
+.igot.plt       0x20000034        0x0 load address 0x00002024
+ .igot.plt      0x00000000        0x0 xil_interface_lib.o
+
+.bss            0x20000034      0x1e4 load address 0x00002024
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                _sbss = .
+                0x20000034                __bss_start__ = _sbss
+ *(.bss .bss.*)
+ .bss.xilIODataPtr
+                0x20000034        0x4 xil_interface_lib.o
+ .bss.isShutdownCommand
+                0x20000038        0x4 xil_interface_lib.o
+ .bss.serverFcnId
+                0x2000003c        0x4 xil_interface_lib.o
+ .bss.cc        0x20000040        0xc xil_interface_lib.o
+ .bss.uDataAddress.4445
+                0x2000004c        0x4 xil_interface_lib.o
+ .bss.uDataLength.4446
+                0x20000050        0x4 xil_interface_lib.o
+ .bss.pBuffer   0x20000054        0x4 xil_data_stream.o
+ .bss.xilWriteBuffer
+                0x20000058        0x4 xil_data_stream.o
+ .bss.xilWriteDataPtr
+                0x2000005c        0x4 xil_data_stream.o
+ .bss.xilWriteDataAvail
+                0x20000060        0x2 xil_data_stream.o
+ *fill*         0x20000062        0x2 
+ .bss.commandResponseType
+                0x20000064        0x4 xil_data_stream.o
+ .bss.xil_fcnid0_task1_u
+                0x20000068       0x18 xil_interface.o
+ .bss.xil_fcnid0_task1_y
+                0x20000080       0x18 xil_interface.o
+ .bss.xil_fcnid0_init_y
+                0x20000098       0x18 xil_interface.o
+ .bss.xil_fcnid0_term_y
+                0x200000b0       0x18 xil_interface.o
+ .bss.initComplete.5276
+                0x200000c8        0x4 xil_interface.o
+ .bss.initComplete.5301
+                0x200000cc        0x4 xil_interface.o
+ .bss.initComplete.5307
+                0x200000d0        0x4 xil_interface.o
+ .bss.initComplete.5312
+                0x200000d4        0x4 xil_interface.o
+ .bss.streamID  0x200000d8        0x4 xilcomms_rtiostream.o
+ .bss.xilCommsBuffer
+                0x200000dc       0x80 xilcomms_rtiostream.o
+ .bss.xilWriteBuffer
+                0x2000015c       0x40 xilcomms_rtiostream.o
+ .bss.codeInstrWriteBuffer
+                0x2000019c       0x40 xilcomms_rtiostream.o
+ .bss.xsd_xil_timer_corrected
+                0x200001dc        0x4 xil_instrumentation.o
+ .bss.xsd_xil_timer_freeze
+                0x200001e0        0x4 xil_instrumentation.o
+ .bss.xsd_xil_timer_unfreeze
+                0x200001e4        0x4 xil_instrumentation.o
+ .bss.pBuffer   0x200001e8        0x4 codeinstr_data_stream.o
+ .bss.codeInstrWriteBuffer
+                0x200001ec        0x4 codeinstr_data_stream.o
+ .bss.codeInstrWriteDataPtr
+                0x200001f0        0x4 codeinstr_data_stream.o
+ .bss.codeInstrWriteDataAvail
+                0x200001f4        0x2 codeinstr_data_stream.o
+ *fill*         0x200001f6        0x2 
+ .bss.commandComplete
+                0x200001f8        0x4 codeinstr_data_stream.o
+ .bss.initTimer
+                0x200001fc        0x1 profiler_timer.o
+                0x200001fc                initTimer
+ *fill*         0x200001fd        0x3 
+ .bss.sysTickZeroCount
+                0x20000200        0x4 profiler_timer.o
+                0x20000200                sysTickZeroCount
+ *(COMMON)
+ COMMON         0x20000204       0x14 ../instrumented/Controller.o
+                0x20000204                Controller_M_
+                0x20000208                Controller_U
+                0x20000210                Controller_Y
+                0x20000218                . = ALIGN (0x4)
+                0x20000218                _ebss = .
+                0x20000218                __bss_end__ = _ebss
+
+.co_stack       0x20000218      0x840 load address 0x00002208
+                0x20000218                . = ALIGN (0x8)
+                0x20000218                __stack_end__ = .
+ *(.co_stack .co_stack.*)
+ .co_stack      0x20000218      0x840 startup_gcc.o
+                0x20000218                pulStack
+                0x20000a58                __stack_start__ = .
+                0x20000a58                . = ALIGN (0x8)
+                0x20000a58                _end = .
+                0x20000a58                PROVIDE (__stack, __stack_start__)
+                0x20000a60                PROVIDE (_sheap, (_end + 0x8))
+                0x2000fff8                PROVIDE (_eheap, ALIGN (((ORIGIN (SRAM) + 0x10000) - 0x8), 0x8))
+OUTPUT(Controller.elf elf32-littlearm)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 xil_interface_lib.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 xil_data_stream.o
+ .comment       0x00000000       0x71 xil_interface.o
+ .comment       0x00000000       0x71 xilcomms_rtiostream.o
+ .comment       0x00000000       0x71 rtiostream_utils.o
+ .comment       0x00000000       0x71 rtiostream_serial.o
+ .comment       0x00000000       0x71 pil_main.o
+ .comment       0x00000000       0x71 startup_gcc.o
+ .comment       0x00000000       0x71 xil_instrumentation.o
+ .comment       0x00000000       0x71 codeinstr_data_stream.o
+ .comment       0x00000000       0x71 profiler_timer.o
+ .comment       0x00000000       0x71 ../instrumented/Controller.o
+ .comment       0x00000000       0x71 ../instrumented/Controller_data.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x33 xil_interface_lib.o
+ .ARM.attributes
+                0x00000033       0x33 xil_data_stream.o
+ .ARM.attributes
+                0x00000066       0x33 xil_interface.o
+ .ARM.attributes
+                0x00000099       0x33 xilcomms_rtiostream.o
+ .ARM.attributes
+                0x000000cc       0x33 rtiostream_utils.o
+ .ARM.attributes
+                0x000000ff       0x33 rtiostream_serial.o
+ .ARM.attributes
+                0x00000132       0x33 pil_main.o
+ .ARM.attributes
+                0x00000165       0x33 startup_gcc.o
+ .ARM.attributes
+                0x00000198       0x33 xil_instrumentation.o
+ .ARM.attributes
+                0x000001cb       0x33 codeinstr_data_stream.o
+ .ARM.attributes
+                0x000001fe       0x33 profiler_timer.o
+ .ARM.attributes
+                0x00000231       0x33 ../instrumented/Controller.o
+ .ARM.attributes
+                0x00000264       0x33 ../instrumented/Controller_data.o
+ .ARM.attributes
+                0x00000297       0x1d c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000002b4       0x1d c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000002d1       0x1d c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7-m\libgcc.a(_arm_cmpsf2.o)
+ .ARM.attributes
+                0x000002ee       0x1b c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000309       0x2d c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+.debug_frame    0x00000000       0x2c
+ .debug_frame   0x00000000       0x2c c:/matlab/supportpackages/r2015a/gcc-arm-none-eabi-4_8-2014q2-20140609-win32/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)

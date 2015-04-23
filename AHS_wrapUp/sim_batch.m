@@ -260,24 +260,24 @@ S_3 = S_3(:, stateOfInterests);
 % csvwrite('./simResults/s2.csv', S_2);
 % csvwrite('./simResults/s3.csv', S_3);
 % 
-% %% Learning
-% % First use SVM
-% fprintf('Start SVM\n');
-% X = [S_1;S_2;S_3];
-% y = [0*ones(size(S_1, 1), 1); 1 * ones(size(S_2, 1), 1); 0 * ones(size(S_3, 1), 1)];
-% svm;  
-% 
-% % Then we try neural networks
-% fprintf('Start Neural Networks\n');
-% X = [S_1; S_2; S_3];
-% y = [ones(size(S_1, 1), 1); 2 * ones(size(S_2, 1), 1); 3 * ones(size(S_3, 1), 1)];
-% neuralNetwork;
-% wrong = find((y~=pred) == 1);
-% fprintf('predicted value: \n')
-% [X(wrong, :), pred(wrong)]
-% fprintf('actual value: \n')
-% [X(wrong, :), y(wrong)]
-% 
+%% Learning
+% First use SVM
+fprintf('Start SVM\n');
+X = [S_1;S_2;S_3];
+y = [0*ones(size(S_1, 1), 1); 1 * ones(size(S_2, 1), 1); 0 * ones(size(S_3, 1), 1)];
+svm;  
+
+% Then we try neural networks
+fprintf('Start Neural Networks\n');
+X = [S_1; S_2; S_3];
+y = [ones(size(S_1, 1), 1); 2 * ones(size(S_2, 1), 1); 3 * ones(size(S_3, 1), 1)];
+neuralNetwork;
+wrong = find((y~=pred) == 1);
+fprintf('predicted value: \n')
+[X(wrong, :), pred(wrong)]
+fprintf('actual value: \n')
+[X(wrong, :), y(wrong)]
+
 % %% TAAF
 % 
 % t_S_N = [];

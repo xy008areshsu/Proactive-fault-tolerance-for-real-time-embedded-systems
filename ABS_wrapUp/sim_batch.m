@@ -261,10 +261,14 @@ X = [S_1; S_2; S_3];
 y = [ones(size(S_1, 1), 1); 2 * ones(size(S_2, 1), 1); 3 * ones(size(S_3, 1), 1)];
 neuralNetwork;
 wrong = find((y~=pred) == 1);
-fprintf('predicted value: \n')
-[X(wrong, :), pred(wrong)]
-fprintf('actual value: \n')
-[X(wrong, :), y(wrong)]
+% fprintf('predicted value: \n')
+% [X(wrong, :), pred(wrong), y(wrong)]
+wrong_preds = [X(wrong, :), pred(wrong), y(wrong)];
+msize = size(wrong_preds, 1);
+% wrong_preds = wrong_preds(randperm(msize, 1500), :); 
+wrong_preds = wrong_preds(wrong_preds(:, 4) < wrong_preds(:, 5), :);
+size(wrong_preds, 1)
+% wrong_preds
 
 %% TAAF
 

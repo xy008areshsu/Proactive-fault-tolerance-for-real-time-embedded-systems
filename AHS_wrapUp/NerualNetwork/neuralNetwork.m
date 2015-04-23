@@ -1,6 +1,6 @@
 %% Setup the parameters you will use for this exercise
-input_layer_size  = 2;  
-hidden_layer_size = 25;   
+input_layer_size  = 3;  
+hidden_layer_size = 50;   
 num_labels = 3;         
 
 
@@ -68,8 +68,8 @@ Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
 
 Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
                  num_labels, (hidden_layer_size + 1));
-csvwrite('./simResults/Theta1.csv', Theta1);
-csvwrite('./simResults/Theta2.csv', Theta2);
+csvwrite('./Theta1.csv', Theta1);
+csvwrite('./Theta2.csv', Theta2);
              
              
 fprintf('Program paused. Press enter to continue.\n');
@@ -82,7 +82,7 @@ pause;
 %  neural network to predict the labels of the training set. This lets
 %  you compute the training set accuracy.
 
-threshold = 0.55;
+threshold = 0.5;
 [pred, ex_time] = predict(Theta1, Theta2, X, threshold);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);

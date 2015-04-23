@@ -1,0 +1,25 @@
+Cam H= 10cm
+------------
+Angle = photo2 fort
+Zone morte <13cm
+largeur à 13cm = 20cm à 1m=110cm
+
+Cam H=23cm
+------------
+Angle = photo3 fort
+Zone morte <34cm  >160cm
+largeur à 34cm = 50cm à 160cm=205cm
+
+
+Cam H=41cm
+------------
+Angle = photo4 fort
+Zone morte <40cm  >240cm
+largeur à 40cm = 62cm à 240cm=300cm
+
+Cam H=52cm
+------------
+Angle = photo5 fort
+Zone morte <50cm  >300cm
+largeur à 50cm = 62cm à 300cm=360cm
+41

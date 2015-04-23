@@ -1,0 +1,8 @@
+
+Nsites=8
+SnapshotDir=C:\Users\wrkshop\MakerFaire\Competition\Snapshots
+ResultFile=C:\Users\wrkshop\MakerFaire\Competition\MakerFaireCompetitionResults.mat
+CalibrationFile=C:\Users\wrkshop\MATLABApp\judge_calibration.mat
+#CalibrationFile=judge_calibration.mat
+DisplayWarnings=0
+Teams=Lannister,Stark,Targaryen

@@ -1,0 +1,91 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c2_InputProcessing"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c2_InputProcessing"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Running"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Running"\
+    }\
+    ChartData {\
+      Name         "TargetIndex"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "TargetIndex"\
+    }\
+    ChartData {\
+      Name         "encoder_right_prev_target"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "encoder_right_prev_target"\
+    }\
+    ChartData {\
+      Name         "CurrentDistance"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CurrentDistance"\
+    }\
+    ChartData {\
+      Name         "encoder_left_prev_target"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "encoder_left_prev_target"\
+    }\
+    ChartData {\
+      Name         "prev_target"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "prev_target"\
+      Dimensions   [1,2]\
+    }\
+    ChartData {\
+      Name         "prev_bearing"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "prev_bearing"\
+    }\
+    ChartData {\
+      Name         "BearingToTarget"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "BearingToTarget"\
+    }\
+    ChartData {\
+      Name         "DistanceToTarget"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "DistanceToTarget"\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

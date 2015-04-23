@@ -1,0 +1,12 @@
+
+PictureDirectory=C:\Users\wrkshop\MakerFaire\Slideshow
+GlobalResultFile=C:\Users\wrkshop\MakerFaire\Competition\MakerFaireCompetitionAllResults.mat
+NumberOfTeams=12
+
+# Counter time: Countdown duration in minutes
+CounterTime=10
+
+#Background=
+BackgroundRanking=background_ranking.jpg
+
+WindowTitle=Juge central

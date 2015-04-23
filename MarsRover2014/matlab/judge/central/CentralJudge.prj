@@ -1,0 +1,98 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="1265605284" file="C:\Users\odufour\SANDBOX\SVN\PROJECT\I-MakerFaireDistrib\matlab\judge\central\CentralJudge.prj" location="C:\Users\odufour\SANDBOX\SVN\PROJECT\I-MakerFaireDistrib\matlab\judge\central" name="CentralJudge" target="target.mlapps" target-name="Package App">
+    <param.appname>CentralJudge</param.appname>
+    <param.authnamewatermark>FrMakerFaireTeam</param.authnamewatermark>
+    <param.email />
+    <param.company>Mathworks</param.company>
+    <param.icon>${PROJECT_ROOT}\CentralJudge_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\CentralJudge_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\CentralJudge_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\CentralJudge_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\odufour\SANDBOX\SVN\PROJECT\I-MakerFaireDistrib\archives\juge_central_screenshot.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>MATLAB</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+    </param.products.id>
+    <param.products.version>
+      <item>8.3</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}\CentralJudge.mlappinstall</param.output>
+    <param.guid>b57b18a2-e74c-4341-9888-9892cb8def23</param.guid>
+    <unset>
+      <param.email />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.platforms />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\startup.m</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\ClockCounter.m</file>
+      <file>${PROJECT_ROOT}\judge_central.fig</file>
+      <file>${PROJECT_ROOT}\judge_central.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\background_ranking.jpg</file>
+      <file>${PROJECT_ROOT}\config.txt</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\odufour\SANDBOX\SVN\PROJECT\I-MakerFaireDistrib\matlab\judge\central" name="CentralJudge.mlappinstall" optional="false">C:\Users\odufour\SANDBOX\SVN\PROJECT\I-MakerFaireDistrib\matlab\judge\central\CentralJudge.mlappinstall</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\MATLAB\R2014a_win32</root>
+      <toolboxes>
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.1</osver>
+      <os32>true</os32>
+      <os64>false</os64>
+      <arch>win32</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

@@ -1,0 +1,1 @@
+export DISPLAY=:0.0; export XAUTHORITY=~Xauthority; echo raspberry | sudo -S /home/pi/RobotLocalisation_no_external_mode_rtt/MW/RobotLocalisation_no_external_mode
